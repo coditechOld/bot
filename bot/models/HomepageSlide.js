@@ -6,15 +6,15 @@ var Types = keystone.Field.Types;
  * =====================
  */
 
- var SliderHomepageImage = new keystone.List('HomepageSliderImage',{
+ var HomepageSlide = new keystone.List('HomepageSlide',{
 	map: { name: 'title' },
  });
 
  var myStorage = new keystone.Storage({
 	adapter: keystone.Storage.Adapters.FS,
 	fs: {
-		path: keystone.expandPath('./public/images/homepagesliderimages'), // required; path where the files should be stored
-  		publicPath: '/images/homepagesliderimages/', // path where files will be served
+		path: keystone.expandPath('./public/images/homepageslides'), // required; path where the files should be stored
+  		publicPath: '/images/homepageslides/', // path where files will be served
 	},
 	schema: {
 		originalname: true,
@@ -23,7 +23,7 @@ var Types = keystone.Field.Types;
 	},
 });
 
-SliderHomepageImage.add({
+HomepageSlide.add({
   title: { type: String},	
   image: { type: Types.File, storage: myStorage},
   text: { type: String },
@@ -32,4 +32,4 @@ SliderHomepageImage.add({
 });
 
 
-SliderHomepageImage.register();
+HomepageSlide.register();
