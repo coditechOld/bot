@@ -14,8 +14,8 @@ exports = module.exports = function (req, res) {
 
     };
 
-    view.query('sliders', keystone.list('HomepageSliderImage').model.find().sort('sortOrder'));
+    view.query('sliders', keystone.list('HomepageSlide').model.find().sort('sortOrder'));
 
     // Render the view
-    view.render('home', {layout: 'default'});
+    view.render('index', {layout: 'default'});
 };

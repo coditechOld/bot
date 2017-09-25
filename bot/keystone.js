@@ -10,31 +10,25 @@ var handlebars = require('express-handlebars');
 // See http://keystonejs.com/guide/config for available options
 // and documentation.
 
+
 keystone.init({
-	'name': 'BOT',
-	'brand': 'BOT',
+    'name': 'BOT',
+    'brand': 'BOT',
 
-	'stylus': 'public',
-	'static': 'public',
-	'favicon': 'public/favicon.ico',
-	'views': 'templates/views',
-	'view engine': '.hbs',
+    'stylus': 'public',
+    'static': 'public',
+    'favicon': 'public/favicon.ico',
+    'views': 'templates/views',
+    'view engine': 'pug',
 
-	'custom engine': handlebars.create({
-		layoutsDir: 'templates/views/layouts',
-		partialsDir: 'templates/views/partials',
-		defaultLayout: 'default',
-		helpers: new require('./templates/views/helpers')(),
-		extname: '.hbs',
-	}).engine,
+    'emails': 'templates/emails',
 
-	'emails': 'templates/emails',
-
-	'auto update': true,
-	'session': true,
-	'auth': true,
-	'user model': 'User',
+    'auto update': true,
+    'session': true,
+    'auth': true,
+    'user model': 'User',
 });
+
 
 // Load your project's Models
 keystone.import('models');
