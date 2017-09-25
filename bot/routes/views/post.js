@@ -8,7 +8,7 @@ exports = module.exports = function (req, res) {
 	// Set locals
 	locals.section = 'blog';
 	locals.filters = {
-		post: req.params.post,
+		post: 'post-1',
 	};
 	locals.data = {
 		posts: [],
