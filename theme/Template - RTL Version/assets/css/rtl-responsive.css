@@ -1,0 +1,175 @@
+/* ===================================================
+
+   MatX Media Queries
+
+   TOC:
+	01. screen width less than 1401px and more then 1040  ( Extra large Screen / Desktop )
+	02. screen width more than 1200px and less then 1300  ( Mid large Screen / Desktop )
+	03. screen width less than 1200px  ( large Screen / Notebook )
+	04. screen width more than 767px  ( Tablets & Desktop Screen )
+	05. screen width less than 992px  ( Medium Screen / Tablets )
+	06. screen width less than 801px  ( Medium wide Screen / Small Tablets )
+	07. screen width less than 768px  ( Medium Screen / Smaller Tablets )
+	08. screen width less than 603px  ( Medium Screen / Mobile )
+	09. screen width less than 600px  ( Medium Screen / Mobile )
+	10. screen width less than 500px  ( Small Screen / Mobile )
+	11. screen width less than 370px  ( Smaller Screen / Mobile )
+	
+====================================================== */
+/* screen width less than 1200px
+------------------------------- */
+@media (max-width: 1199px) {
+  .specialties-accordion-wrap > div[class^="col-"] {
+    margin: 0;
+  }
+  .col-lg-offset-2 {
+    margin-left: 0;
+  }
+  .brief-content {
+    margin-right: 0;
+  }
+  .brief-slider-wrap {
+    margin-right: 0;
+  }
+  .img-imodule-wrap {
+    padding: 80px 40px 40px 0;
+  }
+  .vimeo-intro .content-module {
+    padding-top: 0;
+  }
+  .service-section .col-md-offset-1 {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+  .brief-no-slider .brief-article {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  .single-imodule.imodule-icon-xxl {
+    padding: 0;
+  }
+  .brief-no-slider .brief-content.brief-vertical {
+    margin-top: 30px;
+    padding-left: 0px;
+    padding-right: 30px;
+  }
+}
+/* screen width less than 992px
+--------------------------------- */
+@media (max-width: 991px) {
+  .sidebar-area {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .matx-logo img {
+    left: auto;
+    right: 30px;
+  }
+  /*single post page mobile menu*/
+  .comment-form-group .row > div[class^="col-"] {
+    width: 100% !important ;
+  }
+  .single-imodule.rbodard-imodule:after {
+    width: 0px;
+  }
+  .contact-form-start .section-common-space {
+    padding-right: 30px;
+  }
+  .contact-info-start .section-common-space {
+    padding-left: 31px;
+  }
+  .vimeo-intro div[class^="col-"] {
+    float: none;
+  }
+}
+/* screen width less than 801px
+------------------------------ */
+@media (max-width: 800px) {
+  .single-post-page .banner-content .banner-content-inner {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .post-meta span {
+    margin-bottom: 10px;
+  }
+  .post-meta .cm {
+    border-left: 0 !important;
+  }
+  .post-meta span:last-child {
+    border-right: 0 !important;
+    padding-right: 0 !important;
+  }
+  .owl-item .why-chose-us-cards {
+    width: 100%;
+  }
+  .slide-2 {
+    text-align: center !important;
+  }
+  .article-module-wrap-float-none {
+    float: none !important;
+  }
+}
+/* screen width less than 768px
+------------------------------ */
+@media (max-width: 767px) {
+  div[class^="col-sm"],
+  div[class^="col-lg"] {
+    width: 100%;
+  }
+}
+/* screen width less than 603px
+------------------------------ */
+@media (max-width: 603px) {
+  .newsletter-form .btn-default {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .img-imodule-wrap {
+    padding: 360px 0 15px 0;
+  }
+  .icon-module-section .single-imodule,
+  .img-imodule-wrap .imodule-leftaligned {
+    padding-right: 0;
+  }
+  .icon-module-section .single-imodule,
+  .img-imodule-wrap .imodule-leftaligned {
+    padding-left: 50px;
+  }
+  .brief-slider-main {
+    margin-bottom: 20px;
+  }
+  .stay-center .btn-wrap {
+    position: absolute;
+    left: 50%;
+    margin-left: -36px;
+    bottom: -30px;
+  }
+  .brief-no-slider .brief-content.brief-vertical {
+    padding: 0 15px;
+  }
+}
+/* screen width less than 600px
+------------------------------ */
+@media (max-width: 600px) {
+  .back-to-top {
+    right: auto;
+    left: 20px;
+  }
+}
+/* screen width less than 500px
+------------------------------ */
+@media (max-width: 500px) {
+  .comment-thumb .ctwr {
+    margin-right: 0;
+    margin-left: 15px;
+  }
+}
+/* screen width less than 370px
+------------------------------ */
+@media (max-width: 370px) {
+  .icon-module-section .single-imodule,
+  .img-imodule-wrap .imodule-leftaligned {
+    padding-left: 20px;
+  }
+}

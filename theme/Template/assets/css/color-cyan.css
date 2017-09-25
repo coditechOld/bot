@@ -1,0 +1,419 @@
+/*=========== From common.css ===============*/
+.btn-highlight {
+  background-color: #00bcd4;
+}
+.btn-highlight:hover {
+  background-color: #00bcd4;
+}
+.btn-highlight:active {
+  background-color: #00bcd4;
+}
+@-webkit-keyframes cpScale {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: #00bcd4;
+    color: #fff;
+  }
+  50% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    background-color: #fff;
+    color: #00bcd4;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: #00bcd4;
+    color: #fff;
+  }
+}
+@-moz-keyframes cpScale {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+         transform: scale(1);
+    background-color: #00bcd4;
+    color: #fff;
+  }
+  50% {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+         transform: scale(0.7);
+    background-color: #fff;
+    color: #00bcd4;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+         transform: scale(1);
+    background-color: #00bcd4;
+    color: #fff;
+  }
+}
+@-o-keyframes cpScale {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+       transform: scale(1);
+    background-color: #00bcd4;
+    color: #fff;
+  }
+  50% {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -o-transform: scale(0.7);
+       transform: scale(0.7);
+    background-color: #fff;
+    color: #00bcd4;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+       transform: scale(1);
+    background-color: #00bcd4;
+    color: #fff;
+  }
+}
+@keyframes cpScale {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+      -o-transform: scale(1);
+         transform: scale(1);
+    background-color: #00bcd4;
+    color: #fff;
+  }
+  50% {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+      -o-transform: scale(0.7);
+         transform: scale(0.7);
+    background-color: #fff;
+    color: #00bcd4;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+      -o-transform: scale(1);
+         transform: scale(1);
+    background-color: #00bcd4;
+    color: #fff;
+  }
+}
+@-webkit-keyframes cpScaleReverse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: #00bcd4;
+    color: #fff;
+  }
+  50% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    background-color: #fff;
+    color: #00bcd4;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: #00bcd4;
+    color: #fff;
+  }
+}
+@-moz-keyframes cpScaleReverse {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+         transform: scale(1);
+    background-color: #00bcd4;
+    color: #fff;
+  }
+  50% {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+         transform: scale(0.7);
+    background-color: #fff;
+    color: #00bcd4;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+         transform: scale(1);
+    background-color: #00bcd4;
+    color: #fff;
+  }
+}
+@-o-keyframes cpScaleReverse {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+       transform: scale(1);
+    background-color: #00bcd4;
+    color: #fff;
+  }
+  50% {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -o-transform: scale(0.7);
+       transform: scale(0.7);
+    background-color: #fff;
+    color: #00bcd4;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+       transform: scale(1);
+    background-color: #00bcd4;
+    color: #fff;
+  }
+}
+@keyframes cpScaleReverse {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+      -o-transform: scale(1);
+         transform: scale(1);
+    background-color: #00bcd4;
+    color: #fff;
+  }
+  50% {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+      -o-transform: scale(0.7);
+         transform: scale(0.7);
+    background-color: #fff;
+    color: #00bcd4;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+      -o-transform: scale(1);
+         transform: scale(1);
+    background-color: #00bcd4;
+    color: #fff;
+  }
+}
+.is-invalid .mdl-textfield__label:after {
+  background-color: #00bcd4;
+}
+.main-nav {
+  /*matx desktop submenu*/
+}
+.main-nav ul li a:hover,
+.main-nav ul li:hover > a,
+.main-nav ul li.active > a {
+  color: #00bcd4;
+}
+.main-nav > ul > li ul li.menu-item-has-children:hover > a:after {
+  color: #00bcd4;
+}
+.main-nav > ul > li ul li:hover > a {
+  color: #00bcd4 !important;
+}
+.main-nav > ul > li ul li a:hover {
+  color: #00bcd4 !important;
+}
+.color-schema-white .main-nav ul li a:hover {
+  color: #00bcd4;
+}
+.color-schema-white .main-nav ul li:hover a {
+  color: #00bcd4;
+}
+.color-schema-white .main-nav ul li.active a {
+  color: #00bcd4;
+}
+.color-schema-white .main-nav ul li a:hover {
+  color: #00bcd4;
+}
+.color-schema-white .main-nav ul li:hover a {
+  color: #00bcd4;
+}
+.color-schema-white .main-nav ul li.active a {
+  color: #00bcd4;
+}
+.main-header.is-sticky .main-nav ul li.active a {
+  border-bottom-color: #00bcd4;
+}
+.thumb-slides-container.owl-theme .owl-controls .owl-page.active span {
+  background: #00bcd4;
+}
+.mdl-card__title-text a:hover {
+  color: #00bcd4;
+}
+.mdl-card__actions.mdl-card--border a.blog-comments:hover {
+  color: #00bcd4;
+}
+.mdl-card__actions.mdl-card--border a.blog-share:hover {
+  color: #00bcd4;
+}
+.footer-social li a:hover {
+  color: #00bcd4;
+}
+/*=========== From main.css ===============*/
+.styled-paginantion .owl-page.active span {
+  background: #00bcd4 !important;
+  border-color: #00bcd4 !important;
+}
+.styled-paginantion.colorsch-white .owl-page.active span {
+  background: #00bcd4 !important;
+  border-color: #00bcd4 !important;
+}
+.single-imodule .icon-box i {
+  color: #00bcd4;
+}
+.single-imodule.rbodard-imodule .icon-box i {
+  color: #00bcd4;
+}
+.single-imodule.rbodard-imodule:hover .icon-box {
+  background-color: #00bcd4;
+}
+.single-imodule.imodule-slide .icon-box i {
+  color: #00bcd4;
+}
+.single-imodule.hov-white-red:hover .icon-box {
+  background: #00bcd4;
+}
+.single-imodule.csch-white-white .icon-box i {
+  color: #00bcd4;
+}
+.single-imodule.csch-tp-red .icon-box i {
+  color: #00bcd4;
+}
+.progress-bar-L1 {
+  background-color: #00bcd4;
+}
+.wcu-collapse li.init-color,
+.wcu-collapse li.collapse-open {
+  background: #00bcd4;
+}
+.wcu-collapse li.init-color .collapse-label,
+.wcu-collapse li.collapse-open .collapse-label {
+  background: #00bcd4;
+}
+.wcu-collapse li.init-remove-color .icwrap {
+  color: #00bcd4;
+}
+.wcu-collapse .collapse-label .icwrap {
+  color: #00bcd4;
+}
+.matx-service-tabbar .mdl-tabs__tab.is-active i {
+  color: #00bcd4;
+}
+.matx-service-tabbar .mdl-tabs__tab.is-active:after {
+  background: #00bcd4 !important;
+}
+.tab-histry span {
+  color: #00bcd4;
+}
+.satistic .top i {
+  color: #00bcd4;
+}
+.portfolio-category li.active {
+  color: #00bcd4;
+  border-bottom-color: #00bcd4;
+}
+.portfolio-meta i {
+  color: #00bcd4;
+}
+.portfolio-box-style-3 .single-portfolio .pf-overlay,
+.portfolio-box-style-2 .single-portfolio .pf-overlay {
+  background: rgba(0, 188, 212, 0.8);
+}
+.portfolio-box-style-3 .single-portfolio .protfolio-image .pf-overlay,
+.portfolio-box-style-2 .single-portfolio .protfolio-image .pf-overlay {
+  background: rgba(0, 188, 212, 0.8);
+}
+.shot-count-inner button:focus {
+  background: #00bcd4;
+}
+.shot-count-inner .mdl-button--fab:focus:not(:active),
+.shot-count-inner .mdl-button--raised:focus:not(:active) {
+  background: #00bcd4;
+}
+.member-social li a:hover {
+  color: #00bcd4;
+}
+.tm-edition2 .social li a:hover {
+  color: #00bcd4;
+}
+.tm-edition2 .member-info .member-role {
+  color: #00bcd4;
+}
+.pricing-table.recommended-plan .plan-price span {
+  color: #00bcd4;
+}
+.ci-icons {
+  color: #00bcd4;
+}
+.sweet-alert button.cancel {
+  background: #00bcd4 !important;
+}
+.map-buttons {
+  background-color: rgba(0, 188, 212, 0.8);
+}
+.map-buttons:hover {
+  background-color: rgba(0, 188, 212, 0.5);
+}
+.twitter-info .tweet-text a,
+.twitter-info .tweet-text p a {
+  color: #57e3f5;
+}
+/*=========== From option-panel.css ===============*/
+.matx-option-panel-box .matx-option-panel-toggle {
+  color: #00bcd4;
+}
+/*=========== From portfolio.css ===============*/
+.single-pf-content a {
+  color: #00bcd4;
+}
+.fullwidh-pagination a:hover {
+  color: #00bcd4;
+}
+/*=========== From blog.css ===============*/
+.blog-page .main-nav ul li a:hover {
+  color: #00bcd4;
+}
+.blog-page .main-nav ul li.active a {
+  color: #00bcd4;
+}
+.search-bar > .search-bg {
+  background: #00bcd4;
+}
+.single-post-page .share-social li a:hover > * {
+  color: #00bcd4;
+}
+.post-meta a:hover {
+  color: #00bcd4;
+}
+.post-entry ul li:before {
+  background-color: #00bcd4;
+}
+.post-entry blockquote {
+  border-color: #00bcd4;
+}
+span.comment-reply:hover {
+  background: #00bcd4;
+}
+.widget ul li a:hover {
+  color: #00bcd4;
+}
+.tagcloud a:hover {
+  background-color: #00bcd4;
+}
