@@ -1,0 +1,97 @@
+mixin flash-messages(messages)
+    if messages
+        #flash-messages.container
+            each message in messages.info
+                +flash-message(message, 'info')
+            each message in messages.success
+                +flash-message(message, 'success')
+            each message in messages.warning
+                +flash-message(message, 'warning')
+            each message in messages.error
+                +flash-message(message, 'danger')
+
+mixin flash-message(message, type)
+    div(class='alert alert-' + type)
+        if utils.isObject(message)
+            if message.title
+                h4= message.title
+            if message.detail
+                p= message.detail
+            if message.list
+                ul
+                    each item in message.list
+                        li= item
+        else
+            = message
+mixin fetchSliders(sliders)
+    section#home.section-main
+        #matx_revslider_1_wrapper.rev_slider_wrapper.fullwidthbanner-container(data-alias='web-product-light-hero66', style='margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;')
+            // START REVOLUTION SLIDER 5.0.7 fullwidth mode
+            #matx_revslider_1.rev_slider.matx-revslider-1.fullwidthabanner(style='display:none;', data-action='matx_revslider', data-version='5.0.7')
+                ul
+                    // SLIDE 1
+                    li.slider-color-schema-dark(data-index='rs-68', data-transition='zoomout', data-slotamount='default', data-easein='Power4.easeInOut', data-easeout='Power4.easeInOut', data-masterspeed='2000', data-rotate='0', data-saveperformance='off', data-title='Intro', data-description='')
+                        // MAIN IMAGE
+                        img.rev-slidebg(src='img/revslider/rev_img_1.jpg', alt='', data-bgposition='center bottom', data-kenburns='on', data-duration='30000', data-ease='Linear.easeNone', data-rotatestart='0', data-rotateend='0', data-offsetstart='0 0', data-offsetend='0 0', data-bgparallax='10', data-no-retina='')
+                        // LAYERS
+                        // LAYER NR. 1
+                        #sl1-lyr1.tp-caption.slide-3.tp-shape.tp-shapewrapper.tp-resizeme.rs-parallaxlevel-0(data-x="['center','center','center','center']", data-hoffset="['0','0','0','0']", data-y="['middle','middle','middle','middle']", data-voffset="['0','0','0','0']", data-width='full', data-height='full', data-whitespace='normal', data-transform_idle='o:1;', data-transform_in='opacity:0;s:1500;e:Power3.easeInOut;', data-transform_out='s:300;s:300;', data-start='1000', data-basealign='slide', data-responsive_offset='on', style='z-index:1;background-color: rgba(34, 34, 34, 0.80);')
+                        // LAYER NR. 2
+                        #sl1-lyr2.tp-caption.rev-title-typo.tp-resizeme.rs-parallaxlevel-0(data-x="['center','center','center','center']", data-hoffset="['0','0','0','0']", data-y="['middle','middle','middle','middle']", data-voffset="['-54','-52','-84','-79']", data-fontsize="['50','45','50','40']", data-lineheight="['58','52','58','46']", data-width="['1200','1000','750','480']", data-height='none', data-whitespace='normal', data-transform_idle='o:1;', data-transform_in='z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;', data-transform_out='y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;', data-mask_in='x:0px;y:0px;', data-mask_out='x:inherit;y:inherit;', data-start='1000', data-splitin='none', data-splitout='none', data-responsive_offset='on', style='z-index: 7; white-space: nowrap; text-align: center')
+                            | Material
+                            span Design
+                            |  Agency Template
+                        // LAYER NR. 3
+                        #sl1-lyr3.tp-caption.rev-subtitle-typo.tp-resizeme.rs-parallaxlevel-0(data-x="['center','center','center','center']", data-hoffset="['0','0','0','0']", data-y="['middle','middle','middle','middle']", data-voffset="['0','0','0','5']", data-fontsize="['17','17','17','17']", data-lineheight="['25','25','25','25']", data-width='none', data-height='none', data-whitespace='nowrap', data-transform_idle='o:1;', data-transform_in='y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:1500;e:Power4.easeInOut;', data-transform_out='y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;', data-mask_in='x:0px;y:[100%];s:inherit;e:inherit;', data-mask_out='x:inherit;y:inherit;s:inherit;e:inherit;', data-start='1000', data-splitin='none', data-splitout='none', data-responsive_offset='on', style='z-index: 8; white-space: nowrap; text-align:center;')
+                            | Super clean minimal design. Awesome features
+                            span.break with endless possibilites.
+                        // LAYER NR. 4
+                        #sl1-lyr4.tp-caption.rev-slider-btns.rs-parallaxlevel-0(data-x="['center','center','center','center']", data-hoffset="['0','0','0','0']", data-y="['middle','middle','middle','middle']", data-voffset="['68','71','76','88']", data-width='400px', data-height='none', data-whitespace='nowrap', data-transform_idle='o:1;', data-transform_hover='o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power1.easeInOut;', data-style_hover='c:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);cursor:pointer;', data-transform_in='y:50px;opacity:0;s:1500;e:Power4.easeInOut;', data-transform_out='y:[175%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;', data-mask_out='x:inherit;y:inherit;s:inherit;e:inherit;', data-start='1250', data-splitin='none', data-splitout='none', data-responsive_offset='on', data-responsive='off', style='z-index: 9; white-space: nowrap;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box; text-align:center;')
+                            a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.btn-lg.btn-white.btn-default.tp-resizeme.rs-parallaxlevel-0(href='#', style='margin-left: -20px;') call to action
+                            a.menu-smooth-scroll.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.btn-lg.btn-highlight.btn-default.tp-resizeme.rs-parallaxlevel-0(href='#about', data-target='#about') learn more
+                    // SLIDE 2
+                    li.slider-color-schema-dark(data-index='rs-2', data-transition='fade', data-slotamount='7', data-easein='default', data-easeout='default', data-masterspeed='1000', data-rotate='0', data-saveperformance='off', data-title='Slide', data-description='')
+                        // MAIN IMAGE
+                        img.rev-slidebg(src='img/revslider/rev_img_2_2.jpg', alt='', data-bgposition='center bottom', data-kenburns='on', data-duration='30000', data-ease='Linear.easeNone', data-scalestart='100', data-scaleend='120', data-rotatestart='0', data-rotateend='0', data-offsetstart='0 0', data-offsetend='0 0', data-bgparallax='10', data-no-retina='')
+                        // LAYER NR. 1
+                        #sl2-lyr1.tp-caption.slide-2.tp-shape.tp-shapewrapper.tp-resizeme.rs-parallaxlevel-0(data-x="['center','center','center','center']", data-hoffset="['0','0','0','0']", data-y="['middle','middle','middle','middle']", data-voffset="['0','0','0','0']", data-width='full', data-height='full', data-whitespace='normal', data-transform_idle='o:1;', data-transform_in='opacity:0;s:1500;e:Power3.easeInOut;', data-transform_out='s:300;s:300;', data-start='1000', data-basealign='slide', data-responsive_offset='on', style='z-index:1;background-color: rgba(119, 119, 119, 0.50);')
+                        // LAYER NR. 2
+                        h2#sl2-lyr2.tp-caption.slide-2.rev-title-typo.tp-resizeme.rs-parallaxlevel-0(data-x="['left','left','center','center']", data-hoffset="['125','125','0','0']", data-y="['middle','middle','top','top']", data-voffset="['-53','-48','220','150']", data-fontsize="['50','45','50','40']", data-lineheight="['58','52','58','46']", data-width="['500','500','500','420']", data-height='none', data-whitespace='normal', data-transform_idle='o:1;', data-transform_in='y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;', data-transform_out='auto:auto;s:1000;', data-mask_in='x:0px;y:0px;', data-mask_out='x:0;y:0;', data-start='1000', data-splitin='none', data-splitout='none', data-responsive_offset='on', style='z-index: 3; white-space: normal; color: #333333')
+                            | Clean
+                            span(style='color: #fff;') Design
+                            br
+                            |  Experience
+                        // LAYER NR. 3
+                        h3#sl2-lyr3.tp-caption.slide-2.rev-subtitle-typo.tp-resizeme.rs-parallaxlevel-0(data-x="['left','left','center','center']", data-hoffset="['125','125','0','0']", data-y="['middle','middle','top','top']", data-voffset="['30','30','350','255']", data-fontsize="['17','17','17','17']", data-lineheight="['25','25','25','25']", data-width='none', data-height='none', data-whitespace='nowrap', data-transform_idle='o:1;', data-transform_in='y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;', data-transform_out='auto:auto;s:1000;', data-mask_in='x:0px;y:0px;', data-mask_out='x:0;y:0;', data-start='1000', data-splitin='none', data-splitout='none', data-responsive_offset='on', style='z-index: 3; white-space: nowrap; color: #efefef')
+                            | matx is a Clean agency template
+                        // LAYER NR. 4
+                        #sl2-lyr4.tp-caption.slide-2(data-x="['left','left','center','center']", data-hoffset="['125','125','0','0']", data-y="['middle','middle','top','top']", data-voffset="['98','101','410','310']", data-width='none', data-height='none', data-whitespace='nowrap', data-transform_idle='o:1;', data-transform_in='x:-50px;opacity:0;s:1000;e:Power2.easeOut;', data-transform_out='opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;', data-start='1000', data-splitin='none', data-splitout='none', data-responsive_offset='on', style='z-index: 3; white-space: nowrap;')
+                            a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.btn-lg.btn-highlight.btn-default.tp-resizeme.rs-parallaxlevel-0(href='#') call to action
+                        // LAYER NR. 5
+                        #sl2-lyr5.tp-caption.slide-2.macbook-pro.tp-resizeme.rs-parallaxlevel-0(data-x="['right','right','center','center']", data-hoffset="['80','50','0','0']", data-y="['middle','middle','bottom','bottom']", data-voffset="['30','30','130','80']", data-whitespace='normal', data-transform_idle='o:1;', data-transform_in='x:right;s:1500;e:Power3.easeOut;', data-transform_out='opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;', data-start='2500', data-basealign='slide', data-responsive_offset='on', data-width="['none', 'none', 'none', '0px']", style='z-index: 2; text-aligh: right;')
+                            img(src='img/revslider/macbooki.png', alt='', width='996', data-ww="['996px','600px','600px','0px']", data-hh="['996px','600px','600px','0px']")
+                        // LAYER NR. 6
+                        #sl2-lyr6.tp-caption.slide-2.macbook-screen.tp-resizeme.rs-parallaxlevel-0(data-x="['right','right','center','center']", data-hoffset="['80','50','0','0']", data-y="['middle','middle','bottom','bottom']", data-voffset="['30','30','130','80']", data-whitespace='nowrap', data-transform_idle='o:1;', data-transform_in='z:0;rX:0deg;rY:0;rZ:0;sX:1.3;sY:1.3;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeOut;', data-transform_out='opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;', data-start='3350', data-mask_in='x:0px;y:0px;s:inherit;e:inherit;', data-basealign='slide', data-responsive_offset='on', data-width="['none', 'none', 'none', '0px']", style='z-index: 2; text-aligh: right;')
+                            img(src='img/revslider/ps_screenshot.png', alt='', width='996', data-ww="['996px','600px','600px','0px']", data-hh="['996px','600px','600px','0px']")
+                    // SLIDE 3
+                    li.slider-color-schema-dark(data-index='rs-3', data-transition='fade', data-slotamount='7', data-easein='default', data-easeout='default', data-masterspeed='1000', data-rotate='0', data-saveperformance='off', data-title='Slide', data-description='')
+                        // MAIN IMAGE
+                        img.rev-slidebg(src='img/revslider/rev_img_3.jpg', alt='', data-bgposition='center bottom', data-kenburns='on', data-duration='30000', data-ease='Linear.easeNone', data-scalestart='100', data-scaleend='120', data-rotatestart='0', data-rotateend='0', data-offsetstart='0 0', data-offsetend='0 0', data-bgparallax='10', data-no-retina='')
+                        // LAYERS
+                        // Slide Video Background
+                        .rs-background-video-layer(data-forcerewind='on', data-volume='mute', data-videowidth='100%', data-videoheight='100%', data-videomp4='video/officeloop_low.mp4', data-videopreload='preload', data-videoloop='loopandnoslidestop', data-forcecover='1', data-aspectratio='16:9', data-autoplay='true', data-autoplayonlyfirsttime='false')
+                        // LAYER NR. 1
+                        #sl3-lyr1.tp-caption.slide-3.tp-shape.tp-shapewrapper.tp-resizeme.rs-parallaxlevel-0(data-x="['center','center','center','center']", data-hoffset="['0','0','0','0']", data-y="['middle','middle','middle','middle']", data-voffset="['0','0','0','0']", data-width='full', data-height='full', data-whitespace='normal', data-transform_idle='o:1;', data-transform_in='opacity:0;s:1500;e:Power3.easeInOut;', data-transform_out='s:300;s:300;', data-start='1000', data-basealign='slide', data-responsive_offset='on', style='z-index:1;background-color: rgba(51, 51, 51, 0.95);')
+                        // LAYER NR. 2
+                        h2#sl3-lyr2.tp-caption.slide-3.rev-title-typo.tp-resizeme.rs-parallaxlevel-0(data-x="['left','left','left','center']", data-hoffset="['125','125','30','0']", data-y="['middle','middle','middle','middle']", data-voffset="['-53','-48','-48','-48']", data-fontsize="['50','45','40','30']", data-lineheight="['58','52','46','35']", data-width="['1100','1100','900','420']", data-height='none', data-whitespace='normal', data-transform_idle='o:1;', data-transform_in='y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;', data-transform_out='auto:auto;s:1000;', data-mask_in='x:0px;y:0px;', data-mask_out='x:0;y:0;', data-start='1000', data-splitin='none', data-splitout='none', data-responsive_offset='on', style='z-index: 3; color: #fff; white-space: normal;')
+                            | MAKING THE IMPOSSIBLE
+                            span POSSIBLE
+                            br
+                            span THAT'S
+                            |  WHAT WE DO
+                        // LAYER NR. 3
+                        h3#sl3-lyr3.tp-caption.slide-3.rev-subtitle-typo.tp-resizeme.rs-parallaxlevel-0(data-x="['left','left','left','center']", data-hoffset="['125','125','30','0']", data-y="['middle','middle','middle','middle']", data-voffset="['30','30','30','30']", data-fontsize="['17','17','17','17']", data-lineheight="['25','25','25','25']", data-width='none', data-height='none', data-whitespace='nowrap', data-transform_idle='o:1;', data-transform_in='y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;', data-transform_out='auto:auto;s:1000;', data-mask_in='x:0px;y:0px;', data-mask_out='x:0;y:0;', data-start='1000', data-splitin='none', data-splitout='none', data-responsive_offset='on', style='z-index: 3; white-space: nowrap;')
+                            | matx is a Clean agency template
+                        // LAYER NR. 4
+                        #sl3-lyr4.tp-caption.slide-3(data-x="['left','left','left','center']", data-hoffset="['125','125','30','0']", data-y="['middle','middle','middle','middle']", data-voffset="['98','101','101','101']", data-width='none', data-height='none', data-whitespace='nowrap', data-transform_idle='o:1;', data-transform_in='x:-50px;opacity:0;s:1000;e:Power2.easeOut;', data-transform_out='opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;', data-start='1000', data-splitin='none', data-splitout='none', data-responsive_offset='on', style='z-index: 3; white-space: nowrap;')
+                            a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.btn-highlight.btn-lg.btn-default.tp-resizeme.rs-parallaxlevel-0(href='#') call to action
