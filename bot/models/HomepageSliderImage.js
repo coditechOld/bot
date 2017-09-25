@@ -7,7 +7,7 @@ var Types = keystone.Field.Types;
  */
 
  var SliderHomepageImage = new keystone.List('HomepageSliderImage',{
-	map: { name: 'image' }
+	map: { name: 'title' },
  });
 
  var myStorage = new keystone.Storage({
@@ -24,8 +24,8 @@ var Types = keystone.Field.Types;
 });
 
 SliderHomepageImage.add({
-  title: { type: String, default: Date.now},	
-  image: { type: Types.File, storage: myStorage, required: true },
+  title: { type: String},	
+  image: { type: Types.File, storage: myStorage},
   text: { type: String },
   buttonlink: { type: String } ,
   buttontext: { type: String },
