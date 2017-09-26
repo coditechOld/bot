@@ -1,13 +1,13 @@
 var keystone = require('keystone');
-var Types = keystone.Field.Types;
+var Types = keystone.Field.Types
 
 /**
- * ServiceCategory Model
- * ====================
+ * Service Model
+ * =============
  */
 
 var ServiceCategory = new keystone.List('ServiceCategory', {
-    map: { name: 'title' },
+	map: { name: 'title' },
 });
 
 var myStorage = new keystone.Storage({
@@ -22,13 +22,12 @@ var myStorage = new keystone.Storage({
 		path: true,
 	},
 });
-
+ServiceCategory
 ServiceCategory.add({
     title: { type: String, required: true },
-    briefDescription:{type:String},
     icon: { type: Types.File, storage: myStorage},
+    briefDescription: {type: String },
+    categoryComponents:{type: Types.Html, wysiwyg: true, height: 400}
 });
-
-ServiceCategory.relationship({ ref: 'Service', path: 'services', refPath: 'categories' });
 
 ServiceCategory.register();
