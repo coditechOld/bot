@@ -38,20 +38,20 @@ var keystone = require('keystone'),
     User = keystone.list('User'),
     Sliders = keystone.list('HomePageSlide');
 
-const CreateSlider = function ({title,image  }) {
-    // new Sliders.model({
-    //
-    // }).save(done);
-    console.log('title ==>', title)
-
-}
-
-
-exports = module.exports = function (done) {
-    console.log('title ==>', '22')
-
-    slidersData.map(CreateSlider)
-}
+// const CreateSlider = function ({title,image  }) {
+//     // new Sliders.model({
+//     //
+//     // }).save(done);
+//     console.log('title ==>', title)
+//
+// }
+//
+//
+// exports = module.exports = function (done) {
+//     console.log('title ==>', '22')
+//
+//     slidersData.map(CreateSlider)
+// }
 
 
 /*
