@@ -31,7 +31,6 @@ HomepageSlide.add({
   buttontext: { type: String },
 });
 
-const x = [{x: 2}, {x: 3}];
 
 
 HomepageSlide.register();
