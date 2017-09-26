@@ -1,6 +1,6 @@
 extends ../../layouts/default
 block content
-    include ../../mixins/services-slider
+    include ../../mixins/services
     +fetchServiceSlider([
         {
             name: 'name'
@@ -59,7 +59,6 @@ block content
 block js-body
     script.
         $(document).ready(function () {
-            alert(22);
             var owl = $('.owl-carousel-services');
             owl.owlCarousel({
                 loop: true,

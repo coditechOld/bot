@@ -1,4 +1,3 @@
-
 mixin fetchServiceSlider(clients)
     // start service section
     section#about.section-main
@@ -19,3 +18,15 @@ mixin fetchServiceSlider(clients)
 
         // end intro section with icon box
     // end service section
+mixin fetchService(services)
+
+    each service, length in services
+        div
+            h2=service.name
+            .row(id=service.slug)
+                .col-sm-6
+                    .cover
+                        img(src=service.src)
+                .col-sm-6
+                    =service.description
+
