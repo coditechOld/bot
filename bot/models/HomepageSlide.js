@@ -31,6 +31,4 @@ HomepageSlide.add({
   buttontext: { type: String },
 });
 
-
-
 HomepageSlide.register();
