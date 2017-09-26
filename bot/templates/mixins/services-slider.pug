@@ -1,0 +1,21 @@
+
+mixin fetchServiceSlider(clients)
+    // start service section
+    section#about.section-main
+        // start intro section with icon box
+        section.dark-section.overflow-hidden.boderd-intro-imodules
+            .section-common-space
+                .container
+                    .owl-carousel-services
+                        each client, index in clients
+                            // start bordered icon box
+                            .single-imodule.imodule-centerd.rbodard-imodule.wow.fadeInUp(data-wow-duration='1s')
+                                .icon-box
+                                    i(class=client.icon)
+                                .ic-module-content
+                                    h3.imodule-title=client.name
+                                    p=client.description
+                            // end bordered icon box
+
+        // end intro section with icon box
+    // end service section

@@ -13,8 +13,8 @@ exports = module.exports = function (req, res) {
         posts: []
 
     };
+    view.query('sliders', keystone.list('HomepageSlide').model.find());
 
-    view.query('sliders', keystone.list('HomepageSlide').model.find().sort('sortOrder'));
     // Render the view
-    view.render('test/sliders');
+    view.render('test/services-home');
 };

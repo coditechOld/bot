@@ -44,8 +44,8 @@ exports = module.exports = function (app) {
 	app.all('/contact', routes.views.contact);
 	app.get('/homepageslide', routes.views.homepageslide);
 
-	app.get('/test' , routes.tests.sliders)
-	app.get('/test/slider',routes.tests.sliders2)
+	app.get('/test/slider',routes.tests.sliders)
+	app.get('/test/services-home',routes.tests.services_home)
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);

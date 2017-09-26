@@ -16,5 +16,5 @@ exports = module.exports = function (req, res) {
     view.query('sliders', keystone.list('HomepageSlide').model.find());
 
     // Render the view
-    view.render('sliders');
+    view.render('test/sliders');
 };

@@ -463,15 +463,15 @@ $(window).on('scroll', function(e){
 
 doneResize(function(){
 
-	// Home slider height fix
-	homeSliderHeightFix();
-
-	// Update Google Map Positions
-	map.setCenter({
-		lat: mapOps.lat,
-		lng: mapOps.lng
-	});
-	map.panBy(mapOps.panBy.x, mapOps.panBy.y);
+	// // Home slider height fix
+	// homeSliderHeightFix();
+    //
+	// // Update Google Map Positions
+	// map.setCenter({
+	// 	lat: mapOps.lat,
+	// 	lng: mapOps.lng
+	// });
+	// map.panBy(mapOps.panBy.x, mapOps.panBy.y);
 });
 
 
