@@ -1,0 +1,27 @@
+extends ../layouts/default
+block content
+    include ../mixins/home-sliders
+    - console.log('sliders ==> ',sliders)
+    +fetchSliders([
+        {
+            title: "hello worlds"
+            , image: {
+            url: '/images/homepagesliderimages/PzxYcv6hPcVpcWpx.png'}
+            , buttonlink: '#about'
+            , buttontext: 'Go To about Pages'
+        }, {
+            title: "<span>world</span> hello world 2"
+            , image: {
+                url: '/images/homepagesliderimages/y1oIcqHAZL2jHbCM.png'
+            }
+            , buttonlink: '#about2'
+            , buttontext: 'Go To about Page 2'
+        }, {
+            title: "hello world 3"
+            , image: {
+                url: '/images/homepagesliderimages/PzxYcv6hPcVpcWpx.png'
+            }
+            , buttonlink: '#about3'
+            , buttontext: 'Go To about Page 3'
+        }
+    ])
