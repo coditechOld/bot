@@ -8,10 +8,51 @@
  */
 
 exports.create = {
-	User: [
-		{ 'name.first': 'Admin', 'name.last': 'User', 'email': 'admin', 'password': 'admin', 'isAdmin': true },
-	],
+    User: [
+        {'name.first': 'Admin', 'name.last': 'User', 'email': 'admin', 'password': 'admin', 'isAdmin': true},
+    ],
 };
+
+
+const slidersData = [
+    {
+        title: "Slide 1"
+        , image: './'
+        , text: 'hello world Slide 1'
+        , buttonlink: 'http://keystonejs.com/docs/configuration/'
+        , buttontext: 'Keystone Docs'
+
+    }
+];
+
+incrementByOne = function (element) {
+    return element + 1;
+}
+
+myArray = [1, 2, 3, 4];
+
+myArray.map(incrementByOne);
+
+
+var keystone = require('keystone'),
+    User = keystone.list('User'),
+    Sliders = keystone.list('HomePageSlide');
+
+const CreateSlider = function ({title,image  }) {
+    // new Sliders.model({
+    //
+    // }).save(done);
+    console.log('title ==>', title)
+
+}
+
+
+exports = module.exports = function (done) {
+    console.log('title ==>', '22')
+
+    slidersData.map(CreateSlider)
+}
+
 
 /*
 

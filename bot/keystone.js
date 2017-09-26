@@ -14,6 +14,7 @@ var handlebars = require('express-handlebars');
 keystone.init({
     'name': 'BOT',
     'brand': 'BOT',
+	'port': 3000,
 
     'stylus': 'public',
     'static': 'public',
