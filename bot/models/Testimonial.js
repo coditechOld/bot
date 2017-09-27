@@ -26,7 +26,7 @@ var myStorage = new keystone.Storage({
 
 Testimonial.add({
     name:{type:String, required:true},
-    jobPosition:{type:String},
+    personDescription:{type:String},
     testimonial:{type:String},
     profileImage:{type: Types.File, storage: myStorage },
 });

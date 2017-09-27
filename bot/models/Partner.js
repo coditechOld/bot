@@ -14,8 +14,8 @@ var Partner = new keystone.List('Partner',{
 var myStorage = new keystone.Storage({
 	adapter: keystone.Storage.Adapters.FS,
 	fs: {
-		path: keystone.expandPath('./public/images/partnerlogos'), // required; path where the files should be stored
-  		publicPath: '/images/partnerlogos/', // path where files will be served
+		path: keystone.expandPath('./public/images/partners'), // required; path where the files should be stored
+  		publicPath: '/images/partners/', // path where files will be served
 	},
 	schema: {
 		originalname: true,
@@ -27,7 +27,9 @@ var myStorage = new keystone.Storage({
 Partner.add({
 
     name: {type:String, required:true},
-    logo:{type: Types.File, storage: myStorage },
+	logo:{type: Types.File, storage: myStorage },
+	images:{type:Types.File, storage:myStorage},
+	year:{type:Number},
     typeOfWork:{type:String},
     url:{type:String},
     externalWebsite:{ type: Types.Boolean },
