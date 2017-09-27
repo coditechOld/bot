@@ -5,7 +5,7 @@ exports = module.exports = function (req, res) {
     var view = new keystone.View(req, res);
     var locals = res.locals;
 
-    locals.section = 'homepageslider';
+    locals.section = 'homepage';
 
     locals.data = {
         slides: []
@@ -19,9 +19,12 @@ exports = module.exports = function (req, res) {
             locals.data.slides = results;
             next(err);
         });
+
+        
     });
 
-    view.render('homepageslider');
+    //ADD HOMEPAGEVIEW
+    view.render('testing');
     
 
 }
