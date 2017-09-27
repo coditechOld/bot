@@ -31,7 +31,7 @@ Partner.add({
     typeOfWork:{type:String},
     url:{type:String},
     externalWebsite:{ type: Types.Boolean },
-    text:{type: Types.Html, wysiwyg: true, height: 400},
+    partnerDescription:{type: Types.Html, wysiwyg: true, height: 300},
 
 });
 

@@ -7,7 +7,7 @@ var Types = keystone.Field.Types;
  */
 
 
-var Testimonial = new keystone.List('Partner',{
+var Testimonial = new keystone.List('Testimonial',{
     map:{name: 'name'},
 });
 
