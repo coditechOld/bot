@@ -27,7 +27,7 @@ var myStorage = new keystone.Storage({
 Partner.add({
 
     name: {type:String, required:true},
-    image:{type: Types.File, storage: myStorage },
+    logo:{type: Types.File, storage: myStorage },
     typeOfWork:{type:String},
     url:{type:String},
     externalWebsite:{ type: Types.Boolean },
