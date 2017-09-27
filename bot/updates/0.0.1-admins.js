@@ -35,8 +35,7 @@ myArray.map(incrementByOne);
 
 
 var keystone = require('keystone'),
-    User = keystone.list('User'),
-    Sliders = keystone.list('HomePageSlide');
+    User = keystone.list('User');
 
 // const CreateSlider = function ({title,image  }) {
 //     // new Sliders.model({

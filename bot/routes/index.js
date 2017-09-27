@@ -43,6 +43,7 @@ exports = module.exports = function (app) {
 	app.get('/gallery', routes.views.gallery);
 	app.all('/contact', routes.views.contact);
 
+	app.get('/test',routes.tests.home)
 	app.get('/test/slider',routes.tests.sliders)
 	app.get('/test/services-home',routes.tests.services_home)
 	app.get('/test/services', routes.tests.services)
