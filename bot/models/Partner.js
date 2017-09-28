@@ -28,11 +28,15 @@ Partner.add({
 
     name: {type:String, required:true},
 	logo:{type: Types.File, storage: myStorage },
-	images:{type:Types.File, storage:myStorage},
+	image1:{type:Types.File, storage:myStorage},
+	image2:{type:Types.File, storage:myStorage},
+	image3:{type:Types.File, storage:myStorage},
 	year:{type:Number},
-    typeOfWork:{type:String},
-    url:{type:String},
-    externalWebsite:{ type: Types.Boolean },
+    typeOfWork:{type:Types.TextArray},
+	website:{type:String},
+	externalWebsite:{ type: Types.Boolean },
+	facebook:{type:String},
+	twitter:{type:String},
     partnerDescription:{type: Types.Html, wysiwyg: true, height: 300},
 
 });
