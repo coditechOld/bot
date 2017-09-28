@@ -30,6 +30,7 @@ keystone.pre('render', middleware.flashMessages);
 var routes = {
 	views: importRoutes('./views'),
     tests: importRoutes('./tests'),
+    api: importRoutes('./api'),
 };
 
 // Setup Route Bindings
@@ -45,10 +46,12 @@ exports = module.exports = function (app) {
 	app.get('/homepage',routes.views.homepage);
 	app.get('/partners/:partner',routes.views.partner);
 
-	app.get('/test',routes.tests.home)
-	app.get('/test/slider',routes.tests.sliders)
-	app.get('/test/services-home',routes.tests.services_home)
-	app.get('/test/services', routes.tests.services)
+	app.get('/test',routes.tests.home);
+	app.get('/test/slider',routes.tests.sliders);
+	app.get('/test/services-home',routes.tests.services_home);
+	app.get('/test/services', routes.tests.services);
+
+	app.post('/api/subscribe', routes.api.subscribe)
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);

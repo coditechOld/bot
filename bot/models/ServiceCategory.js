@@ -14,7 +14,7 @@ var ServiceCategory = new keystone.List('ServiceCategory', {
 
 ServiceCategory.add({
     title: { type: String, required: true },
-    icon: { type: String},
+    c: { type: String},
     briefDescription: {type: String },
     categoryComponents:{type: Types.Html, wysiwyg: true, height: 400}
 });

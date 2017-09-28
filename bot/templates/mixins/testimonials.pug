@@ -1,0 +1,56 @@
+mixin fetchTestimonialsSection(testimonials)
+    section#testimonial.section-main
+        // start testimonial slider section
+        section.testimonial-section
+            .bg-image.testimonial-bg(style='background-image: url("' + '/images/testimonial_bg.jpg' + '")',data-center='transform: translate3d(0px, -50%, 0px)', data-top-bottom='transform: translate3d(0px, -25%, 0px)', data-bottom-top='transform: translate3d(0px, -75%, 0px)')
+            .overlay.overlay-four
+                .section-common-space
+                    // start testimonial slider
+                    .testimonial-slider.styled-paginantion.colorsch-black(data-action='testimonialSlider')
+                        if testimonials
+                            each testimonial in testimonials
+                                -console.log(';testimonials', testimonial.profileImage)
+                                // start single testimonial
+                                .text-center.single-testimonial.wow.fadeIn(data-wow-duration='1s')
+                                    // start testimonial thumbnail
+                                    .recomenders-thumb
+                                        img(src=testimonial.profileImage.url, alt='')
+                                    // end testimonial thumbnail
+                                    .recomenders-info
+                                        // testimonial text
+                                        p=testimonial.testimonial
+                                        // recommender name and designation
+                                        div
+                                            span.recomenders-name=testimonial.name
+                                            |  |
+                                            span.recomenders-role=testimonial.personDescription
+                            // end single testimonial
+                    // end testimonial slider
+        // end testimonial slider section
+//
+    section#testimonial.section-main
+        // start testimonial slider section
+        section.testimonial-section
+            .bg-image.testimonial-bg(data-center='transform: translate3d(0px, -50%, 0px)', data-top-bottom='transform: translate3d(0px, -25%, 0px)', data-bottom-top='transform: translate3d(0px, -75%, 0px)')
+            .overlay.overlay-four
+                .section-common-space
+                    // start testimonial slider
+                    .testimonial-slider.styled-paginantion.colorsch-black(data-action='testimonialSlider')
+                        each testimonial in testimonials
+                            // start single testimonial
+                            .text-center.single-testimonial.wow.fadeIn(data-wow-duration='1s')
+                                // start testimonial thumbnail
+                                .recomenders-thumb
+                                    img(src=testimonial.profileImage.url, alt='')
+                                // end testimonial thumbnail
+                                .recomenders-info
+                                    // testimonial text
+                                    p
+                                        | Distinctively whiteboard interactive partnerships through client-centric ideas. Uniquely engineer future-proof testing procedures with bricks-and-clicks metrics. Authoritatively synthesize bleeding-edge supply chains through granular e-services. Monotonectally.
+                                    // recommender name and designation
+                                    div
+                                        span.recomenders-name Jeffrey Way,
+                                        span.recomenders-role  Nettuts+
+                            // end single testimonial
+                    // end testimonial slider
+        // end testimonial slider section

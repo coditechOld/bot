@@ -2004,9 +2004,6 @@ div.tparrows.tp-rightarrow:before {
 .testimonial-slider.testimonial-with-nav {
   padding: 0 100px;
 }
-.testimonial-bg {
-  background-image: url("../../img/banner/testimonial_bg.jpg");
-}
 .testimonial-bg > .overlay {
   background-color: rgba(35, 35, 40, 0.85);
 }
@@ -2087,9 +2084,6 @@ div.tparrows.tp-rightarrow:before {
 /* ====================================================
     Newsletter Styles
 =======================================================*/
-.newsletter-bg {
-  background-image: url("../../img/banner/newsletter.jpg");
-}
 .newsletter-bg > .overlay {
   background-color: rgba(35, 35, 40, 0.8);
 }
