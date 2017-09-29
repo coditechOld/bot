@@ -26,7 +26,7 @@ var myStorage = new keystone.Storage({
 HomepageHowItWorks.add({
     title: { type: String, default:'How It Works?' },
     text: { type: Types.Html, wysiwyg: true, height: 150 },
-    backgroundimage:{type: Types.File, storage: myStorage },    
+    backgroundImage:{type: Types.File, storage: myStorage },    
 });
 
 HomepageHowItWorks.register();
