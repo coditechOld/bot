@@ -82,7 +82,8 @@ exports = module.exports = function (req, res) {
         });
 
 
-    });view.on('init', function (next) {
+    });
+    view.on('init', function (next) {
         var q = keystone.list('HomepageBanner').model.findOne();
 
         q.exec(function (err, results) {

@@ -1,24 +1,381 @@
-extends ../layouts/default
-
+extends ../../layouts/test-default
 
 block content
-	.container: .jumbotron
-		img(src='/images/logo.svg', width='160')
-		h1 Welcome
-		p This is your new <a href='http://keystonejs.com' target='_blank'>KeystoneJS</a> website.
-		p It includes the latest versions of
-			| <a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
-			| and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-		p Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.
-		hr
-		if user && user.canAccessKeystone
-			p
-				a(href='/keystone').btn.btn-lg.btn-primary Open the Admin UI
-		else
-			p We have created a default Admin user for you with the email <strong>admin</strong> and the password <strong>admin</strong>.
-			p
-				a(href='/keystone/signin', style='margin-right: 10px').btn.btn-lg.btn-primary Sign in
-				|  to use the Admin UI.
-		hr
-		p Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
-			| <a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
+	include ../../mixins/home-sliders
+	// start revolution slider section
+	+fetchSliders(data.homeSliders)
+	// end revolution slider section
+
+	include ../../mixins/services
+	//+fetchServiceSlider([
+	//    {
+	//        name: 'name'
+	//        , description: 'description'
+	//        , icon: 'zmdi zmdi-card-travel'
+	//        , link: '#client'
+	//    }, {
+	//        name: 'name'
+	//        , description: 'description'
+	//        , icon: 'zmdi zmdi-card-travel'
+	//        , link: '#client'
+	//    }, {
+	//        name: 'name'
+	//        , description: 'description'
+	//        , icon: 'zmdi zmdi-card-travel'
+	//        , link: '#client'
+	//    }
+	//    , {
+	//        name: 'name'
+	//        , description: 'description'
+	//        , icon: 'zmdi zmdi-card-travel'
+	//        , link: '#client'
+	//    }, {
+	//        name: 'name'
+	//        , description: 'description'
+	//        , icon: 'zmdi zmdi-card-travel'
+	//        , link: '#client'
+	//    }, {
+	//        name: 'name'
+	//        , description: 'description'
+	//        , icon: 'zmdi zmdi-card-travel'
+	//        , link: '#client'
+	//    }, {
+	//        name: 'name'
+	//        , description: 'description'
+	//        , icon: 'zmdi zmdi-card-travel'
+	//        , link: '#client'
+	//    }, {
+	//        name: 'name'
+	//        , description: 'description'
+	//        , icon: 'zmdi zmdi-card-travel'
+	//        , link: '#client'
+	//    }
+	//    , {
+	//        name: 'name'
+	//        , description: 'description'
+	//        , icon: 'zmdi zmdi-card-travel'
+	//        , link: '#client'
+	//    }, {
+	//        name: 'name'
+	//        , description: 'description'
+	//        , icon: 'zmdi zmdi-card-travel'
+	//        , link: '#client'
+	//    }
+	//])
+
+	+fetchServiceSlider(data.serviceCategory)
+	include ../../mixins/video-section
+	+fetchVideoSection({
+        link: 'https://www.youtube.com/watch?v=rrT6v5sOwJg',
+        backgroundImage: {url: '/test/sliders/slide1.jpg'}
+
+    })
+	include ../../mixins/howItWorks
+	+fecthHowItWorks(data.homepageHowItWorks)
+	include ../../mixins/testimonials
+	+fetchTestimonialsSection(data.testimonial)
+	section#blog.section-main
+		// start blog post section
+		section.primary-bg-color.blog-post-section
+			.section-common-space
+				.container
+					// start section title
+					.text-center.section-heading
+						h2.section-title BLOG POST
+						h3.section-subtitle Check what's new in the world of web development and design trends
+					// end section title
+					.row.blog-post-grid
+						// start single blog post
+						article.col-xxs-12.col-xs-6.col-sm-4.single-blog-post
+							.mdl-card.jumbo-shadow.mdl-shadow--2dp
+								.post-thumb-wrap
+									// blog post thumbnail
+									img(src='/img/blog/bp1.jpg', alt='Blog 1 Thumb')
+									.post-meta-info
+										// post date
+										span.post-meta-date Merch 14, 2015
+								.post-content-wrap
+									// blog post title
+									h2.mdl-card__title-text.mdl-card__title-content
+										a(href='blog/single/single.html') We support any type of design
+									// blog post content
+									.mdl-card__supporting-text
+										p
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro velit laboriosam eius amet nobis repellat fugiat adipisci.
+								.mdl-card__actions.mdl-card--border
+									// blog post comment number
+									a.blog-comments(href='#') 5 Comments
+									a#post-1.blog-share
+										i.zmdi.zmdi-share
+									// start blog post social icons
+									ul.mdl-menu.mdl-menu--bottom-right.mdl-js-menu.mdl-js-ripple-effect.post-share-media.js-post-share-media(data-for='post-1')
+										li.fb
+											a(href='blog/single/single.html')
+												i.zmdi.zmdi-facebook-box
+												span Facebook
+										li.tw
+											a(href='blog/single/single.html')
+												i.zmdi.zmdi-twitter-box
+												span Twitter
+										li.gplus
+											a(href='blog/single/single.html')
+												i.zmdi.zmdi-google-plus-box
+												span Google plus
+										li.lin
+											a(href='blog/single/single.html')
+												i.zmdi.zmdi-linkedin-box
+												span Linked In
+									// end blog post social icons
+						// end single blog post
+						// start single blog post
+						article.col-xxs-12.col-xs-6.col-sm-4.single-blog-post
+							.mdl-card.jumbo-shadow.mdl-shadow--2dp
+								.post-thumb-wrap
+									// blog post thumbnail
+									img(src='/img/blog/bp2.jpg', alt='Blog 2 Thumb')
+									.post-meta-info
+										// post date
+										span.post-meta-date Merch 14, 2015
+								.post-content-wrap
+									// blog post title
+									h2.mdl-card__title-text.mdl-card__title-content
+										a(href='blog/single/single.html') MUSIC for refreshment
+									// blog post content
+									.mdl-card__supporting-text
+										p
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro velit laboriosam eius amet nobis repellat fugiat adipisci.
+								.mdl-card__actions.mdl-card--border
+									// blog post comment number
+									a.blog-comments(href='#') 5 Comments
+									a#post-2.blog-share
+										i.zmdi.zmdi-share
+									// start blog post social icons
+									ul.mdl-menu.mdl-menu--bottom-right.mdl-js-menu.mdl-js-ripple-effect.post-share-media.js-post-share-media(data-for='post-2')
+										li.fb
+											a(href='blog/single/single.html')
+												i.zmdi.zmdi-facebook-box
+												span Facebook
+										li.tw
+											a(href='blog/single/single.html')
+												i.zmdi.zmdi-twitter-box
+												span Twitter
+										li.gplus
+											a(href='blog/single/single.html')
+												i.zmdi.zmdi-google-plus-box
+												span Google plus
+										li.lin
+											a(href='blog/single/single.html')
+												i.zmdi.zmdi-linkedin-box
+												span Linked In
+									// end blog post social icons
+						// end single blog post
+						// start single blog post
+						article.col-xxs-12.col-xs-6.col-sm-4.single-blog-post
+							.mdl-card.jumbo-shadow.mdl-shadow--2dp
+								.post-thumb-wrap
+									// blog post thumbnail
+									img(src='/img/blog/bp3.jpg', alt='Blog 3 Thumb')
+									.post-meta-info
+										// post date
+										span.post-meta-date Merch 14, 2015
+								.post-content-wrap
+									// blog post title
+									h2.mdl-card__title-text.mdl-card__title-content
+										a(href='blog/single/single.html') We love photography
+									// blog post content
+									.mdl-card__supporting-text
+										p
+											| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro velit laboriosam eius amet nobis repellat fugiat adipisci.
+								.mdl-card__actions.mdl-card--border
+									// blog post comment number
+									a.blog-comments(href='#') 5 Comments
+									a#post-3.blog-share
+										i.zmdi.zmdi-share
+									// start blog post social icons
+									ul.mdl-menu.mdl-menu--bottom-right.mdl-js-menu.mdl-js-ripple-effect.post-share-media.js-post-share-media(data-for='post-3')
+										li.fb
+											a(href='blog/single/single.html')
+												i.zmdi.zmdi-facebook-box
+												span Facebook
+										li.tw
+											a(href='blog/single/single.html')
+												i.zmdi.zmdi-twitter-box
+												span Twitter
+										li.gplus
+											a(href='blog/single/single.html')
+												i.zmdi.zmdi-google-plus-box
+												span Google plus
+										li.lin
+											a(href='blog/single/single.html')
+												i.zmdi.zmdi-linkedin-box
+												span Linked In
+									// end blog post social icons
+						// end single blog post
+					// view all blog page button
+					.text-center.view-blog-post.wow.fadeInUpSmall(data-wow-duration='1s')
+						a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.btn-default.btn-highlight(href='blog/blog-standard.html') View all
+		// end blog post section
+		// start newsletter section
+		section.newsletter.overflow-hidden
+			.bg-image.newsletter-bg(style='background-image: url("' + '/images/newsletter.jpg' + '")',data-center='transform: translate3d(0px, -50%, 0px)', data-top-bottom='transform: translate3d(0px, -25%, 0px)', data-bottom-top='transform: translate3d(0px, -75%, 0px)')
+			.overlay.overlay-five
+				.section-common-space
+					.container
+						.row
+							.clearfix.col-sm-12.col-md-offset-2.col-md-10.col-lg-offset-2.col-lg-8
+								.section-heading
+									h2.section-title NEWSLETTER
+								.clearfix.newsletter-form
+									form.mailchimpForm(action='#')
+										.mdl-textfield.mdl-js-textfield.news-letter-input
+											input#nl_email.mdl-textfield__input(type='text', name='EMAIL', required)
+											label.mdl-textfield__label(for='nl_email') YOUR EMAIL
+										button.mdl-button.ripple-black.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.btn-default.btn-white.wow.fadeInRight(type='submit', data-wow-duration='1.2s') Subscribe
+
+		// end newsletter section
+
+
+	include ../../mixins/partners
+	+fetchPartnersSlider(data.partners)
+	// end testimonial and client logo section
+
+	section.section-main
+		section.overflow-hidden
+			if data.homepageBanner
+				.bg-image.newsletter-bg(data-center='transform: translate3d(0px, -50%, 0px)', data-top-bottom='transform: translate3d(0px, -25%, 0px)', data-bottom-top='transform: translate3d(0px, -75%, 0px)', style='background-image: url("' +  data.homepageBanner.backgroundimage.url+'")')
+				.overlay.overlay-five
+					.section-common-space
+						.container
+							.row
+								.clearfix.col-sm-12.col-md-offset-2.col-md-10.col-lg-offset-2.col-lg-8
+									h2.section-title=data.homepageBanner.title
+									p=data.homepageBanner.text
+									if data.homepageBanner.buttonlink
+										a(href=data.homepageBanner.buttonlink)
+											button.mdl-button.ripple-black.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.btn-default.btn-white.wow.fadeInRight(type='submit', data-wow-duration='1.2s', style="float: right")=data.homepageBanner.buttontext
+
+	section#contact.section-main.contact
+		.container.container-map
+			.map-wrapper
+				#map
+		.container.equal-height-map
+			.row
+				// start contact left section/contact address
+				.col-sm-6.contact-info-start
+					.section-common-space
+						h2.section-title CONTACT US
+						.contact-info
+							.clearfix.ci-items
+								span.ci-icons
+									i.zmdi.zmdi-home
+								address 1600 Amphitheatre Parkway, Mountain View, CA 94043, US
+							.clearfix.ci-items
+								span.ci-icons
+									i.zmdi.zmdi-email
+								address info@coderpixel.com
+							.clearfix.ci-items
+								span.ci-icons
+									i.zmdi.zmdi-phone
+								address 0088 1234 567890
+							.clearfix.ci-items
+								span.ci-icons
+									i.zmdi.zmdi-globe
+								address www.coderpixel.com
+
+				// end left contact section
+				// start right contact section/contact form
+				// end right contact section
+			.row
+				.col-sm-6
+					form#contactForm.matx-form-valid.contact-form(action='#', method='post')
+						input(type='hidden', name='action', value='contact')
+						.row
+							.col-sm-12.col-md-6
+								.mdl-textfield.mdl-js-textfield
+									input#name.mdl-textfield__input(type='text', name='contactName')
+									label.mdl-textfield__label(for='name') Name
+							.col-sm-12.col-md-6
+								.mdl-textfield.mdl-js-textfield
+									input#email.mdl-textfield__input(type='text', name='contactEmail')
+									label.mdl-textfield__label(for='email') Email
+						.row
+							.col-sm-12
+								.mdl-textfield.mdl-js-textfield
+									input#phone.mdl-textfield__input(type='text', name='contactPhone')
+									label.mdl-textfield__label(for='phone') Phone
+						.row
+							.col-sm-12
+								.mdl-textfield.mdl-js-textfield
+									input#subject.mdl-textfield__input(type='text', name='contactSubject')
+									label.mdl-textfield__label(for='subject') Subject
+						.row
+							.col-sm-12
+								.mdl-textfield.mdl-js-textfield.mdl-textarea
+									textarea#message.mdl-textfield__input(name='contactMessage')
+									label.mdl-textfield__label(for='message') Message
+						.row
+							.col-sm-12
+								.text-left
+									button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.btn-black.btn-default.btn-submit(disabled='') send
+
+
+		// start map section
+
+		.section.bg-image-class.location-on-map
+			.overlay
+				.text-center.map-content
+					.map-buttons
+						a(href='#name')
+							button.btn-active.btn.btn-block.btn-tranparent(type='button')
+								span Contact Us
+
+		// end map section
+
+
+
+
+block js-body
+	script.
+        $(document).ready(function () {
+            if ($('.equal-height-map').width() > 768) {
+                $('#map').css('height', $('.equal-height-map').height());
+            }
+            $(window).resize(function () {
+                if ($('.equal-height-map').width() > 768) {
+                    if($('#map').height() !== $('.equal-height-map').height()) {
+                        $('#map').css('height', $('.equal-height-map').height());
+                    }
+                }
+            });
+
+
+
+            var owl = $('.owl-carousel-services');
+            owl.owlCarousel({
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                lazyLoad: true,
+                autoPlay: true,
+                autoPlayTimeout: 1000,
+                autoPlayHoverPause: true,
+                autoPlaySpeed: 2000,
+                items: 3,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true
+                    },
+                    600: {
+                        items: 2,
+                        nav: false
+                    },
+                    1000: {
+                        items: 3,
+                        nav: true
+                    }
+                }
+            })
+            owl.trigger('play.owl.autoplay', [1000])
+        })
+
