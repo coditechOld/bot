@@ -50,6 +50,7 @@ exports = module.exports = function (app) {
 	app.get('/test/slider',routes.tests.sliders);
 	app.get('/test/services-home',routes.tests.services_home);
 	app.get('/test/services', routes.tests.services);
+	app.get('/test/request-service', routes.tests.request_services);
 
 	app.get('/api/contact', routes.api.contact)
 	app.post('/api/contact', routes.api.contact)
