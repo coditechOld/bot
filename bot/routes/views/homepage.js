@@ -30,7 +30,7 @@ exports = module.exports = function (req, res) {
 
 	view.on('init', function (next) {
 
-		var q = keystone.list('ServiceCategory').model.find();
+		var q = keystone.list('Service').model.find();
 
 		q.exec(function (err, results) {
 			locals.data.services = results;

@@ -12,7 +12,7 @@ exports = module.exports = function (req, res) {
     locals.data = {
         homeSliders: [],
         homeVideo: [],
-        serviceCategory: [],
+        service: [],
         homepageHowItWorks: [],
         testimonial: [],
         partners: [],
@@ -44,10 +44,10 @@ exports = module.exports = function (req, res) {
 
     });
     view.on('init', function (next) {
-        var q = keystone.list('ServiceCategory').model.find();
+        var q = keystone.list('Service').model.find();
 
         q.exec(function (err, results) {
-            locals.data.serviceCategory = results;
+            locals.data.service = results;
             next(err);
         });
 
@@ -58,6 +58,7 @@ exports = module.exports = function (req, res) {
 
         q.exec(function (err, results) {
             locals.data.homepageHowItWorks = results[0];
+            console.log('Results, ', results[0]);
             next(err);
         });
 
@@ -82,12 +83,12 @@ exports = module.exports = function (req, res) {
         });
 
 
-    });
-    view.on('init', function (next) {
-        var q = keystone.list('HomepageBanner').model.findOne();
+    });view.on('init', function (next) {
+        var q = keystone.list('HomepageBanner').model.find();
 
         q.exec(function (err, results) {
-            locals.data.homepageBanner = results;
+            console.log(results)
+            locals.data.homepageBanner = results[0];
             next(err);
         });
 
