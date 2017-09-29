@@ -6,16 +6,15 @@ var Types = keystone.Field.Types;
  * ===================
  */
 
-var AboutUs = new keystone.List('AboutUs',{
-    singular:'About Us',
-    label:'About Us',
+var About = new keystone.List('About',{
+    label:'About',
 });
 
-AboutUs.add({
+About.add({
    missionTitle:{type:String,default:'Mission'},
    missionText:{type: Types.Html, wysiwyg: true, height: 200},
    visionTitle:{type:String,default:'Vision'},
    visionText:{type: Types.Html, wysiwyg: true, height: 200},
 });
 
-AboutUs.register();
+About.register();
