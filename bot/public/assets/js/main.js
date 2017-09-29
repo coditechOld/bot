@@ -310,6 +310,8 @@ $(document).ready(function ($) {
             data = $(this).serialize(),
             name = $this.find('#name'),
             email = $this.find('#email'),
+            phone = $this.find('#phone'),
+            subject = $this.find('#subject'),
             message = $this.find('#message'),
             loader = $this.find('.form-loader-area'),
             submitBtn = $this.find('button, input[type="submit"]');
@@ -325,28 +327,33 @@ $(document).ready(function ($) {
 
         var error = function (response) {
             $this.find('.is-invalid').removeClass('is-invalid');
-            if (response.name) {
+            if (response.errors.name) {
                 name.closest('.mdl-textfield').addClass('is-invalid');
             }
-
-            if (response.email) {
+            if (response.errors.email) {
                 email.closest('.mdl-textfield').addClass('is-invalid');
             }
-
-            if (response.message) {
+            if (response.errors.phone) {
+                phone.closest('.mdl-textfield').addClass('is-invalid');
+            }
+            if (response.errors.subject) {
+                subject.closest('.mdl-textfield').addClass('is-invalid');
+            }
+            if (response.errors.message) {
                 message.closest('.mdl-textfield').addClass('is-invalid');
             }
         };
 
         $.ajax({
             type: "POST",
-            url: "assets/inc/sendEmail.php",
+            url: '/api/contact',
             data: data
         }).done(function (res) {
 
             var response = JSON.parse(res);
 
-            ( response.OK ) ? success(response) : error(response);
+            console.log('response ==<', response.success);
+            ( response.success ) ? success(response) : error(response);
 
             var hand = setTimeout(function () {
                 loader.hide();
@@ -419,7 +426,7 @@ $(document).ready(function ($) {
         window.mapOps = {
 
             lat: 33.822895,	// Provide your latitude
-            lng:  35.730461, // Provide your longitude
+            lng: 35.730461, // Provide your longitude
             content: '<p>Coder Pixel, Gulshan 1, Dhaka, Bangladesh</p>', // Provide your address to show on pop up
             icon: '/img/marker-icon.png',
             zoom: 9,
@@ -513,6 +520,7 @@ doneResize(function () {
     });
     map.panBy(mapOps.panBy.x, mapOps.panBy.y);
 });
+
 // The function actually applying the offset
 function offsetAnchor() {
     if (location.hash.length !== 0) {
@@ -522,10 +530,10 @@ function offsetAnchor() {
 
 
 // Captures click events of all <a> elements with href starting with #
-$(document).on('click', 'a[href^="#"]', function(event) {
+$(document).on('click', 'a[href^="#"]', function (event) {
     // Click events are captured before hashchanges. Timeout
     // causes offsetAnchor to be called after the page jump.
-    window.setTimeout(function() {
+    window.setTimeout(function () {
         offsetAnchor();
     }, 0);
 });

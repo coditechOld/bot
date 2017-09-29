@@ -9,7 +9,6 @@ mixin fetchTestimonialsSection(testimonials)
                     .testimonial-slider.styled-paginantion.colorsch-black(data-action='testimonialSlider')
                         if testimonials
                             each testimonial in testimonials
-                                -console.log(';testimonials', testimonial.profileImage)
                                 // start single testimonial
                                 .text-center.single-testimonial.wow.fadeIn(data-wow-duration='1s')
                                     // start testimonial thumbnail

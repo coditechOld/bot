@@ -287,6 +287,7 @@ block content
             .row
                 .col-sm-6
                     form#contactForm.matx-form-valid.contact-form(action='#', method='post')
+                        input(type='hidden', name='action', value='contact')
                         .row
                             .col-sm-12.col-md-6
                                 .mdl-textfield.mdl-js-textfield
@@ -296,6 +297,11 @@ block content
                                 .mdl-textfield.mdl-js-textfield
                                     input#email.mdl-textfield__input(type='text', name='contactEmail')
                                     label.mdl-textfield__label(for='email') Email
+                        .row
+                            .col-sm-12
+                                .mdl-textfield.mdl-js-textfield
+                                    input#phone.mdl-textfield__input(type='text', name='contactPhone')
+                                    label.mdl-textfield__label(for='phone') Phone
                         .row
                             .col-sm-12
                                 .mdl-textfield.mdl-js-textfield

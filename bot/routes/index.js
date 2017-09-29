@@ -51,7 +51,8 @@ exports = module.exports = function (app) {
 	app.get('/test/services-home',routes.tests.services_home);
 	app.get('/test/services', routes.tests.services);
 
-	app.post('/api/subscribe', routes.api.subscribe)
+	app.get('/api/contact', routes.api.contact)
+	app.post('/api/contact', routes.api.contact)
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);

@@ -58,7 +58,6 @@ exports = module.exports = function (req, res) {
 
         q.exec(function (err, results) {
             locals.data.homepageHowItWorks = results[0];
-            console.log('Results, ', results[0]);
             next(err);
         });
 
@@ -87,7 +86,6 @@ exports = module.exports = function (req, res) {
         var q = keystone.list('HomepageBanner').model.findOne();
 
         q.exec(function (err, results) {
-            console.log('results ==>>', results);
             locals.data.homepageBanner = results;
             next(err);
         });
