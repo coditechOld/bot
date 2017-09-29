@@ -241,17 +241,18 @@ block content
 
     section.section-main
         section.overflow-hidden
-            .bg-image.newsletter-bg(data-center='transform: translate3d(0px, -50%, 0px)', data-top-bottom='transform: translate3d(0px, -25%, 0px)', data-bottom-top='transform: translate3d(0px, -75%, 0px)', style='background-image: url("' +  data.homepageBanner.backgroundimage.url+'")')
-            .overlay.overlay-five
-                .section-common-space
-                    .container
-                        .row
-                            .clearfix.col-sm-12.col-md-offset-2.col-md-10.col-lg-offset-2.col-lg-8
-                                h2.section-title=data.homepageBanner.title
-                                p=data.homepageBanner.text
-                                if data.homepageBanner.buttonlink
-                                    a(href=data.homepageBanner.buttonlink)
-                                        button.mdl-button.ripple-black.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.btn-default.btn-white.wow.fadeInRight(type='submit', data-wow-duration='1.2s', style="float: right")=data.homepageBanner.buttontext
+            if data.homepageBanner
+                .bg-image.newsletter-bg(data-center='transform: translate3d(0px, -50%, 0px)', data-top-bottom='transform: translate3d(0px, -25%, 0px)', data-bottom-top='transform: translate3d(0px, -75%, 0px)', style='background-image: url("' +  data.homepageBanner.backgroundimage.url+'")')
+                .overlay.overlay-five
+                    .section-common-space
+                        .container
+                            .row
+                                .clearfix.col-sm-12.col-md-offset-2.col-md-10.col-lg-offset-2.col-lg-8
+                                    h2.section-title=data.homepageBanner.title
+                                    p=data.homepageBanner.text
+                                    if data.homepageBanner.buttonlink
+                                        a(href=data.homepageBanner.buttonlink)
+                                            button.mdl-button.ripple-black.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.btn-default.btn-white.wow.fadeInRight(type='submit', data-wow-duration='1.2s', style="float: right")=data.homepageBanner.buttontext
 
     section#contact.section-main.contact
         .container.container-map

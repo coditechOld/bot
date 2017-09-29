@@ -7,15 +7,16 @@ mixin fetchServiceSlider(services)
                 h2 Services
                 .container
                     .owl-carousel-services
-                        each service, index in services
-                            // start bordered icon box
-                            .single-imodule.imodule-centerd.rbodard-imodule.wow.fadeInUp(data-wow-duration='1s')
-                                .icon-box
-                                    i(class=service.icon)
-                                .ic-module-content
-                                    h3.imodule-title=service.title
-                                    p=service.briefDescription
-                            // end bordered icon box
+                        if services
+                            each service, index in services
+                                // start bordered icon box
+                                .single-imodule.imodule-centerd.rbodard-imodule.wow.fadeInUp(data-wow-duration='1s')
+                                    .icon-box
+                                        i(class=service.icon)
+                                    .ic-module-content
+                                        h3.imodule-title=service.title
+                                        p=service.briefDescription
+                                // end bordered icon box
 
         // end intro section with icon box
     // end service section
