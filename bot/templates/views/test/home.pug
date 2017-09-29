@@ -283,38 +283,10 @@ block content
 
                 // end left contact section
                 // start right contact section/contact form
-
-                //
-                    .col-sm-6.contact-form-start
-                    .section-common-space
-                        form#contactForm.matx-form-valid.contact-form(action='#')
-                            .row
-                                .col-sm-12.col-md-6
-                                    .mdl-textfield.mdl-js-textfield
-                                        input#name.mdl-textfield__input(type='text', name='contactName')
-                                        label.mdl-textfield__label(for='name') Name
-                                .col-sm-12.col-md-6
-                                    .mdl-textfield.mdl-js-textfield
-                                        input#email.mdl-textfield__input(type='text', name='contactEmail')
-                                        label.mdl-textfield__label(for='email') Email
-                            .row
-                                .col-sm-12
-                                    .mdl-textfield.mdl-js-textfield
-                                        input#subjec,t.mdl-textfield__input(type='text', name='contactSubject')
-                                        label.mdl-textfield__label(for='subject') Subject
-                            .row
-                                .col-sm-12
-                                    .mdl-textfield.mdl-js-textfield.mdl-textarea
-                                        textarea#message.mdl-textfield__input(name='contactMessage')
-                                        label.mdl-textfield__label(for='message') Message
-                            .row
-                                .col-sm-12
-                                    .text-left
-                                        button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.btn-black.btn-default.btn-submit(disabled='') send
                 // end right contact section
             .row
                 .col-sm-6
-                    form#contactForm.matx-form-valid.contact-form(action='#')
+                    form#contactForm.matx-form-valid.contact-form(action='#', method='post')
                         .row
                             .col-sm-12.col-md-6
                                 .mdl-textfield.mdl-js-textfield
@@ -346,8 +318,9 @@ block content
             .overlay
                 .text-center.map-content
                     .map-buttons
-                        button.btn-active.btn.btn-block.btn-tranparent(type='button')
-                            span Contact Us
+                        a(href='#name')
+                            button.btn-active.btn.btn-block.btn-tranparent(type='button')
+                                span Contact Us
 
         // end map section
 
