@@ -1,0 +1,285 @@
+doctype html
+//if lt IE 7
+  html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+  html.no-js.lt-ie9.lt-ie8
+//if IE 8
+  html.no-js.lt-ie9
+// [if gt IE 8] <!
+html.no-js
+    // <![endif]
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        title= title || 'BOT By Dot'
+
+        block meta
+
+        // Google Fonts
+        link(href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700italic,700,500italic,900', rel='stylesheet', type='text/css')
+        // Stylesheets
+        link(rel='stylesheet', href='/assets/libs/material-design-iconic-font/css/material-design-iconic-font.min.css')
+        link(rel='stylesheet', href='/assets/libs/bootstrap/bootstrap.min.css')
+        link(rel='stylesheet', href='/assets/libs/mdl/material.min.css')
+        link(rel='stylesheet', href='/assets/css/animate.min.css')
+        link(rel='stylesheet', href='/assets/libs/owl-carousel/owl.carousel.css')
+        link(rel='stylesheet', href='/assets/libs/owl-carousel/owl.theme.css')
+        link(rel='stylesheet', href='/assets/libs/owl-carousel/owl.transitions.css')
+        link(rel='stylesheet', href='/assets/libs/magnific-popup/magnific-popup.css')
+        link(rel='stylesheet', href='/assets/libs/sweetalert/sweet-alert.min.css')
+        link(rel='stylesheet', href='/assets/libs/sweetalert/ie9.css')
+        link(rel='stylesheet', href='/assets/css/common.css')
+        link(rel='stylesheet', href='/assets/css/main.css')
+        link(rel='stylesheet', href='/assets/css/responsive.css')
+        link(href="/styles/site.css", rel="stylesheet")
+
+
+        link(rel='stylesheet', type='text/css', href='/assets/libs/revolution/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css')
+        link(rel='stylesheet', type='text/css', href='/assets/libs/revolution/fonts/font-awesome/css/font-awesome.min.css')
+        // REVOLUTION STYLE SHEETS
+        link(rel='stylesheet', type='text/css', href='/assets/libs/revolution/css/settings.css')
+        // REVOLUTION LAYERS STYLES
+        link(rel='stylesheet', type='text/css', href='/assets/libs/revolution/css/layers.css')
+        // REVOLUTION NAVIGATION STYLES
+        link(rel='stylesheet', type='text/css', href='/assets/libs/revolution/css/navigation.css')
+        // SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading)
+
+        if user && user.canAccessKeystone
+            link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
+
+        block css
+
+        block head
+
+        // Header Scripts
+        //if lt IE 9
+            script(src='assets/js/vendor/html5shiv.js')
+    body.blog-page
+        //if lt IE 7
+          p.browsehappy
+            | You are using an
+            strong outdated
+            |  browser. Please
+            a(href='http://browsehappy.com/') upgrade your browser
+            |  to improve your experience.
+        // loder
+        #loader.loader-wrapper
+            .matx-preloader
+        // Overlay display while mobile navigation will open
+        .nav-overlay-bg
+        // start banner
+        section.banner-header
+            .banner-overlay
+                .bg-image.standred-blog-bg(data-top='transform: translate3d(0px, 0px, 0px)', data-top-bottom='transform: translate3d(0px, 250px, 0px)')
+            section.section-main
+                .overlay.overlay-seven
+                    // start banner content
+                    .container
+                        .section-common-space
+                            .align-middle-contentf.banner-content
+                                h2  MATX standard BLOG
+                                h3
+                                    | Super clean minimal design. Awesome features with endless possibilities.
+                                    br
+                                    |  Fully responsive and retina ready.
+                    // end banner content
+            // start search section
+            section#fullSearch.section-main.search-bar.hide-bg
+                .search-bg
+                i.zmdi.zmdi-close.search-close
+                .container
+                    .row
+                        .col-sm-8.col-sm-offset-2
+                            form(action='#')
+                                .mdl-textfield.mdl-js-textfield
+                                    p.search-label Just type and press 'enter'
+                                    label.mdl-textfield__label(for='search-blog')
+                                    input#search-blog.mdl-textfield__input(type='text')
+            // end search section
+            // start site main header
+            header.main-header.hide-init-animation
+                // start desktop logo
+                a.logo.matx-logo.logo-initial.hide-init-animation(href='../index.html')
+                    img.logo-dark(src='../img/logo_dark.png', alt='logo')
+                    img.logo-lite(src='../img/logo_lite.png', alt='logo')
+                // end desktop logo
+                // search button
+                .right-nav-sec
+                    .group-btn
+                        button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.search-open
+                            i.zmdi.zmdi-search
+                // start desktop nav
+                nav.nav-typo.main-nav
+                    ul
+                        li.menu-item-has-children
+                            a(href='#') Home
+                            ul.sub-menu
+                                li
+                                    a(href='../index.html') Home 1
+                                li
+                                    a(href='../home2.html') Home 2
+                                li
+                                    a(href='../home3.html') Home 3
+                        li.active
+                            a(href='blog-standard.html') Blog Standard
+                        li
+                            a(href='blog-masonry.html') Blog Masonry
+                        li
+                            a(href='blog-masonry-sidebar.html') Blog Masonry Sidebar
+                        li
+                            a(href='single/single.html') Blog Single
+                        li.menu-item-has-children
+                            a(href='#') More Pages
+                            ul.sub-menu
+                                li
+                                    a(href='../components.html') Extra Components
+                                li.menu-item-has-children
+                                    a(href='#') Portfolio Pages
+                                    ul.sub-menu
+                                        li
+                                            a(href='../portfolio/single-pages/portfolio-single-01.html') Slider Style
+                                        li
+                                            a(href='../portfolio/single-pages/portfolio-single-02.html') List Style
+                                        li
+                                            a(href='../portfolio/single-pages/portfolio-single-03.html') List Full Style
+                                li.menu-item-has-children
+                                    a(href='#') Single Blog Pages
+                                    ul.sub-menu
+                                        li
+                                            a(href='single/single.html') Image
+                                        li
+                                            a(href='single/single-audio.html') Audio
+                                        li
+                                            a(href='single/single-video-vimeo.html') Vimeo
+                                        li
+                                            a(href='single/single-video-youtube.html') Youtube
+                                        li
+                                            a(href='single/single-video.html') HTML5 Video
+                                        li
+                                            a(href='single/single-slider.html') Slider
+                                        li
+                                            a(href='single/single-quote.html') Quote
+                                li
+                                    a(target='_blank', href='http://themeforest.net/item/matx-material-design-agency-template/13887396') Buy Now
+                // end desktop nav
+                // start mobile logo
+                a.logo.matx-logo.mobile-logo.menu-smooth-scroll(href='#', data-target='#home')
+                    img(src='../img/logo_lite.png', alt='logo')
+                // end mobile logo
+                // toogle icons, which are responsible for display and hide menu in small layout
+                .mdl-layout__drawer-button.mobile-menu-area
+                    i#menu-back-btn.mobile-menu-ctrl.zmdi.zmdi-arrow-right
+                    i#menu-show-btn.mobile-menu-ctrl.active.zmdi.zmdi-menu
+            // end site main header
+            // start mobile nav
+            nav.nav-typo.mobile-nav
+                ul
+                    li.menu-item-has-children
+                        a(href='#') Home
+                        ul.sub-menu
+                            li
+                                a(href='../index.html') Home 1
+                            li
+                                a(href='../home2.html') Home 2
+                            li
+                                a(href='../home3.html') Home 3
+                    li.active
+                        a(href='blog-standard.html') Blog Standard
+                    li
+                        a(href='blog-masonry.html') Blog Masonry
+                    li
+                        a(href='blog-masonry-sidebar.html') Blog Masonry Sidebar
+                    li
+                        a(href='single/single.html') Blog Single
+                    li.menu-item-has-children
+                        a(href='#') More Pages
+                        ul.sub-menu
+                            li
+                                a(href='../components.html') Extra Components
+                            li.menu-item-has-children
+                                a(href='#') Portfolio Pages
+                                ul.sub-menu
+                                    li
+                                        a(href='../portfolio/single-pages/portfolio-single-01.html') Slider Style
+                                    li
+                                        a(href='../portfolio/single-pages/portfolio-single-02.html') List Style
+                                    li
+                                        a(href='../portfolio/single-pages/portfolio-single-03.html') List Full Style
+                            li.menu-item-has-children
+                                a(href='#') Single Blog Pages
+                                ul.sub-menu
+                                    li
+                                        a(href='single/single.html') Image
+                                    li
+                                        a(href='single/single-audio.html') Audio
+                                    li
+                                        a(href='single/single-video-vimeo.html') Vimeo
+                                    li
+                                        a(href='single/single-video-youtube.html') Youtube
+                                    li
+                                        a(href='single/single-video.html') HTML5 Video
+                                    li
+                                        a(href='single/single-slider.html') Slider
+                                    li
+                                        a(href='single/single-quote.html') Quote
+                            li
+                                a(target='_blank', href='http://themeforest.net/item/matx-material-design-agency-template/13887396') Buy Now
+            // end mobile nav
+        // end banner
+        // start main footer
+        footer.main-footer
+            section.footer-top
+                .section
+                    .section-common-space
+                        .container
+                            .row
+                                .text-center.ft-content-start
+                                    a.logo.footer-logo.wow.fadeIn(href='#', data-wow-duration='1s')
+                                        img(src='../img/logo_lite.png', alt='logo')
+                                    ul.clearfix.social.footer-social.hover-round
+                                        li
+                                            a(href='#')
+                                                i.zmdi.zmdi-facebook
+                                        li
+                                            a(href='#')
+                                                i.zmdi.zmdi-twitter
+                                        li
+                                            a(href='#')
+                                                i.zmdi.zmdi-google-plus
+                                        li
+                                            a(href='#')
+                                                i.zmdi.zmdi-instagram
+            section.footer-bottom
+                .text-center
+                    p MATX © 2016. ALL RIGHT RESERVED
+        // end main footer
+        // back to top button
+        button#backToTop.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.btn-highlight.back-to-top.hide-bottom
+            i.zmdi.zmdi-chevron-up
+        script.
+            window.jQuery || document.write('<script type="text/javascript" src="/assets/js/vendor/jquery-1.10.2.min.js"><\\/script>')
+        script(type = 'text/javascript', src = 'https://maps.google.com/maps/api/js?key=YOUR_GOOGLE_MAP_API_KEY')
+        script(type = 'text/javascript', src = '//platform.twitter.com/widgets.js')
+        script(type = 'text/javascript', src = '/assets/libs/mdl/material.min.js')
+        script(type = 'text/javascript', src = '/assets/js/all-plugins.js')
+        script(type = 'text/javascript', src = '/assets/js/common-plugins.js')
+        script(type = 'text/javascript', src = '/assets/libs/owl-carousel/owl.carousel.min.js')
+        script(type = 'text/javascript', src = '/assets/libs/sweetalert/sweet-alert.min.js')
+        script(type = 'text/javascript', src = '/assets/libs/magnific-popup/jquery.magnific-popup.min.js')
+        script(type = 'text/javascript', src = '/assets/libs/jwplayer/jwplayer.js')
+        // REVOLUTION JS FILES
+        script(type = 'text/javascript', src = '/assets/libs/revolution/js/jquery.themepunch.tools.min.js')
+        script(type = 'text/javascript', src = '/assets/libs/revolution/js/jquery.themepunch.revolution.min.js')
+        script(type = 'text/javascript', src = '/assets/libs/revolution/js/extensions/revolution.extension.actions.min.js')
+        script(type = 'text/javascript', src = '/assets/libs/revolution/js/extensions/revolution.extension.carousel.min.js')
+        script(type = 'text/javascript', src = '/assets/libs/revolution/js/extensions/revolution.extension.kenburn.min.js')
+        script(type = 'text/javascript', src = '/assets/libs/revolution/js/extensions/revolution.extension.layeranimation.min.js')
+        script(type = 'text/javascript', src = '/assets/libs/revolution/js/extensions/revolution.extension.migration.min.js')
+        script(type = 'text/javascript', src = '/assets/libs/revolution/js/extensions/revolution.extension.navigation.min.js')
+        script(type = 'text/javascript', src = '/assets/libs/revolution/js/extensions/revolution.extension.parallax.min.js')
+        script(type = 'text/javascript', src = '/assets/libs/revolution/js/extensions/revolution.extension.slideanims.min.js')
+        script(type = 'text/javascript', src = '/assets/libs/revolution/js/extensions/revolution.extension.video.min.js')
+        script(type = 'text/javascript', src = '/assets/js/common.js')
+        script(type = 'text/javascript', src = '/assets/js/all-components.js')
+        script(type = 'text/javascript', src = '/assets/js/main.js')
+        block js - body
