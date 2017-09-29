@@ -81,7 +81,7 @@ html.matx.no-js
             nav.nav-typo.main-nav
                 ul
                     each link in navLinks
-                        li(class=( section == link.key ? 'active' : null))
+                        li(class=( section === link.key ) ? 'active' : null))
                             a.menu-smooth-scroll(href=link.href, data-target='#about')= link.label
                     if user
                         if user.canAccessKeystone
@@ -170,8 +170,8 @@ html.matx.no-js
         // end mobile nav
         // start main wrapper
         main.main-wrapper
-            block content
             block intro
+            block content
         // end main wrapper
         // start main footer
         footer.main-footer
