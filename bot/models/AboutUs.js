@@ -6,7 +6,9 @@ var Types = keystone.Field.Types;
  * ===================
  */
 
-var AboutUs = new keystone.List('AboutUs');
+var AboutUs = new keystone.List('AboutUs',{
+    label:'About Us';
+});
 
 AboutUs.add({
    missionTitle:{type:String,default:'Mission'},
