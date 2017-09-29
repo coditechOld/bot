@@ -7,7 +7,7 @@ var Types = keystone.Field.Types;
  */
 
 var AboutUs = new keystone.List('AboutUs',{
-    label:'About Us';
+    label:'About Us',
 });
 
 AboutUs.add({
