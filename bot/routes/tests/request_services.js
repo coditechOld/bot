@@ -9,7 +9,8 @@ exports = module.exports = function (req, res) {
     // locals.section is used to set the currently selected
     // item in the header navigation.
     locals.section = 'request_services';
-    locals.enquiryTypes = RequestService.fields.interested.ops;
+    locals.interestedTypes = RequestService.fields.interested.ops;
+    console.log('interestedTypes', locals.interestedTypes);
 
     locals.data = {
         posts: []

@@ -81,7 +81,7 @@ html.matx.no-js
             nav.nav-typo.main-nav
                 ul
                     each link in navLinks
-                        li(class=( section === link.key ) ? 'active' : null))
+                        li(class=( section === link.key ) ? 'active' : '')
                             a.menu-smooth-scroll(href=link.href, data-target='#about')= link.label
                     if user
                         if user.canAccessKeystone

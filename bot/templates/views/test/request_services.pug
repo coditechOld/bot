@@ -31,7 +31,14 @@ block content
                         .col-sm-12
                             .mdl-textfield.mdl-js-textfield.mdl-textarea
                                 textarea#contactInterests.mdl-textfield__input(name='contactInterests')
-                                label.mdl-textfield__label(for='contactInterests') Interested.row
+                                label.mdl-textfield__label(for='contactInterests') Interested.row.row
+                        .col-sm-12
+                            .mdl-textfield.mdl-js-textfield.mdl-textarea
+                                select#contactInterestss.mdl-textfield__input(name='contactInterests')
+                                    option(value='') (select one)
+                                    each type in interestedTypes
+                                        option(value=type.value, selected=formData.interestedTypes == type.value)= type.label
+                                label.mdl-textfield__label(for='contactInterestss') Interested.row
                     .col-sm-12
                         .mdl-textfield.mdl-js-textfield.mdl-textarea
                             textarea#contactBudget.mdl-textfield__input(name='contactBudget')

@@ -4,7 +4,7 @@ mixin fetchVideoSections(homePageVideo)
         div
             .video-background
                 .video-foreground
-                    iframe(src='https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ', frameborder='0', allowfullscreen='')
+                    iframe(src=homePageVideo.link, frameborder='0', allowfullscreen='')
             #vidtop-content
                 .vid-info
                     h1 YouTube Fullscreen Background Demo
@@ -28,7 +28,5 @@ mixin fetchVideoSections(homePageVideo)
 
 mixin fetchVideoSection(homePageVideo)
     #bg_container
-        iframe#bg(src='//www.youtube.com/embed/LuD3_umIxgw?autoplay=1&loop=1&cc_load_policy=1rel=0&amp;controls=0&amp;showinfo=0', frameborder='0')
+        iframe#bg(src= homePageVideo.link , frameborder='0')
     #content
-        h1 Web page with HD looping video background
-        h2 Using CSS the video is simply placed underneath our HTML content
