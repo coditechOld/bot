@@ -29,7 +29,7 @@ HomepageBanner.add({
     text:{type:String},
     buttonlink:{type:String},
     buttontext:{type:String},
-    backgroundimage:{type: Types.File, storage: myStorage }
+    backgroundImage:{type: Types.File, storage: myStorage }
 
 });
 
