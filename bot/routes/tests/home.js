@@ -15,6 +15,8 @@ exports = module.exports = function (req, res) {
         serviceCategory: [],
         homepageHowItWorks: [],
         testimonial: [],
+        partners: [],
+        homepageBanner: [],
 
 
     };
@@ -67,6 +69,26 @@ exports = module.exports = function (req, res) {
 
         q.exec(function (err, results) {
             locals.data.testimonial = results;
+            next(err);
+        });
+
+
+    });
+    view.on('init', function (next) {
+        var q = keystone.list('Partner').model.find();
+
+        q.exec(function (err, results) {
+            locals.data.partners = results;
+            next(err);
+        });
+
+
+    });view.on('init', function (next) {
+        var q = keystone.list('HomepageBanner').model.findOne();
+
+        q.exec(function (err, results) {
+            console.log('results ==>>', results);
+            locals.data.homepageBanner = results;
             next(err);
         });
 

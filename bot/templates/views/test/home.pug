@@ -235,48 +235,23 @@ block content
         // end newsletter section
 
 
-    // start clients or logo slider
-    section.secondary-bg-color.clients
-        .section-common-space.text-center
-            h2.section-title Clients
-            .container
-                .row
-                    .client-slider(data-action='clientSlider')
-                        .col-sm-3
-                            .single-clients
-                                img(src='/img/logo/client1.png', alt='Client Logo')
-                        .col-sm-3
-                            .single-clients
-                                img(src='/img/logo/client2.png', alt='Client Logo')
-                        .col-sm-3
-                            .single-clients
-                                img(src='/img/logo/client3.png', alt='Client Logo')
-                        .col-sm-3
-                            .single-clients
-                                img(src='/img/logo/client4.png', alt='Client Logo')
-                        .col-sm-3
-                            .single-clients
-                                img(src='/img/logo/client1.png', alt='Client Logo')
-                        .col-sm-3
-                            .single-clients
-                                img(src='/img/logo/client2.png', alt='Client Logo')
-                        .col-sm-3
-                            .single-clients
-                                img(src='/img/logo/client3.png', alt='Client Logo')
-    // end clients or logo slider
+    include ../../mixins/partners
+    +fetchPartnersSlider(data.partners)
     // end testimonial and client logo section
 
     section.section-main
         section.overflow-hidden
-            .bg-image.newsletter-bg(data-center='transform: translate3d(0px, -50%, 0px)', data-top-bottom='transform: translate3d(0px, -25%, 0px)', data-bottom-top='transform: translate3d(0px, -75%, 0px)')
+            .bg-image.newsletter-bg(data-center='transform: translate3d(0px, -50%, 0px)', data-top-bottom='transform: translate3d(0px, -25%, 0px)', data-bottom-top='transform: translate3d(0px, -75%, 0px)', style='background-image: url("' +  data.homepageBanner.backgroundimage.url+'")')
             .overlay.overlay-five
                 .section-common-space
                     .container
                         .row
                             .clearfix.col-sm-12.col-md-offset-2.col-md-10.col-lg-offset-2.col-lg-8
-                                h2.section-title Join us action section
-                                p hwwa asd sad sad sad sadsanjd jsdna jsdnjasd jasdn hwwa asd sad sad sad sadsanjd jsdna jsdnjasd jasdn hwwa asd sad sad sad sadsanjd jsdna jsdnjasd jasdn hwwa asd sad sad sad sadsanjd jsdna jsdnjasd jasdn hwwa asd sad sad sad sadsanjd jsdna jsdnjasd jasdn
-                                button.mdl-button.ripple-black.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.btn-default.btn-white.wow.fadeInRight(type='submit', data-wow-duration='1.2s', style="float: right") Action
+                                h2.section-title=data.homepageBanner.title
+                                p=data.homepageBanner.text
+                                if data.homepageBanner.buttonlink
+                                    a(href=data.homepageBanner.buttonlink)
+                                        button.mdl-button.ripple-black.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.btn-default.btn-white.wow.fadeInRight(type='submit', data-wow-duration='1.2s', style="float: right")=data.homepageBanner.buttontext
 
     section#contact.section-main.contact
         .container.container-map

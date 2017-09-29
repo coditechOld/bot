@@ -1,32 +1,14 @@
-mixin fetchClientSlider(clients)
-
-//  start clients or logo slider
-section.secondary-bg-color.clients
-    .section-common-space.text-center
-        h2.section-title Clients
-        .container
-            .row
-                .client-slider(data-action='clientSlider')
-                    each client, index in clients
-                        .col-sm-3
-                            .single-clients
-                                img(src=client.logo, alt=client.name)
-                    .col-sm-3
-                        .single-clients
-                            img(src='/img/logo/client2.png', alt='Client Logo')
-                    .col-sm-3
-                        .single-clients
-                            img(src='/img/logo/client3.png', alt='Client Logo')
-                    .col-sm-3
-                        .single-clients
-                            img(src='/img/logo/client4.png', alt='Client Logo')
-                    .col-sm-3
-                        .single-clients
-                            img(src='/img/logo/client1.png', alt='Client Logo')
-                    .col-sm-3
-                        .single-clients
-                            img(src='/img/logo/client2.png', alt='Client Logo')
-                    .col-sm-3
-                        .single-clients
-                            img(src='/img/logo/client3.png', alt='Client Logo')
-//  start clients or logo slider
+mixin fetchPartnersSlider(partners)
+    //  start clients or logo slider
+    section.secondary-bg-color.clients
+        .section-common-space.text-center
+            h2.section-title Clients
+            .container
+                .row
+                    .client-slider(data-action='clientSlider')
+                        if partners
+                            each partner, index in partners
+                                .col-sm-3
+                                    .single-clients
+                                        img(src=partner.logo.url, alt=partner.name)
+    //  start clients or logo slider
