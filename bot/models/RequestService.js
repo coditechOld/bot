@@ -6,7 +6,7 @@ var Types = keystone.Field.Types;
  * =============
  */
 
-var RequestService = new keystone.List('Contact', {
+var RequestService = new keystone.List('RequestService', {
     nocreate: true,
     noedit: true,
 });
@@ -16,9 +16,22 @@ RequestService.add({
     contactName: {type: Types.Email, required: true},
     email: {type: Types.Email},
     mobileNumber: {type: String, required: true},
-    interested: {type: Types.Markdown, required: true},
-    budget: {type: Types.Markdown, required: true},
-    createdAt: {type: Date, default: Date.now},
+    interested: {
+        type: Types.Select, options: [
+            {value: 'mobile-and-web', label: 'Mobile and Web'},
+            {value: 'data', label: 'Data'},
+            {value: 'other', label: 'Something else...'},
+        ]
+    },
+    budget: {
+        type: Types.Select, options: [
+            {value: '500', label: 'Less Than $500'},
+            {value: '1000', label: 'Less than $1,000'},
+            {value: '5000', label: 'Less than $5,000'},
+            {value: 'other', label: '5000 plus'},
+        ]
+    },
+    createdAt: {type: Date, default: Date.now}
 });
 
 RequestService.schema.pre('save', function (next) {
