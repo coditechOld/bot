@@ -14,14 +14,14 @@ var RequestService = new keystone.List('RequestService', {
 RequestService.add({
     organizationName: {type: Types.Name, required: true},
     contactName: {type: Types.Email, required: true},
-    email: {type: Types.Email},
+    email: {type: Types.Email, required: true},
     mobileNumber: {type: String, required: true},
     interested: {
         type: Types.Select, options: [
             {value: 'mobile-and-web', label: 'Mobile and Web'},
             {value: 'data', label: 'Data'},
             {value: 'other', label: 'Something else...'},
-        ]
+        ], required: true
     },
     budget: {
         type: Types.Select, options: [
@@ -29,7 +29,7 @@ RequestService.add({
             {value: '1000', label: 'Less than $1,000'},
             {value: '5000', label: 'Less than $5,000'},
             {value: 'other', label: '5000 plus'},
-        ]
+        ], required: true
     },
     createdAt: {type: Date, default: Date.now}
 });
