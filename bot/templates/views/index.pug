@@ -194,9 +194,8 @@ block content
                                 .clearfix.col-sm-12.col-md-offset-2.col-md-10.col-lg-offset-2.col-lg-8
                                     h2.section-title=data.homepageBanner.title
                                     p=data.homepageBanner.text
-                                    if data.homepageBanner.buttonlink
-                                        a(href=data.homepageBanner.buttonlink)
-                                            button.mdl-button.ripple-black.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.btn-default.btn-white.wow.fadeInRight(type='submit', data-wow-duration='1.2s', style="float: right")=data.homepageBanner.buttontext
+                                    a(href="/request-service")
+                                        button.mdl-button.ripple-black.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.btn-default.btn-white.wow.fadeInRight(type='submit', data-wow-duration='1.2s', style="float: right")=data.homepageBanner.buttontext
 
     section#contact.section-main.contact
         .container.container-map

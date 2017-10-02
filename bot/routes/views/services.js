@@ -21,6 +21,6 @@ exports = module.exports = function (req, res) {
     });
 
     //CHANGE VIEW LATER
-    view.render('testing');
+    view.render('services');
         
-}
+};
