@@ -5,14 +5,18 @@ block content
     // start revolution slider section
     +fetchAboutSliders(data.aboutSliders)
     // end revolution slider section
-    section#mission(style='text-align: center')
-        h2=data.about.missionTitle
-        hr(style='width: 50%; margin: auto')
-        p(style='color: #ff5252')=data.about.missionText
-    section#vision(style='text-align: center')
-        h2=data.about.visionTitle
-        hr(style='width: 50%; margin: auto')
-        p(style='color: #ff5252')=data.about.visionText
+    .container
+        section#about.about
+            h2=data.about.aboutUsTitle
+            p=data.about.aboutUsText
+        section#mission.about(style='text-align: center')
+            h2=data.about.missionTitle
+            hr(style='width: 50%; margin: auto')
+            !=data.about.missionText
+        section#vision.about(style='text-align: center')
+            h2=data.about.visionTitle
+            hr(style='width: 50%; margin: auto')
+            !=data.about.visionText
 
 
 block js-body
