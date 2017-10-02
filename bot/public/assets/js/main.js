@@ -498,29 +498,66 @@ $(document).ready(function ($) {
 
         window.mapOps = {
 
-            lat: 33.822895,	// Provide your latitude
-            lng: 35.730461, // Provide your longitude
+            lat: 33.893775,	// Provide your latitude
+            lng: 35.557071, // Provide your longitude
             content: '<p>Coder Pixel, Gulshan 1, Dhaka, Bangladesh</p>', // Provide your address to show on pop up
             icon: '/img/marker-icon.png',
-            zoom: 9,
-            panBy: {x: 0, y: -40},
         };
         window.mapOps2 = {
-            lat: 24,	// Provide your latitude
-            lng: 91.42428, // Provide your longitude
+            lat: 34.434706,	// Provide your latitude
+            lng: 35.835389, // Provide your longitude
+            content: '<p>Coder Pixel, Gulshan 1, Dhaka, Bangladesh</p>', // Provide your address to show on pop up
+            icon: '/img/marker-icon.png',
+        };
+        window.mapOps3 = {
+            lat: 34.546827,	// Provide your latitude
+            lng: 36.085198, // Provide your longitude
+            content: '<p>Coder Pixel, Gulshan 1, Dhaka, Bangladesh</p>', // Provide your address to show on pop up
+            icon: '/img/marker-icon.png',
+        };
+        window.mapOps4 = {
+            lat: 33.376892,	// Provide your latitude
+            lng: 35.481483, // Provide your longitude
+            content: '<p>Coder Pixel, Gulshan 1, Dhaka, Bangladesh</p>', // Provide your address to show on pop up
+            icon: '/img/marker-icon.png',
+        };
+        window.mapOps5 = {
+            lat: 33.558020,	// Provide your latitude
+            lng: 35.372854, // Provide your longitude
+            content: '<p>Coder Pixel, Gulshan 1, Dhaka, Bangladesh</p>', // Provide your address to show on pop up
+            icon: '/img/marker-icon.png',
+        };
+        window.mapOps6 = {
+            lat: 33.702266,	// Provide your latitude
+            lng: 35.581105, // Provide your longitude
+            content: '<p>Coder Pixel, Gulshan 1, Dhaka, Bangladesh</p>', // Provide your address to show on pop up
+            icon: '/img/marker-icon.png',
+        };
+        window.mapOps7 = {
+            lat: 34.004658,	// Provide your latitude
+            lng: 36.211068, // Provide your longitude
+            content: '<p>Coder Pixel, Gulshan 1, Dhaka, Bangladesh</p>', // Provide your address to show on pop up
+            icon: '/img/marker-icon.png',
+        };
+        window.mapOps8 = {
+            lat: 33.762066,	// Provide your latitude
+            lng: 35.883544, // Provide your longitude
             content: '<p>Coder Pixel, Gulshan 1, Dhaka, Bangladesh</p>', // Provide your address to show on pop up
             icon: '/img/marker-icon.png',
         };
 
+        
+
         window.map = new GMaps({
             div: mapWrapperID,
-            lat: mapOps.lat,
-            lng: mapOps.lng,
+            lat: 33.822895,
+            lng: 35.730461,
             scrollwheel: true,
             draggable: draggableOp,
             zoom: mapOps.zoom,
             disableDefaultUI: false,
             styles: mapStyle,
+            zoom: 9,
         });
 
 
@@ -540,10 +577,59 @@ $(document).ready(function ($) {
                 infoWindow: {
                     content: mapOps2.content
                 }
-            }
+            },
+            {
+                lat: mapOps3.lat,
+                lng: mapOps3.lng,
+                icon: mapOps3.icon,
+                infoWindow: {
+                    content: mapOps3.content
+                }
+            },
+            {
+                lat: mapOps4.lat,
+                lng: mapOps4.lng,
+                icon: mapOps4.icon,
+                infoWindow: {
+                    content: mapOps4.content
+                }
+            },
+            {
+                lat: mapOps5.lat,
+                lng: mapOps5.lng,
+                icon: mapOps5.icon,
+                infoWindow: {
+                    content: mapOps5.content
+                }
+            },
+            {
+                lat: mapOps6.lat,
+                lng: mapOps6.lng,
+                icon: mapOps6.icon,
+                infoWindow: {
+                    content: mapOps6.content
+                }
+            },
+            {
+                lat: mapOps7.lat,
+                lng: mapOps7.lng,
+                icon: mapOps7.icon,
+                infoWindow: {
+                    content: mapOps7.content
+                }
+            },
+            {
+                lat: mapOps8.lat,
+                lng: mapOps8.lng,
+                icon: mapOps8.icon,
+                infoWindow: {
+                    content: mapOps8.content
+                }
+            },
+            
         ]);
 
-        map.panBy(mapOps.panBy.x, mapOps.panBy.y);
+        map.panBy(0,-40);
     }
 
 });
