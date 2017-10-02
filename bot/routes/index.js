@@ -44,6 +44,7 @@ exports = module.exports = function (app) {
 	app.get('/gallery', routes.views.gallery);
 	app.all('/contact', routes.views.contact);
 	app.get('/homepage',routes.views.homepage);
+	app.get('/request-service',routes.views.request_service);
 	app.get('/partners/:partner',routes.views.partner);
 
 	app.get('/test',routes.tests.home);
