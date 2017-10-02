@@ -3,20 +3,21 @@ extends ../layouts/test-default
 block content
     include ../mixins/about
     // start revolution slider section
-    +fetchAboutSliders(data.aboutSliders)
+    +fetchAboutSliders(data.aboutSliders ? data.aboutSliders : [])
     // end revolution slider section
     .container
-        section#about.about
-            h2=data.about.aboutUsTitle
-            p!=data.about.aboutUsText
-        section#mission.about
-            h2=data.about.missionTitle
-            hr
-            !=data.about.missionText
-        section#vision.about
-            h2=data.about.visionTitle
-            hr
-            !=data.about.visionText
+        if data.about
+            section#about.about
+                h2=data.about.aboutUsTitle ? data.about.aboutUsTitle : ''
+                p!=data.about.aboutUsText
+            section#mission.about
+                h2=data.about.missionTitle
+                hr
+                !=data.about.missionText
+            section#vision.about
+                h2=data.about.visionTitle
+                hr
+                !=data.about.visionText
 
 
 block js-body

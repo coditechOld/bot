@@ -6,17 +6,18 @@ mixin fetchServiceSlider(services)
             .section-common-space.text-center
                 h2 Services
                 .container
-                    .owl-carousel-services
+                    .row
                         if services
                             each service, index in services
-                                // start bordered icon box
-                                .single-imodule.imodule-centerd.rbodard-imodule.wow.fadeInUp(data-wow-duration='1s')
-                                    .icon-box
-                                        i(class=service.icon)
-                                    .ic-module-content
-                                        h3.imodule-title=service.title
-                                        p=service.briefDescription
-                                // end bordered icon box
+                                .col-sm-6
+                                    // start bordered icon box
+                                    .single-imodule.imodule-centerd.rbodard-imodule.wow.fadeInUp(data-wow-duration='1s')
+                                        .icon-box
+                                            i(class=service.icon)
+                                        .ic-module-content
+                                            h3.imodule-title=service.title
+                                            p=service.briefDescription
+                                    // end bordered icon box
 
         // end intro section with icon box
     // end service section
