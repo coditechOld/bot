@@ -8,14 +8,14 @@ block content
     .container
         section#about.about
             h2=data.about.aboutUsTitle
-            p=data.about.aboutUsText
-        section#mission.about(style='text-align: center')
+            p!=data.about.aboutUsText
+        section#mission.about
             h2=data.about.missionTitle
-            hr(style='width: 50%; margin: auto')
+            hr
             !=data.about.missionText
-        section#vision.about(style='text-align: center')
+        section#vision.about
             h2=data.about.visionTitle
-            hr(style='width: 50%; margin: auto')
+            hr
             !=data.about.visionText
 
 
