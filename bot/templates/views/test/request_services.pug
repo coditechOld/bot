@@ -34,11 +34,11 @@ block content
                                 label.mdl-textfield__label(for='contactInterests') Interested
                         .col-sm-6
                             .mdl-textfield.mdl-js-textfield.mdl-textarea
-                                select#contactInterestss.mdl-switch__input(name='contactInterests')
+                                select#contactInterests.mdl-switch__input(name='contactInterests')
                                     option(value='') (select one)
                                     each type in interestedTypes
                                         option(value=type.value, selected=formData.interestedTypes == type.value)= type.label
-                                label.mdl-textfield__label(for='contactInterestss') Interested
+                                label.mdl-textfield__label(for='contactInterests') Interested
                         .col-sm-6
                             .mdl-textfield.mdl-js-textfield.mdl-textarea
                                 label.mdl-textfield__label(for='contactBudget') Budget
