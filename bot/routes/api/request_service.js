@@ -1,6 +1,5 @@
 var keystone = require('keystone');
 var crypto = require('crypto');
-var Contact = keystone.list('Contact');
 var RequestService = keystone.list('RequestService');
 
 exports = module.exports = function (req, res) {
@@ -37,14 +36,15 @@ exports = module.exports = function (req, res) {
 
         console.log('req.body ==>>', req.body);
         updater.process({
-            name: req.body.contactName,
-            email: req.body.contactEmail,
-            phone: req.body.contactPhone,
-            subject: req.body.contactSubject,
-            message: req.body.contactMessage
+            organizationName: req.body.contactName,
+            contactName: req.body.contactEmail,
+            email: req.body.contactPhone,
+            mobileNumber: req.body.contactSubject,
+            interested: req.body.contactMessage,
+            budget: req.body.contactMessage
         }, {
             flashErrors: true,
-            fields: 'name, email, phone,subject, message',
+            fields: 'organizationName, contactName, email,mobileNumber, interested,budget',
             errorMessage: 'There was a problem submitting your enquiry:',
         }, function (err) {
             console.log('Errors ==>>> ', err);
@@ -52,12 +52,13 @@ exports = module.exports = function (req, res) {
             if (err) {
 
                 locals.validationErrors = err.errors;
-                locals.data.contact.success = false;
-                locals.data.contact.errors.name = err.detail.name;
-                locals.data.contact.errors.email = err.detail.email;
-                locals.data.contact.errors.phone = err.detail.phone;
-                locals.data.contact.errors.subject = err.detail.subject;
-                locals.data.contact.errors.message = err.detail.message;
+                locals.data.request_service.success = false;
+                locals.data.request_service.errors.organizationName = err.detail.organizationName;
+                locals.data.request_service.errors.contactName = err.detail.contactName;
+                locals.data.request_service.errors.contactEmail = err.detail.email;
+                locals.data.request_service.errors.contactPhone = err.detail.mobileNumber;
+                locals.data.request_service.errors.contactInterests = err.detail.interested;
+                locals.data.request_service.errors.contactBudget = err.detail.budget;
             } else {
                 locals.enquirySubmitted = true;
             }
@@ -66,6 +67,6 @@ exports = module.exports = function (req, res) {
     });
 
     // Render the view
-    view.render('api/contact');
+    view.render('api/requestService');
     // return JSON.s
 };
