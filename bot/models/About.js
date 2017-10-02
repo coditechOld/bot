@@ -11,7 +11,7 @@ var About = new keystone.List('About', {
 });
 
 About.add({
-    aboutUsTitle: {type: String, default: 'Mission'},
+    aboutUsTitle: {type: String, default: 'About Us'},
     aboutUsText: {type: Types.Html, wysiwyg: true, height: 200},
     missionTitle: {type: String, default: 'Mission'},
     missionText: {type: Types.Html, wysiwyg: true, height: 200},
