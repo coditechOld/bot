@@ -10,7 +10,8 @@ exports = module.exports = function (req, res) {
     // item in the header navigation.
     locals.section = 'home';
     locals.data = {
-        aboutSliders: []
+        aboutSliders: [],
+        about: []
 
 
     };
@@ -22,6 +23,19 @@ exports = module.exports = function (req, res) {
 
         q.exec(function (err, results) {
             locals.data.aboutSliders = results;
+            next(err);
+        });
+
+
+    });
+
+
+    view.on('init', function (next) {
+
+        var q = keystone.list('About').model.findOne();
+
+        q.exec(function (err, results) {
+            locals.data.about = results;
             next(err);
         });
 
