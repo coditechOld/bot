@@ -17,8 +17,11 @@ exports = module.exports = function (req, res) {
                     locals.data.services = results;
                     next(err);
                 });
-        
+        console.log('Localsss 2 ==> ', locals.data.services);
+
+
     });
+    console.log('Locals ==> ', locals.data.services);
 
     //CHANGE VIEW LATER
     view.render('services');

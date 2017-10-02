@@ -9,7 +9,7 @@ mixin fetchServiceSlider(services)
                     .row
                         if services
                             each service, index in services
-                                .col-sm-6
+                                .col-sm-4t
                                     // start bordered icon box
                                     .single-imodule.imodule-centerd.rbodard-imodule.wow.fadeInUp(data-wow-duration='1s')
                                         .icon-box
@@ -21,15 +21,17 @@ mixin fetchServiceSlider(services)
 
         // end intro section with icon box
     // end service section
-mixin fetchService(services)
+mixin fetchServices(services)
 
     each service, length in services
-        div
-            h2=service.title
-            .row(id=service.slug)
-                .col-sm-6
-                    .cover
-                        img(src=service.src)
-                .col-sm-6
-                    =service.briefDescription
+        .row(id=service.slug).dark-section.overflow-hidden.boderd-intro-imodules.serviceItem
+            .col-sm-4
+                .single-imodule.imodule-centerd.rbodard-imodule.wow.fadeInUp(data-wow-duration='1s')
+                    .icon-box
+                        i(class=service.icon)
+                    .ic-module-content
+                        h3.imodule-title=service.title
+
+            .col-sm-8
+                !=service.categoryComponents
 

@@ -1,8 +1,12 @@
 extends ../layouts/page
 
+block css
+    link(href="/styles/services.css", rel="stylesheet")
+
 block content
     .container
-        | hello world
+        include ../mixins/services
+        +fetchServices(data.services)
 
 block js-body
     script.
