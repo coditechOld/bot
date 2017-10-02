@@ -36,12 +36,12 @@ exports = module.exports = function (req, res) {
 
         console.log('req.body ==>>', req.body);
         updater.process({
-            organizationName: req.body.contactName,
+            organizationName: req.body.contactOrganizationName,
             contactName: req.body.contactEmail,
-            email: req.body.contactPhone,
-            mobileNumber: req.body.contactSubject,
-            interested: req.body.contactMessage,
-            budget: req.body.contactMessage
+            email: req.body.contactEmail,
+            mobileNumber: req.body.contactMobileNumber,
+            interested: req.body.contactInterests,
+            budget: req.body.contactBudget
         }, {
             flashErrors: true,
             fields: 'organizationName, contactName, email,mobileNumber, interested,budget',
@@ -61,6 +61,8 @@ exports = module.exports = function (req, res) {
                 locals.data.request_service.errors.contactBudget = err.detail.budget;
             } else {
                 locals.enquirySubmitted = true;
+                locals.data.request_service.success = true;
+
             }
             next();
         });

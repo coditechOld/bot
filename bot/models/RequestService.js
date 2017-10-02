@@ -13,7 +13,7 @@ var RequestService = new keystone.List('RequestService', {
 
 RequestService.add({
     organizationName: {type: Types.Name, required: true},
-    contactName: {type: Types.Email, required: true},
+    contactName: {type: Types.Name, required: true},
     email: {type: Types.Email, required: true},
     mobileNumber: {type: String, required: true},
     interested: {
@@ -48,7 +48,27 @@ RequestService.schema.post('save', function () {
 RequestService.schema.methods.sendNotificationEmail = function (callback) {
     if (typeof callback !== 'function') {
         callback = function (err) {
-            if (err) {
+            if (err) {{
+
+    var view = new keystone.View(req, res);
+    var locals = res.locals;
+    // Set locals
+
+    // locals.section is used to set the currently selected
+    // item in the header navigation.
+    locals.section = 'request_services';
+    locals.interestedTypes = RequestService.fields.interested.ops;
+    locals.contactBudgetTypes = RequestService.fields.budget.ops;
+    locals.formData = req.body || {};
+
+    locals.data = {
+        posts: []
+
+    };
+
+    // Render the view
+    view.render('test/request_services');
+}
                 console.error('There was an error sending the notification email:', err);
             }
         };
@@ -82,5 +102,5 @@ RequestService.schema.methods.sendNotificationEmail = function (callback) {
 };
 
 RequestService.defaultSort = '-createdAt';
-RequestService.defaultColumns = 'name, email, enquiryType, createdAt';
+RequestService.defaultColumns = 'organizationName, contactName, email, mobileNumber, interested, budget, createdAt';
 RequestService.register();
