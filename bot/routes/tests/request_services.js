@@ -10,7 +10,8 @@ exports = module.exports = function (req, res) {
     // item in the header navigation.
     locals.section = 'request_services';
     locals.interestedTypes = RequestService.fields.interested.ops;
-    console.log('interestedTypes', locals.interestedTypes);
+    locals.contactBudgetTypes = RequestService.fields.budget.ops;
+    locals.formData = req.body || {};
 
     locals.data = {
         posts: []

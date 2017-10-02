@@ -374,6 +374,79 @@ $(document).ready(function ($) {
     });
 
 
+    // contact Request Service Form
+    $('#contactRequestServiceForm').on('submit', function (e) {
+        e.preventDefault();
+
+        var $this = $(this),
+            data = $(this).serialize(),
+            contactOrganizationName = $this.find('#contactOrganizationName'),
+            contactName = $this.find('#contactName'),
+            contactEmail = $this.find('#contactEmail'),
+            contactMobileNumber = $this.find('#contactMobileNumber'),
+            contactInterests = $this.find('#contactInterestss'),
+            contactBudget = $this.find('#contactBudget'),
+            submitBtn = $this.find('button, input[type="submit"]');
+
+        submitBtn.attr('disabled', 'disabled');
+
+        var success = function (response) {
+            swal("Thanks!", "Your message has been sent successfully!", "success");
+            $this.find("input:not('[type=submit]'), textarea").val("");
+            $this.find(".is-dirty, .is-invalid").removeClass('is-dirty is-invalid');
+        };
+
+        var error = function (response) {
+            $this.find('.is-invalid').removeClass('is-invalid');
+            if (response.errors.organizationName) {
+                contactOrganizationName.closest('.mdl-textfield').addClass('is-invalid');
+            }
+            if (response.errors.contactName) {
+                contactName.closest('.mdl-textfield').addClass('is-invalid');
+            }
+            if (response.errors.contactEmail) {
+                contactEmail.closest('.mdl-textfield').addClass('is-invalid');
+            }
+            if (response.errors.contactPhone) {
+                contactMobileNumber.closest('.mdl-textfield').addClass('is-invalid');
+            }
+            if (response.errors.contactInterests) {
+                contactInterests.closest('.mdl-textfield').addClass('is-invalid');
+            }
+            if (response.errors.contactBudget) {
+                contactBudget.closest('.mdl-textfield').addClass('is-invalid');
+            }
+
+        };
+
+        $.ajax({
+            type: "POST",
+            url: '/api/request-service',
+            data: data
+        }).done(function (res) {
+
+            var response = JSON.parse(res);
+
+            console.log('response ==<', response.success);
+            ( response.success ) ? success(response) : error(response);
+
+            var hand = setTimeout(function () {
+                clearTimeout(hand);
+            }, 1000);
+
+        }).fail(function () {
+
+            sweetAlert("Oops...", "Something went wrong, Try again later!", "error");
+
+            var hand = setTimeout(function () {
+                submitBtn.removeAttr('disabled');
+                clearTimeout(hand);
+            }, 1000);
+
+        });
+    });
+
+
     // Google Map show
     $('#map-open').click(function (e) {
         e.preventDefault();

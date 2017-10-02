@@ -7,62 +7,6 @@ block content
     // end revolution slider section
 
     include ../mixins/services
-    //+fetchServiceSlider([
-    //    {
-    //        name: 'name'
-    //        , description: 'description'
-    //        , icon: 'zmdi zmdi-card-travel'
-    //        , link: '#client'
-    //    }, {
-    //        name: 'name'
-    //        , description: 'description'
-    //        , icon: 'zmdi zmdi-card-travel'
-    //        , link: '#client'
-    //    }, {
-    //        name: 'name'
-    //        , description: 'description'
-    //        , icon: 'zmdi zmdi-card-travel'
-    //        , link: '#client'
-    //    }
-    //    , {
-    //        name: 'name'
-    //        , description: 'description'
-    //        , icon: 'zmdi zmdi-card-travel'
-    //        , link: '#client'
-    //    }, {
-    //        name: 'name'
-    //        , description: 'description'
-    //        , icon: 'zmdi zmdi-card-travel'
-    //        , link: '#client'
-    //    }, {
-    //        name: 'name'
-    //        , description: 'description'
-    //        , icon: 'zmdi zmdi-card-travel'
-    //        , link: '#client'
-    //    }, {
-    //        name: 'name'
-    //        , description: 'description'
-    //        , icon: 'zmdi zmdi-card-travel'
-    //        , link: '#client'
-    //    }, {
-    //        name: 'name'
-    //        , description: 'description'
-    //        , icon: 'zmdi zmdi-card-travel'
-    //        , link: '#client'
-    //    }
-    //    , {
-    //        name: 'name'
-    //        , description: 'description'
-    //        , icon: 'zmdi zmdi-card-travel'
-    //        , link: '#client'
-    //    }, {
-    //        name: 'name'
-    //        , description: 'description'
-    //        , icon: 'zmdi zmdi-card-travel'
-    //        , link: '#client'
-    //    }
-    //])
-
     +fetchServiceSlider(data.service)
     include ../mixins/video-section
     +fetchVideoSection({
@@ -292,27 +236,27 @@ block content
                         .row
                             .col-sm-12.col-md-6
                                 .mdl-textfield.mdl-js-textfield
-                                    input#name.mdl-textfield__input(type='text', name='contactName')
-                                    label.mdl-textfield__label(for='name') Name
+                                    input#name.mdl-textfield__input.input-red(type='text', name='contactName')
+                                    label.mdl-textfield__label.label-black(for='name') Name
                             .col-sm-12.col-md-6
                                 .mdl-textfield.mdl-js-textfield
-                                    input#email.mdl-textfield__input(type='text', name='contactEmail')
-                                    label.mdl-textfield__label(for='email') Email
+                                    input#email.mdl-textfield__input.input-red(type='text', name='contactEmail')
+                                    label.mdl-textfield__label.label-black(for='email') Email
                         .row
                             .col-sm-12
                                 .mdl-textfield.mdl-js-textfield
-                                    input#phone.mdl-textfield__input(type='text', name='contactPhone')
-                                    label.mdl-textfield__label(for='phone') Phone
+                                    input#phone.mdl-textfield__input.input-red(type='text', name='contactPhone')
+                                    label.mdl-textfield__label.label-black(for='phone') Phone
                         .row
                             .col-sm-12
                                 .mdl-textfield.mdl-js-textfield
-                                    input#subject.mdl-textfield__input(type='text', name='contactSubject')
-                                    label.mdl-textfield__label(for='subject') Subject
+                                    input#subject.mdl-textfield__input.input-red(type='text', name='contactSubject')
+                                    label.mdl-textfield__label.label-black(for='subject') Subject
                         .row
                             .col-sm-12
                                 .mdl-textfield.mdl-js-textfield.mdl-textarea
-                                    textarea#message.mdl-textfield__input(name='contactMessage')
-                                    label.mdl-textfield__label(for='message') Message
+                                    textarea#message.mdl-textfield__input.input-red(name='contactMessage')
+                                    label.mdl-textfield__label.label-black(for='message') Message
                         .row
                             .col-sm-12
                                 .text-left

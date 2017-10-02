@@ -6,9 +6,9 @@ block content
         p.content-italic   Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Proin eget tortor risus. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec sollicitudin molestie malesuada.
 
         .row
-            .col-sm-8
-                form#contactForm.matx-form-valid.contact-form(action='#', method='post')
-                    input(type='hidden', name='action', value='contact')
+            .col-md-8
+                form#contactRequestServiceForm.matx-form-valid.contact-form(action='#', method='post')
+                    input(type='hidden', name='action', value='request_service')
                     .row
                         .col-sm-12.col-md-6
                             .mdl-textfield.mdl-js-textfield
@@ -28,22 +28,48 @@ block content
                                 input#contactMobileNumber.mdl-textfield__input(type='text', name='contactMobileNumber')
                                 label.mdl-textfield__label(for='contactMobileNumber') Mobile Number
                     .row
-                        .col-sm-12
+                        //.col-sm-6
                             .mdl-textfield.mdl-js-textfield.mdl-textarea
                                 textarea#contactInterests.mdl-textfield__input(name='contactInterests')
-                                label.mdl-textfield__label(for='contactInterests') Interested.row.row
-                        .col-sm-12
+                                label.mdl-textfield__label(for='contactInterests') Interested
+                        .col-sm-6
                             .mdl-textfield.mdl-js-textfield.mdl-textarea
-                                select#contactInterestss.mdl-textfield__input(name='contactInterests')
+                                select#contactInterestss.mdl-switch__input(name='contactInterests')
                                     option(value='') (select one)
                                     each type in interestedTypes
                                         option(value=type.value, selected=formData.interestedTypes == type.value)= type.label
-                                label.mdl-textfield__label(for='contactInterestss') Interested.row
-                    .col-sm-12
-                        .mdl-textfield.mdl-js-textfield.mdl-textarea
-                            textarea#contactBudget.mdl-textfield__input(name='contactBudget')
-                            label.mdl-textfield__label(for='contactBudget') Budget
+                                label.mdl-textfield__label(for='contactInterestss') Interested
+                        .col-sm-6
+                            .mdl-textfield.mdl-js-textfield.mdl-textarea
+                                label.mdl-textfield__label(for='contactBudget') Budget
+                                select#contactBudget.mdl-switch__input(name='contactBudget')
+                                    option(value='') (select one)
+                                    each type in contactBudgetTypes
+                                        option(value=type.value, selected=formData.contactBudgetTypes == type.value)= type.label
+
                     .row
                         .col-sm-12
-                            .text-left
-                                button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.btn-black.btn-default.btn-submit(disabled='') send
+                            .text-center(style="margin-top: 30px")
+                                button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.btn-black.btn-default.btn-submit(disabled='', style="") send
+
+            .col-md-4.contact-info-start
+                .section-common-space
+                    h2.section-title CONTACT US
+                    .contact-info
+                        .clearfix.ci-items
+                            span.ci-icons
+                                i.zmdi.zmdi-home
+                            address 1600 Amphitheatre Parkway, Mountain View, CA 94043, US
+                        .clearfix.ci-items
+                            span.ci-icons
+                                i.zmdi.zmdi-email
+                            address info@coderpixel.com
+                        .clearfix.ci-items
+                            span.ci-icons
+                                i.zmdi.zmdi-phone
+                            address 0088 1234 567890
+                        .clearfix.ci-items
+                            span.ci-icons
+                                i.zmdi.zmdi-globe
+                            address www.coderpixel.com
+

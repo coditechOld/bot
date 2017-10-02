@@ -60,7 +60,7 @@ html.matx.no-js
         // Header Scripts
         //if lt IE 9
             script(src='assets/js/vendor/html5shiv.js')
-    body
+    body.RTL_Version
         //if lt IE 7
           p.browsehappy
             | You are using an
@@ -85,7 +85,7 @@ html.matx.no-js
                 ul
                     each link in navLinks
                         li(class=( section == link.key ? 'active' : null))
-                            a.menu-smooth-scroll(href=link.href, data-target='#about')= link.label
+                            a(href=link.href)= link.label
                     if user
                         if user.canAccessKeystone
                             li: a(href='/keystone') Open Keystone
