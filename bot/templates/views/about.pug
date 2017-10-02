@@ -1,0 +1,23 @@
+extends ../layouts/test-default
+
+block content
+    include ../mixins/about
+    // start revolution slider section
+    +fetchAboutSliders(data.aboutSliders)
+    // end revolution slider section
+    section#mission(style='text-align: center')
+        h2  Our Mission
+        hr(style='width: 50%; margin: auto')
+        p(style='color: #ff5252') dsdsf dsf sd dfs dfsdf sdfd s
+    section#vision(style='text-align: center')
+        h2  Our Vision
+        hr(style='width: 50%; margin: auto')
+        p(style='color: #ff5252') dsdsf dsf sd dfs dfsdf sdfd s
+
+
+block js-body
+    script.
+        $(document).ready(function () {
+
+        })
+

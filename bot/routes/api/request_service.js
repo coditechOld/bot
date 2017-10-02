@@ -47,7 +47,7 @@ exports = module.exports = function (req, res) {
             fields: 'organizationName, contactName, email,mobileNumber, interested,budget',
             errorMessage: 'There was a problem submitting your enquiry:',
         }, function (err) {
-            console.log('Errors ==>>> ', err.detail);
+            // console.log('Errors ==>>> ', err.detail);
 
             if (err) {
 

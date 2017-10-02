@@ -546,7 +546,6 @@ $(document).ready(function ($) {
             icon: '/img/marker-icon.png',
         };
 
-        
 
         window.map = new GMaps({
             div: mapWrapperID,
@@ -554,10 +553,9 @@ $(document).ready(function ($) {
             lng: 35.730461,
             scrollwheel: true,
             draggable: draggableOp,
-            zoom: mapOps.zoom,
             disableDefaultUI: false,
             styles: mapStyle,
-            zoom: 9,
+            zoom: 9
         });
 
 
@@ -626,10 +624,10 @@ $(document).ready(function ($) {
                     content: mapOps8.content
                 }
             },
-            
+
         ]);
 
-        map.panBy(0,-40);
+        map.panBy(0, -40);
     }
 
 });
@@ -666,19 +664,6 @@ $(window).on('scroll', function (e) {
 
 });
 
-
-doneResize(function () {
-
-    // Home slider height fix
-    homeSliderHeightFix();
-
-    // Update Google Map Positions
-    map.setCenter({
-        lat: mapOps.lat,
-        lng: mapOps.lng
-    });
-    map.panBy(mapOps.panBy.x, mapOps.panBy.y);
-});
 
 // The function actually applying the offset
 function offsetAnchor() {

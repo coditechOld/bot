@@ -266,7 +266,21 @@ block content
 
 block js-body
     script.
+        doneResize(function () {
+
+            // Home slider height fix
+            homeSliderHeightFix();
+
+            // Update Google Map Positions
+            map.setCenter({
+                lat: mapOps.lat,
+                lng: mapOps.lng
+            });
+            map.panBy(mapOps.panBy.x, mapOps.panBy.y);
+        });
+
         $(document).ready(function () {
+
             if ($('.equal-height-map').width() > 768) {
                 $('#map').css('height', $('.equal-height-map').height());
             }

@@ -55,6 +55,10 @@ keystone.set('nav', {
 	enquiries: 'enquiries',
 	users: 'users',
 	services: 'services',
+	homePage: [ 'HomepageBanner', 'HomepageHowItWorks',
+		'HomepageSlide', 'HomepageVideo','Partner', 'Testimonial'],
+	aboutUsPage: ['About', 'AboutUsSlide'],
+	contacts: ['Contact', 'RequestService']
 });
 
 // Start Keystone to connect to your database and initialise the web server
