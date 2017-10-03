@@ -9,7 +9,7 @@ mixin fetchServiceSlider(services)
                     .row
                         if services
                             each service, index in services
-                                .col-sm-4
+                                .col-sm-4.col-xs-6
                                     a(href='/services#' + service.slug.split('-').join('_') )
                                         // start bordered icon box
                                         .single-imodule.imodule-centerd.rbodard-imodule.wow.fadeInUp(data-wow-duration='1s')
@@ -23,7 +23,6 @@ mixin fetchServiceSlider(services)
         // end intro section with icon box
     // end service section
 mixin fetchServices(services)
-
     each service, length in services
         .row(id=service.slug.split('-').join('_')).dark-section.overflow-hidden.boderd-intro-imodules.serviceItem
             .col-sm-4
