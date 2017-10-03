@@ -54,8 +54,8 @@ block content
                         .container
                             .row
                                 .clearfix.col-sm-12.col-md-offset-2.col-md-10.col-lg-offset-2.col-lg-8
-                                    h2.section-title=data.homepageBanner.title
-                                    p=data.homepageBanner.text
+                                    h2.section-title(style='color: #fff')=data.homepageBanner.title
+                                    p(style='color: #fff')=data.homepageBanner.text
                                     a(href="/request-service")
                                         button.mdl-button.ripple-black.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.btn-default.btn-white.wow.fadeInRight(type='submit', data-wow-duration='1.2s', style="float: right")=data.homepageBanner.buttontext
 
