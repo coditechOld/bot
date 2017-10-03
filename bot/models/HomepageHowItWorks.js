@@ -8,7 +8,7 @@ var Types = keystone.Field.Types
 
 var HomepageHowItWorks = new keystone.List('HomepageHowItWorks',{
 	label:'How It Works',
-	map:'title',
+	map: { name: 'title' },
 });
 
 
