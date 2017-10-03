@@ -10,7 +10,7 @@ mixin post(post)
                 h2.mdl-card__title-text.mdl-card__title-content
                     a(href='/blog/post/' + post.slug)=post.title
                 .mdl-card__supporting-text
-                    p=post.content.brief
+                    !=post.content.brief
             .mdl-card__actions.mdl-card--border
                 a#post-1.blog-share
                     i.zmdi.zmdi-share

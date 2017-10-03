@@ -8,7 +8,7 @@ exports = module.exports = function (req, res) {
 
     // locals.section is used to set the currently selected
     // item in the header navigation.
-    locals.section = 'request_services';
+    locals.section = 'request-service';
     locals.interestedTypes = RequestService.fields.interested.ops;
     locals.contactBudgetTypes = RequestService.fields.budget.ops;
     locals.formData = req.body || {};

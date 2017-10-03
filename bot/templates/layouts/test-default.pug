@@ -105,71 +105,14 @@ html.matx.no-js
         // start mobile nav
         nav.nav-typo.mobile-nav
             ul
-                li.menu-item-has-children
-                    a.menu-smooth-scroll(href='#home', data-target='#home') Home 1
-                    ul.sub-menu
-                        li
-                            a(href='home2.html') Home 2
-                        li
-                            a(href='home3.html') Home 3
-                li
-                    a.menu-smooth-scroll(href='#about', data-target='#about') About
-                li
-                    a.menu-smooth-scroll(href='#service', data-target='#service') Service
-                li
-                    a.menu-smooth-scroll(href='#work', data-target='#work') Work
-                li
-                    a.menu-smooth-scroll(href='#team', data-target='#team') Team
-                li
-                    a.menu-smooth-scroll(href='#blog', data-target='#blog') Blog
-                li
-                    a.menu-smooth-scroll(href='#pricing', data-target='#pricing') Pricing
-                li
-                    a.menu-smooth-scroll(href='#contact', data-target='#contact') contact
-                li
-                    a(target='_blank', href='rtl/index.html') RTL Version
-                li.menu-item-has-children
-                    a(href='#') More Pages
-                    ul.sub-menu
-                        li
-                            a(href='components.html') Extra Components
-                        li.menu-item-has-children
-                            a(href='#') Portfolio Pages
-                            ul.sub-menu
-                                li
-                                    a(href='portfolio/single-pages/portfolio-single-01.html') Slider Style
-                                li
-                                    a(href='portfolio/single-pages/portfolio-single-02.html') List Style
-                                li
-                                    a(href='portfolio/single-pages/portfolio-single-03.html') List Full Style
-                        li.menu-item-has-children
-                            a(href='#') Blog Pages
-                            ul.sub-menu
-                                li
-                                    a(href='blog/blog-standard.html') Blog Standard
-                                li
-                                    a(href='blog/blog-masonry.html') Blog Masonry
-                                li
-                                    a(href='blog/blog-masonry-sidebar.html') Blog Masonry Sidebar
-                        li.menu-item-has-children
-                            a(href='#') Single Blog Pages
-                            ul.sub-menu
-                                li
-                                    a(href='blog/single/single.html') Image
-                                li
-                                    a(href='blog/single/single-audio.html') Audio
-                                li
-                                    a(href='blog/single/single-video-vimeo.html') Vimeo
-                                li
-                                    a(href='blog/single/single-video-youtube.html') Youtube
-                                li
-                                    a(href='blog/single/single-video.html') HTML5 Video
-                                li
-                                    a(href='blog/single/single-slider.html') Slider
-                                li
-                                    a(href='blog/single/single-quote.html') Quote
-                        li
-                            a(target='_blank', href='http://themeforest.net/item/matx-material-design-agency-template/13887396') Buy Now
+                each link in navLinks
+                    li(class=( section == link.key ? 'active' : null))
+                        a(href=link.href)= link.label
+                if user
+                    if user.canAccessKeystone
+                        li: a(href='/keystone') Open Keystone
+                    li: a(href='/keystone/signout') Sign Out
+
         // end mobile nav
         // start main wrapper
         main.main-wrapper
