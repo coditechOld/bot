@@ -20,7 +20,9 @@ RequestService.add({
         type: Types.Select, options: [
             {value: 'mobile-and-web', label: 'Mobile and Web'},
             {value: 'data', label: 'Data'},
-            {value: 'other', label: 'Something else...'},
+            {value: 'e-commerce', label: 'E-Commerce'},
+            {value: 'marketing', label: 'Marketing'},
+            {value: 'design', label: 'Design'},
         ], required: true
     },
     budget: {

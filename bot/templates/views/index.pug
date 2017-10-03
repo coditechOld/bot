@@ -19,7 +19,8 @@ block content
     include ../mixins/testimonials
     +fetchTestimonialsSection(data.testimonial)
     section#blog.section-main
-
+        include ../mixins/blog
+        +fetchBlogPreview(data.blogPosts)
         // start newsletter section
         section.newsletter.overflow-hidden
             .bg-image.newsletter-bg(style='background-image: url("' + '/images/newsletter.jpg' + '")',data-center='transform: translate3d(0px, -50%, 0px)', data-top-bottom='transform: translate3d(0px, -25%, 0px)', data-bottom-top='transform: translate3d(0px, -75%, 0px)')

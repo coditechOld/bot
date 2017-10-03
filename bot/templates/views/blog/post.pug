@@ -1,0 +1,415 @@
+doctype html
+//if lt IE 7
+  html.no-js.lt-ie9.lt-ie8.lt-ie7
+//if IE 7
+  html.no-js.lt-ie9.lt-ie8
+//if IE 8
+  html.no-js.lt-ie9
+// [if gt IE 8] <!
+html.no-js
+    // <![endif]
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        title Matx - General Post
+        meta(name='description', content='Material Agency Template')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        // matx favicons
+        link(rel='apple-touch-icon-precomposed', sizes='57x57', href='../../matx-icon/apple-touch-icon-57x57.png')
+        link(rel='apple-touch-icon-precomposed', sizes='114x114', href='../../matx-icon/apple-touch-icon-114x114.png')
+        link(rel='apple-touch-icon-precomposed', sizes='72x72', href='../../matx-icon/apple-touch-icon-72x72.png')
+        link(rel='apple-touch-icon-precomposed', sizes='144x144', href='../../matx-icon/apple-touch-icon-144x144.png')
+        link(rel='apple-touch-icon-precomposed', sizes='120x120', href='../../matx-icon/apple-touch-icon-120x120.png')
+        link(rel='apple-touch-icon-precomposed', sizes='152x152', href='../../matx-icon/apple-touch-icon-152x152.png')
+        link(rel='icon', type='image/png', href='../../matx-icon/favicon-32x32.png', sizes='32x32')
+        link(rel='icon', type='image/png', href='../../matx-icon/favicon-16x16.png', sizes='16x16')
+        meta(name='application-name', content=' ')
+        meta(name='msapplication-TileColor', content='#FFFFFF')
+        meta(name='msapplication-TileImage', content='../../matx-icon/mstile-144x144.png')
+        // Google Fonts
+        link(href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,900,400italic,500italic', rel='stylesheet', type='text/css')
+        // Stylesheets
+        link(rel='stylesheet', href='../../assets/libs/material-design-iconic-font/css/material-design-iconic-font.min.css')
+        link(rel='stylesheet', href='../../assets/libs/bootstrap/bootstrap.min.css')
+        link(rel='stylesheet', href='../../assets/libs/mdl/material.min.css')
+        link(rel='stylesheet', href='../../assets/css/animate.min.css')
+        link(rel='stylesheet', href='../../assets/libs/owl-carousel/owl.carousel.css')
+        link(rel='stylesheet', href='../../assets/libs/owl-carousel/owl.theme.css')
+        link(rel='stylesheet', href='../../assets/libs/owl-carousel/owl.transitions.css')
+        link(rel='stylesheet', href='../../assets/css/common.css')
+        link(rel='stylesheet', href='../../assets/css/blog.css')
+        link(rel='stylesheet', href='../../assets/css/responsive.css')
+
+        // Header Scripts
+        //if lt IE 9
+          script(src='../assets/js/vendor/html5shiv.js')
+    body.blog-page.single-post-page
+        //if lt IE 7
+          p.browsehappy
+            | You are using an
+            strong outdated
+            |  browser. Please
+            a(href='http://browsehappy.com/') upgrade your browser
+            |  to improve your experience.
+        // loder
+        #loader.loader-wrapper
+            .matx-preloader
+        // Overlay display while mobile navigation will open
+        .nav-overlay-bg
+        block content    
+        // start banner
+        section.banner-header
+            .banner-overlay
+                .bg-image.single-page-bg(data-top='transform: translate3d(0px, 0px, 0px)', data-top-bottom='transform: translate3d(0px, 250px, 0px)')
+            section.section-main
+                .overlay.overlay-seven
+                    // start banner content
+                    .container
+                        .section-common-space
+                            .clearfix.banner-content
+                                .pull-left.banner-content-inner
+                                    // single page post title
+                                    h2=data.post.title
+                                    // start single page post meta
+                                    .clearfix.post-meta
+                                        span
+                                            | By
+                                            =' ' + data.post.author.name.first
+                                            =' ' + data.post.author.name.last
+                                        //span Octeber 24, 2015
+                                        //+date=new Date(form.startDate.value/)
+                                        span=data.post.publishedDate
+                                        span.cm 5 Comments
+                                        span
+                                            a(href='#') UX Design
+                                    // end single page post meta
+                                // start social icons
+                                ul.pull-right.clearfix.social.share-social.js-post-share-media
+                                    li.fb
+                                        a(href='single.html')
+                                            i.zmdi.zmdi-facebook
+                                    li.tw
+                                        a(href='single.html')
+                                            i.zmdi.zmdi-twitter
+                                    li.gplus
+                                        a(href='single.html')
+                                            i.zmdi.zmdi-google-plus
+                                    li.lin
+                                        a(href='single.html')
+                                            i.zmdi.zmdi-linkedin
+                                // end social icons
+                    // end banner content
+            // start search section
+            section#fullSearch.section-main.search-bar.hide-bg
+                .search-bg
+                i.zmdi.zmdi-close.search-close
+                .container
+                    .row
+                        .col-sm-8.col-sm-offset-2
+                            form(action='#')
+                                .mdl-textfield.mdl-js-textfield
+                                    p.search-label Just type and press 'enter'
+                                    label.mdl-textfield__label(for='search-blog')
+                                    input#search-blog.mdl-textfield__input(type='text')
+            // end search section
+            // start site main header
+            header.main-header.hide-init-animation
+                // start desktop logo
+                a.logo.matx-logo.logo-initial.hide-init-animation(href='../../index.html')
+                    img.logo-dark(src='../../img/logo_dark.png', alt='logo')
+                    img.logo-lite(src='../../img/logo_lite.png', alt='logo')
+                // end desktop logo
+                // search button
+                .right-nav-sec
+                    .group-btn
+                        button.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.search-open
+                            i.zmdi.zmdi-search
+                // start desktop nav
+                nav.nav-typo.main-nav
+                    ul
+                        li.menu-item-has-children
+                            a(href='#') Home
+                            ul.sub-menu
+                                li
+                                    a(href='../../index.html') Home 1
+                                li
+                                    a(href='../../home2.html') Home 2
+                                li
+                                    a(href='../../home3.html') Home 3
+                        li.active
+                            a(href='single.html') Image
+                        li
+                            a(href='single-audio.html') Audio
+                        li
+                            a(href='single-video-vimeo.html') Vimeo
+                        li
+                            a(href='single-video-youtube.html') Youtube
+                        li
+                            a(href='single-video.html') HTML5 Video
+                        li
+                            a(href='single-slider.html') Slider
+                        li
+                            a(href='single-quote.html') Quote
+                        li.menu-item-has-children
+                            a(href='#') More Pages
+                            ul.sub-menu
+                                li
+                                    a(href='../../components.html') Extra Components
+                                li.menu-item-has-children
+                                    a(href='#') Portfolio Pages
+                                    ul.sub-menu
+                                        li
+                                            a(href='../../portfolio/single-pages/portfolio-single-01.html') Slider Style
+                                        li
+                                            a(href='../../portfolio/single-pages/portfolio-single-02.html') List Style
+                                        li
+                                            a(href='../../portfolio/single-pages/portfolio-single-03.html') List Full Style
+                                li.menu-item-has-children
+                                    a(href='#') Blog Pages
+                                    ul.sub-menu
+                                        li
+                                            a(href='../blog-standard.html') Blog Standard
+                                        li
+                                            a(href='../blog-masonry.html') Blog Masonry
+                                        li
+                                            a(href='../blog-masonry-sidebar.html') Blog Masonry Sidebar
+                                li
+                                    a(target='_blank', href='http://themeforest.net/item/matx-material-design-agency-template/13887396') Buy Now
+                // end desktop nav
+                // start mobile logo
+                a.logo.matx-logo.mobile-logo.menu-smooth-scroll(href='#', data-target='#home')
+                    img(src='../../img/logo_lite.png', alt='logo')
+                // end mobile logo
+                // toogle icons, which are responsible for display and hide menu in small layout
+                .mdl-layout__drawer-button.mobile-menu-area
+                    i#menu-back-btn.mobile-menu-ctrl.zmdi.zmdi-arrow-right
+                    i#menu-show-btn.mobile-menu-ctrl.active.zmdi.zmdi-menu
+            // end site main header
+            // start mobile nav
+            nav.nav-typo.mobile-nav
+                ul
+                    li.menu-item-has-children
+                        a(href='#') Home
+                        ul.sub-menu
+                            li
+                                a(href='../../index.html') Home 1
+                            li
+                                a(href='../../home2.html') Home 2
+                            li
+                                a(href='../../home3.html') Home 3
+                    li.active
+                        a(href='single.html') Image
+                    li
+                        a(href='single-audio.html') Audio
+                    li
+                        a(href='single-video-vimeo.html') Vimeo
+                    li
+                        a(href='single-video-youtube.html') Youtube
+                    li
+                        a(href='single-video.html') HTML5 Video
+                    li
+                        a(href='single-slider.html') Slider
+                    li
+                        a(href='single-quote.html') Quote
+                    li.menu-item-has-children
+                        a(href='#') More Pages
+                        ul.sub-menu
+                            li
+                                a(href='../../components.html') Extra Components
+                            li.menu-item-has-children
+                                a(href='#') Portfolio Pages
+                                ul.sub-menu
+                                    li
+                                        a(href='../../portfolio/single-pages/portfolio-single-01.html') Slider Style
+                                    li
+                                        a(href='../../portfolio/single-pages/portfolio-single-02.html') List Style
+                                    li
+                                        a(href='../../portfolio/single-pages/portfolio-single-03.html') List Full Style
+                            li.menu-item-has-children
+                                a(href='#') Blog Pages
+                                ul.sub-menu
+                                    li
+                                        a(href='../blog-standard.html') Blog Standard
+                                    li
+                                        a(href='../blog-masonry.html') Blog Masonry
+                                    li
+                                        a(href='../blog-masonry-sidebar.html') Blog Masonry Sidebar
+                            li
+                                a(target='_blank', href='http://themeforest.net/item/matx-material-design-agency-template/13887396') Buy Now
+            // end mobile nav
+        // end banner
+        // start main wrapper
+        main.main-wrapper.blog-single
+            section.section-main.single-blog.blog-bg
+                .section-common-space
+                    .container
+                        .row
+                            .col-xs-12.col-sm-8
+                                // start main post
+                                .main-post
+                                    // start single page post start
+                                    article.single-post-content
+                                        // start post thumbnail
+                                        .post-header
+                                            img(src='../../img/blog/02.jpg ', alt='blog post thumbnail')
+                                        // end post thumbnail
+                                        // start single post content
+                                        .post-entry
+                                            p
+                                                | Praesent nonummy mi in odio. Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam. Aenean massa. Fusce egestas elit eget lorem. Curabitur a felis in nunc fringilla tristique.
+                                            h2 DESIGN YOU NEED EVERYDAY
+                                            p
+                                                | Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui. Nulla consequat massa quis enim. In ut quam vitae odio lacinia tincidunt. Fusce convallis metus id felis luctus adipiscing. Etiam imperdiet imperdiet orci. Cras risus ipsum, faucibus ut, ullamcorper id, varius ac, leo. Ut a nisl id ante tempus.
+                                            h3 Lorem ipsum dolor sit amet
+                                            p
+                                                | Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam cursus lacinia erat. In hac habitasse platea dictumst. Nullam vel sem. Nullam accumsan lorem in dui. Aenean commodo ligula eget dolor. Nulla sit amet est. Curabitur vestibulum aliquam leo. Phasellus volutpat, metus eget egestas mollis, lacus lacus blandit dui, id egestas quam mauris ut lacus. Suspendisse faucibus..
+                                            blockquote
+                                                | Aenean ut eros et nisl sagittis vestibulum. Morbi mattis ullamcorper velit. Etiam vitae tortor. Donec posuere vulputate arcu. Nullam accumsan lorem in dui.
+                                            p
+                                                | Suspendisse feugiat. Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Etiam feugiat lorem non metus. Vivamus quis mi. Donec vitae sapien ut libero venenatis faucibus. Phasellus gravida semper nisi. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum.
+                                            ul
+                                                li Consectetur adipiscing elit vtae elit libero
+                                                li Nullam id dolor id eget lacinia odio posuere erat a ante
+                                                li Integer posuere erat dapibus posuere velit
+                                            p
+                                                | Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Fusce fermentum odio nec arcu. In auctor lobortis lacus. Fusce vel dui. Praesent turpis. Fusce fermentum odio nec arcu. Aenean commodo ligula eget dolor. Etiam iaculis nunc ac metus. Praesent blandit laoreet nibh. In hac habitasse platea dictumst. In hac habitasse platea dictumst. Ut varius tincidunt libero. Donec id justo.
+                                            pre.
+                                                \nif ($formattedResponse === FALSE) {
+                                                    return redirect('user/dashboard')->with([
+                                                        'message'=>'Request Not Found',
+                                                        'message_important'=>true
+                                                    ]);
+                                                }
+                                            p
+                                                | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non enim ut enim fringilla adipiscing id in lorem. Quisque aliquet neque vitae lectus tempus consectetur. Aliquam erat volutpat. Nunc eu nibh nulla, id cursus arcu.
+                                            p
+                                                i
+                                                    | Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam at velit nisl. Aenean vitae est nisl. Cras molestie molestie nisl vel imperdiet. Donec vel mi sem.
+                                        // end single post content
+                                        // start share post
+                                        .clearfix.tab-histry.post-share
+                                            span Social Share
+                                            ul.pull-right.clearfix.social.share-social.js-post-share-media
+                                                li.fb
+                                                    a(href='single.html')
+                                                        i.zmdi.zmdi-facebook
+                                                li.tw
+                                                    a(href='single.html')
+                                                        i.zmdi.zmdi-twitter
+                                                li.gplus
+                                                    a(href='single.html')
+                                                        i.zmdi.zmdi-google-plus
+                                                li.lin
+                                                    a(href='single.html')
+                                                        i.zmdi.zmdi-linkedin
+                                        // end share post
+                                    // end single page post start
+                                // end main post
+                            // start sidebar
+                            .col-xs-12.col-sm-4.primary-sidebar
+                                .sidebar-area
+                                    // recent post widget
+                                    aside.white-box.widget
+                                        h3.widget-title RECENT POSTS
+                                        .widget-text
+                                            ul.recent-posts
+                                                li.recent-item
+                                                    a(href='single.html') GENERAL BLOG POST
+                                                    span
+                                                        time(datetime='2015-10-24') October 24, 2015
+                                                li.recent-item
+                                                    a(href='single-slider.html') POST WITH IMAGE SLIDE
+                                                    span
+                                                        time(datetime='2015-10-24') October 16, 2015
+                                                li.recent-item
+                                                    a(href='single-video.html') WE SUPPORT YOUR CUSTOM VIDEO
+                                                    span
+                                                        time(datetime='2015-10-24') October 9, 2015
+                                                li.recent-item
+                                                    a(href='single-audio.html') UPDATE POST WITH AUDIO
+                                                    span
+                                                        time(datetime='2015-10-24') October 9, 2015
+                                                li.recent-item
+                                                    a(href='single-video-youtube.html') POST WITH YOUTUBE VIDEO
+                                                    span
+                                                        time(datetime='2015-10-24') September 30, 2015
+                                    // category widget
+                                    aside.white-box.widget
+                                        h3.widget-title CATEGORIES
+                                        ul
+                                            li
+                                                a(href='#') Google Design
+                                            li
+                                                a(href='#') UX Design
+                                            li
+                                                a(href='#') UI Design
+                                            li
+                                                a(href='#') UI Design
+                                            li
+                                                a(href='#') Flat Design
+                                    // archive widget
+                                    aside.white-box.widget
+                                        h3.widget-title ARCHIVE
+                                        ul
+                                            li
+                                                a(href='#') September 2015
+                                            li
+                                                a(href='#') October 2015
+                                            li
+                                                a(href='#') November 2015
+                                            li
+                                                a(href='#') December 2015
+                                            li
+                                                a(href='#') January 2016
+                                    // tag widget
+                                    aside.white-box.widget
+                                        h3.widget-title TAGS
+                                        .clearfix.tagcloud
+                                            a(href='#') Awesome
+                                            a(href='#') Blog
+                                            a(href='#') Coderpixel
+                                            a(href='#') Creative
+                                            a(href='#') MatX
+                                            a(href='#') Google Design
+                                            a(href='#') Material Design
+                            // end sidebar
+        // end main wrapper
+        // start main footer
+        footer.main-footer
+            section.footer-top
+                .section
+                    .section-common-space
+                        .container
+                            .row
+                                .text-center.ft-content-start
+                                    a.logo.footer-logo.wow.fadeIn(href='#', data-wow-duration='1s')
+                                        img(src='../../img/logo_lite.png', alt='logo')
+                                    ul.clearfix.social.footer-social.hover-round
+                                        li
+                                            a(href='#')
+                                                i.zmdi.zmdi-facebook
+                                        li
+                                            a(href='#')
+                                                i.zmdi.zmdi-twitter
+                                        li
+                                            a(href='#')
+                                                i.zmdi.zmdi-google-plus
+                                        li
+                                            a(href='#')
+                                                i.zmdi.zmdi-instagram
+            section.footer-bottom
+                .text-center
+                    p MATX © 2016. ALL RIGHT RESERVED
+        // end main footer
+        // back to top button
+        button#backToTop.mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.btn-highlight.back-to-top.hide-bottom
+            i.zmdi.zmdi-chevron-up
+        script.
+            window.jQuery || document.write('<script type="text/javascript" src="../../assets/js/vendor/jquery-1.10.2.min.js"><\\/script>')
+        script(type='text/javascript', src='../../assets/libs/mdl/material.min.js')
+        script(type='text/javascript', src='../../assets/js/common-plugins.js')
+        script(type='text/javascript', src='../../assets/libs/owl-carousel/owl.carousel.min.js')
+        script(type='text/javascript', src='../../assets/libs/jwplayer/jwplayer.js')
+        script(type='text/javascript', src='../../assets/js/common.js')
+        script(type='text/javascript', src='../../assets/js/blog.js')
