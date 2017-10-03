@@ -27,8 +27,7 @@ HomepageBanner.add({
 
     title: {type:String, default:'Get Started!'},
     text:{type:String},
-    buttonlink:{type:String},
-    buttontext:{type:String},
+    buttontext:{type:String, default:'Request Service'},
     backgroundImage:{type: Types.File, storage: myStorage }
 
 });
