@@ -13,7 +13,8 @@ mixin fetchServiceSlider(services)
                                     a(href='/services#' + service.slug.split('-').join('_') )
                                         // start bordered icon box
                                         .single-imodule.imodule-centerd.rbodard-imodule.wow.fadeInUp(data-wow-duration='1s')
-                                            i(class=service.icon)
+                                            .icon-box
+                                                i(class=service.icon)
                                             .ic-module-content
                                                 h3.imodule-title=service.title
                                                 p=service.briefDescription
