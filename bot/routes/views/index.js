@@ -17,6 +17,7 @@ exports = module.exports = function (req, res) {
         testimonial: [],
         partners: [],
         homepageBanner: [],
+        blogPosts: [],
 
 
     };
@@ -88,6 +89,19 @@ exports = module.exports = function (req, res) {
 
         q.exec(function (err, results) {
             locals.data.homepageBanner = results;
+            next(err);
+        });
+
+
+    });
+    view.on('init', function (next) {
+        var q = keystone.list('Post').model.find().where('state', 'published').sort('publishedDate').populate('author categories').limit(3);
+
+
+        q.exec(function (err, results) {
+            console.log('Error ==> ', err);
+
+            locals.data.blogPosts = results;
             next(err);
         });
 
