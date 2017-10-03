@@ -63,12 +63,10 @@
 .input-red {
   border-bottom: 1px solid rgba(255,82,82,0.8);
 }
-section#mission h2,
-section#vision h2 {
+section#mission h2 {
   color: #f00;
 }
-section#mission hr,
-section#vision hr {
+section#mission hr {
   display: block;
   height: 1px;
   border: 0;

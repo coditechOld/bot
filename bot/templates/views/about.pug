@@ -7,17 +7,18 @@ block content
     // end revolution slider section
     .container
         if data.about
-            section#about.about
+            section#about.about.col-sm-8.col-sm-push-2
                 h2=data.about.aboutUsTitle ? data.about.aboutUsTitle : ''
                 p!=data.about.aboutUsText
-            section#mission.about
-                h2=data.about.missionTitle
-                hr
-                !=data.about.missionText
-            section#vision.about
-                h2=data.about.visionTitle
-                hr
-                !=data.about.visionText
+    .container
+        section#mission.about.col-sm-8.col-sm-push-2
+            h2=data.about.missionTitle
+            hr
+            !=data.about.missionText
+        section#vision.about.col-sm-8.col-sm-push-2
+            h2=data.about.visionTitle
+            hr
+            !=data.about.visionText
 
 
 block js-body
