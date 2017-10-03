@@ -90,7 +90,7 @@ $(document).ready(function ($) {
         specialtySlider.owlCarousel({
             slideSpeed: 500,
             itemsCustom: [
-                [0, 1],
+                [0, 2],
                 [540, 2],
                 [992, 3],
                 [1200, 4]
