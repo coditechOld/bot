@@ -13,7 +13,6 @@ var HomepageHowItWorks = new keystone.List('HomepageHowItWorks',{
 
 
 HomepageHowItWorks.add({
-	icon: { type: String},
     title: { type: String},
     text: { type: Types.Html, wysiwyg: true, height: 150 },
 });

@@ -1,11 +1,24 @@
 mixin fecthHowItWorks(data)
-    section#how_it_work.section-main
-        .section-common-space
-            .container
-                // start section title
-                if data
-                    .text-center.section-heading
-                        h2.section-title=data.title
-                        br
-                        !=data.text
-
+    section.dark-section.overflow-hidden.accordion-section
+        .why-choose-us-accordion-bg(data-center='transform: translate3d(0px, -50%, 0px)', data-top-bottom='transform: translate3d(0px, -25%, 0px)', data-bottom-top='transform: translate3d(0px, -75%, 0px)')
+        .overlay
+            .section-common-space
+                .container
+                    .row
+                        // start section title
+                        .col-sm-12.text-center.section-heading
+                            h2.section-title WHY CHOOSE US
+                            img(src="/images/bot-howitworks.png")
+                        // end section title
+                    .row.specialties-accordion-wrap(data-action='accordionWithImage')
+                        .col-sm-12.col-md-8.col-lg-push-2.col-lg-8
+                            ul.wcu-collapse
+                                each item in data
+                                    -console.log('item ==>', item)
+                                    li.single-acc-item
+                                        .collapse-label()
+                                            // accordion title
+                                            .cllabelmain=item.title
+                                            .icwrap
+                                                i.zmdi.zmdi-plus
+                                        .collapse-content!=item.text

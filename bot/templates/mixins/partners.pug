@@ -1,14 +1,27 @@
 mixin fetchPartnersSlider(partners)
     //  start clients or logo slider
-    section.secondary-bg-color.clients
-        .section-common-space.text-center
-            h2.section-title Clients
-            .container
-                .row
-                    .client-slider(data-action='clientSlider')
-                        if partners
-                            each partner, index in partners
-                                .col-sm-3
-                                    .single-clients
-                                        img(src=partner.logo.url, alt=partner.name)
-    //  start clients or logo slider
+    section.overflow-hidden.icon-module-slider
+        .overlay
+            .section-common-space
+                .container
+                    .row
+                        // start section title
+                        .text-center.section-heading
+                            h2.section-title why chose us
+                            h3.section-subtitle We combine the best of our skills and ideas to change the idea of web service's.
+                        // end section title
+                        .inside-has-slider
+                            div(data-action='specialtySlider')
+                                if partners
+                                    each partner, index in partners
+                                        // single icon box
+                                        .col-md-12
+                                            a(href=partner.slug)
+                                            .single-imodule.imodule-centerd.imodule-slide
+                                                .icon-box
+                                                    img(src=partner.logo.url)
+                            .specialty-slider-navwrap
+                                a.mdl-button.mdl-js-button.mdl-js-ripple-effect.ch-trns-white.left-arrow.icon-arrow.round-arrow.wow.fadeInLeft(href='#', data-wow-duration='1s')
+                                    i.zmdi.zmdi-chevron-left
+                                a.mdl-button.mdl-js-button.mdl-js-ripple-effect.ch-trns-white.right-arrow.icon-arrow.round-arrow.wow.fadeInRight(href='#', data-wow-duration='1s')
+                                    i.zmdi.zmdi-chevron-right

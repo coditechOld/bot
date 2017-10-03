@@ -40,18 +40,7 @@ html.no-js
         link(rel='stylesheet', href='../../assets/css/common.css')
         link(rel='stylesheet', href='../../assets/css/blog.css')
         link(rel='stylesheet', href='../../assets/css/responsive.css')
-        // Other Color Schemes
-        // <link rel="stylesheet" href="../../assets/css/color-cyan.css">
-        // <link rel="stylesheet" href="../../assets/css/color-indigo.css">
-        // <link rel="stylesheet" href="../../assets/css/color-deep-purple.css">
-        // <link rel="stylesheet" href="../../assets/css/color-pink.css">
-        // <link rel="stylesheet" href="../../assets/css/color-blue.css">
-        // <link rel="stylesheet" href="../../assets/css/color-green.css">
-        // <link rel="stylesheet" href="../../assets/css/color-deep-orange.css">
-        // <link rel="stylesheet" href="../../assets/css/color-blue-grey.css">
-        // <link rel="stylesheet" href="../../assets/css/color-teal.css">
-        // <link rel="stylesheet" href="../../assets/css/color-purple.css">
-        // <link rel="stylesheet" href="../../assets/css/color-light-green.css">
+
         // Header Scripts
         //if lt IE 9
           script(src='../assets/js/vendor/html5shiv.js')
@@ -72,7 +61,7 @@ html.no-js
         // start banner
         section.banner-header
             .banner-overlay
-                .bg-image.single-page-bg(data-top='transform: translate3d(0px, 0px, 0px)', data-top-bottom='transform: translate3d(0px, 250px, 0px)')
+                .bg-image.single-page-bg(data-top='transform: translate3d(0px, 0px, 0px)', data-top-bottom='transform: translate3d(0px, 250px, 0px)', style='background-image: url("'+ data.post.image.url +'")')
             section.section-main
                 .overlay.overlay-seven
                     // start banner content
@@ -81,30 +70,32 @@ html.no-js
                             .clearfix.banner-content
                                 .pull-left.banner-content-inner
                                     // single page post title
-                                    h2 GENERAL BLOG POST
+                                    h2=data.post.title
                                     // start single page post meta
                                     .clearfix.post-meta
                                         span
                                             | By
-                                            a(href='#') CoderPixel
-                                        span Octeber 24, 2015
-                                        span.cm 5 Comments
-                                        span
-                                            a(href='#') UX Design
+                                            =' ' + data.post.author.name.first
+                                            =' ' + data.post.author.name.last
+                                        //span Octeber 24, 2015
+                                        //+date=new Date(form.startDate.value/)
+                                        span #{data.post._.publishedDate.format('MMMM D, YYYY')}
+                                        span='In '
+                                        a(href='/blog/category/' + data.post.categories.key )=data.post.categories.name
                                     // end single page post meta
                                 // start social icons
                                 ul.pull-right.clearfix.social.share-social.js-post-share-media
                                     li.fb
-                                        a(href='single.html')
+                                        a(href='/blog/post/' + data.post.slug)
                                             i.zmdi.zmdi-facebook
                                     li.tw
-                                        a(href='single.html')
+                                        a(href='/blog/post/' + data.post.slug)
                                             i.zmdi.zmdi-twitter
                                     li.gplus
-                                        a(href='single.html')
+                                        a(href='/blog/post/' + data.post.slug)
                                             i.zmdi.zmdi-google-plus
                                     li.lin
-                                        a(href='single.html')
+                                        a(href='/blog/post/' + data.post.slug)
                                             i.zmdi.zmdi-linkedin
                                 // end social icons
                     // end banner content

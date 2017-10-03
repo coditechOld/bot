@@ -8,10 +8,11 @@ exports = module.exports = function (req, res) {
 	// Set locals
 	locals.section = 'blog';
 	locals.filters = {
-		post: 'post-1',
+		post: req.params.post,
 	};
 	locals.data = {
-		posts: [],
+        recentPosts: [],
+        categories: [],
 	};
 
 	// Load the current post
@@ -20,7 +21,7 @@ exports = module.exports = function (req, res) {
 		var q = keystone.list('Post').model.findOne({
 			state: 'published',
 			slug: locals.filters.post,
-		}).populate('author categories');
+		}).populate(['author','categories']);
 
 		q.exec(function (err, result) {
 			locals.data.post = result;
@@ -32,10 +33,22 @@ exports = module.exports = function (req, res) {
 	// Load other posts
 	view.on('init', function (next) {
 
-		var q = keystone.list('Post').model.find().where('state', 'published').sort('-publishedDate').populate('author').limit('4');
+		var q = keystone.list('Post').model.find().where('state', 'published').sort('publishedDate').populate('author').limit(5);
 
 		q.exec(function (err, results) {
-			locals.data.posts = results;
+			locals.data.recentPosts = results;
+			next(err);
+		});
+
+	});
+
+	// Load PostCategory
+	view.on('init', function (next) {
+
+		var q = keystone.list('PostCategory').model.find();
+
+		q.exec(function (err, results) {
+			locals.data.categories = results;
 			next(err);
 		});
 

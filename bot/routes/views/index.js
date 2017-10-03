@@ -58,7 +58,7 @@ exports = module.exports = function (req, res) {
         var q = keystone.list('HomepageHowItWorks').model.find();
 
         q.exec(function (err, results) {
-            locals.data.homepageHowItWorks = results[0];
+            locals.data.homepageHowItWorks = results;
             next(err);
         });
 
