@@ -181,6 +181,7 @@ $(document).ready(function ($) {
         testimonialSlider.owlCarousel({
             singleItem: true,
             pagination: true,
+            autoHeight : true,
             autoPlay: false,
         });
     }

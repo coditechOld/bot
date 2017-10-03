@@ -10,7 +10,7 @@ block content
     +fetchServiceSlider(data.service)
     include ../mixins/video-section
     +fetchVideoSection({
-        link: 'https://www.youtube.com/embed/28ji6G5hTRw?autoplay=1&loop=1&cc_load_policy=1&rel=0&controls=0&showinfo=0',
+        link: data.homeVideo.link + '?autoplay=1&loop=1&cc_load_policy=1&rel=0&controls=0&showinfo=0',
         backgroundImage: {url: '/test/sliders/slide1.jpg'}
 
     })
