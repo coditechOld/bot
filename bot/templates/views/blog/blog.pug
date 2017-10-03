@@ -1,0 +1,237 @@
+mixin post(post)
+    article.col-xxs-12.col-xs-6.col-sm-6.col-md-4.single-blog-post
+        .mdl-card.mdl-shadow--2dp.jumbo-shadow
+            .post-thumb-wrap
+                a(href='/blog/post/' + post.slug)
+                    img(src=post.image.url, alt=post.title)
+                    .post-meta-info
+                        span.post-meta-date #{post._.publishedDate.format('MMMM Do, YYYY')}
+            .post-content-wrap
+                h2.mdl-card__title-text.mdl-card__title-content
+                    a(href='/blog/post/' + post.slug)=post.title
+                .mdl-card__supporting-text
+                    p=post.content.brief
+            .mdl-card__actions.mdl-card--border
+                a#post-1.blog-share
+                    i.zmdi.zmdi-share
+                ul.mdl-menu.mdl-menu--bottom-right.mdl-js-menu.mdl-js-ripple-effect.post-share-media.js-post-share-media(data-for='post-1')
+                    li.fb
+                        a(href='/blog/post/' + post.slug)
+                            i.zmdi.zmdi-facebook-box
+                            span Facebook
+                    li.tw
+                        a(href='/blog/post/' + post.slug)
+                            i.zmdi.zmdi-twitter-box
+                            span Twitter
+                    li.gplus
+                        a(href='/blog/post/' + post.slug)
+                            i.zmdi.zmdi-google-plus-box
+                            span Google plus
+                    li.lin
+                        a(href='/blog/post/' + post.slug)
+                            i.zmdi.zmdi-linkedin-box
+                            span Linked In
+
+doctype html
+//
+  if lt IE 7html.no-js.lt-ie9.lt-ie8.lt-ie7
+//
+  if IE 7html.no-js.lt-ie9.lt-ie8
+//
+  if IE 8html.no-js.lt-ie9
+//if gt IE 8
+  | [if gt IE 8]
+html.matx.no-js
+    // <![endif]
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        title Matx - Material Design Agency Template
+        meta(name='description', content='Material Agency Template')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        // matx favicons
+        link(rel='apple-touch-icon-precomposed', sizes='57x57', href='matx-icon/apple-touch-icon-57x57.png')
+        link(rel='apple-touch-icon-precomposed', sizes='114x114', href='matx-icon/apple-touch-icon-114x114.png')
+        link(rel='apple-touch-icon-precomposed', sizes='72x72', href='matx-icon/apple-touch-icon-72x72.png')
+        link(rel='apple-touch-icon-precomposed', sizes='144x144', href='matx-icon/apple-touch-icon-144x144.png')
+        link(rel='apple-touch-icon-precomposed', sizes='120x120', href='matx-icon/apple-touch-icon-120x120.png')
+        link(rel='apple-touch-icon-precomposed', sizes='152x152', href='matx-icon/apple-touch-icon-152x152.png')
+        link(rel='icon', type='image/png', href='matx-icon/favicon-32x32.png', sizes='32x32')
+        link(rel='icon', type='image/png', href='matx-icon/favicon-16x16.png', sizes='16x16')
+        meta(name='application-name', content=' ')
+        meta(name='msapplication-TileColor', content='#FFFFFF')
+        meta(name='msapplication-TileImage', content='matx-icon/mstile-144x144.png')
+        // Google Fonts
+        link(href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,700italic,700,500italic,900', rel='stylesheet', type='text/css')
+        // Stylesheets
+        link(rel='stylesheet', href='/assets/libs/material-design-iconic-font/css/material-design-iconic-font.min.css')
+        link(rel='stylesheet', href='/assets/libs/bootstrap/bootstrap.min.css')
+        link(rel='stylesheet', href='/assets/libs/mdl/material.min.css')
+        link(rel='stylesheet', href='/assets/css/animate.min.css')
+        link(rel='stylesheet', href='/assets/libs/owl-carousel/owl.carousel.css')
+        link(rel='stylesheet', href='/assets/libs/owl-carousel/owl.theme.css')
+        link(rel='stylesheet', href='/assets/libs/owl-carousel/owl.transitions.css')
+        link(rel='stylesheet', href='/assets/libs/magnific-popup/magnific-popup.css')
+        link(rel='stylesheet', href='/assets/libs/sweetalert/sweet-alert.min.css')
+        link(rel='stylesheet', href='/assets/libs/sweetalert/ie9.css')
+        link(rel='stylesheet', href='/assets/css/common.css')
+        link(rel='stylesheet', href='../../assets/css/blog.css')
+
+        link(rel='stylesheet', href='/assets/css/main.css')
+        link(rel='stylesheet', href='/assets/css/responsive.css')
+
+        link(href="/styles/site.css", rel="stylesheet")
+
+        if user && user.canAccessKeystone
+            link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
+
+        block css
+
+        block head
+        // Header Scripts
+        //
+          if lt IE 9script(src='assets/js/vendor/html5shiv.js')
+
+    body.blog-page
+        //
+          if lt IE 7
+          p.browsehappy
+          | You are using an
+          strong outdated
+          |  browser. Please
+          a(href='http://browsehappy.com/') upgrade your browser
+          |  to improve your experience.
+        // Loader
+        #loader.loader-wrapper
+            .matx-preloader
+        // Overlay display while mobile navigation will open
+        .nav-overlay-bg
+        // start site main header
+        header.main-header.is-sticky
+            // start desktop logo
+            a.logos.matx-logo(href='/')
+                img.logo-dark(src='/images/bot-logo.png', alt='logo')
+                img.logo-lite(src='/images/bot-logo.png', alt='logo')
+            // end desktop logo
+            // start desktop nav
+            nav.nav-typo.main-nav
+                ul
+                    each link in navLinks
+                        li(class=( section == link.key ? 'active' : null))
+                            a(href=link.href)= link.label
+                    if user
+                        if user.canAccessKeystone
+                            li: a(href='/keystone') Open Keystone
+                        li: a(href='/keystone/signout') Sign Out
+
+            // end desktop nav
+            // start mobile logo
+            a.logo.matx-logo.mobile-logo.menu-smooth-scroll(href='#', data-target='#home')
+                img(src='/img/logo_lite.png', alt='logo')
+            // end mobile logo
+            // toogle icons, which are responsible for display and hide menu in small layout
+            .mdl-layout__drawer-button.mobile-menu-area
+                i#menu-back-btn.mobile-menu-ctrl.zmdi.zmdi-arrow-right
+                i#menu-show-btn.mobile-menu-ctrl.active.zmdi.zmdi-menu
+        // end site main header
+        // start mobile nav
+        nav.nav-typo.mobile-nav
+            ul
+                each link in navLinks
+                    li(class=( section == link.key ? 'active' : null))
+                        a(href=link.href)= link.label
+                if user
+                    if user.canAccessKeystone
+                        li: a(href='/keystone') Open Keystone
+                    li: a(href='/keystone/signout') Sign Out
+        // end mobile nav
+        div(style='height: 60px; ')
+        // start main-wrapper
+        main.main-wrapper
+            section.section-main
+                .section-common-space.text-center
+                    if filters.category && !data.category
+                        h3.text-muted Invalid Category.
+                    else
+                        if data.posts.results.length
+                            h1.section-title= data.category ? data.category.name : 'Blog'
+                            .container
+                                .row
+                                    .col-sm-12
+                                        if data.posts.totalPages > 1
+                                            h4.text-weight-normal Showing
+                                                strong #{data.posts.first}
+                                                |  to
+                                                strong #{data.posts.last}
+                                                |  of
+                                                strong #{data.posts.total}
+                                                |  posts.
+                                        else
+                                            h4.text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
+                                        // start all masonry blog post
+                                        #blog-posts-mesonary.row.clearfix.main-post.post-groups
+                                            // General Post
+                                            each post in data.posts.results
+                                                +post(post)
+                                        // end all masonry blog post
+                                        if data.posts.totalPages > 1
+                                            ul.pagination
+                                                if data.posts.previous
+                                                    li: a(href='?page=' + data.posts.previous): span.glyphicon.glyphicon-chevron-left
+                                                else
+                                                    li.disabled: a(href='?page=' + 1): span.glyphicon.glyphicon-chevron-left
+                                                each p, i in data.posts.pages
+                                                    li(class=data.posts.currentPage == p ? 'active' : null)
+                                                        a(href='?page=' + (p == '...' ? (i ? data.posts.totalPages : 1) : p ))= p
+                                                if data.posts.next
+                                                    li: a(href='?page=' + data.posts.next): span.glyphicon.glyphicon-chevron-right
+                                                else
+                                                    li.disabled: a(href='?page=' + data.posts.totalPages): span.entypo.glyphicon.glyphicon-chevron-right
+                        else
+                            if data.category
+                                h3.text-muted There are no posts in the category #{data.category.name}.
+                            else
+                                h3.text-muted There are no posts yet.
+
+
+        // end main-wrapper
+
+        // start main footer
+        footer.main-footer
+            section.footer-top
+                .section
+                    .section-common-space
+                        .container
+                            .row
+                                .text-center.ft-content-start
+                                    a.logo.menu-smooth-scroll.footer-logo.wow.fadeIn(href='/', data-target='#top', data-wow-duration='1s')
+                                        img(src='/images/bot-logo.png', alt='logo')
+                                    ul.clearfix.social.footer-social.hover-round
+                                        li
+                                            a(href='#')
+                                                i.zmdi.zmdi-facebook
+                                        li
+                                            a(href='#')
+                                                i.zmdi.zmdi-twitter
+                                        li
+                                            a(href='#')
+                                                i.zmdi.zmdi-google-plus
+                                        li
+                                            a(href='#')
+                                                i.zmdi.zmdi-instagram
+            section.footer-bottom
+                .text-center
+                    p MATX © 2016. ALL RIGHT RESERVED
+        // end main footer
+        // footer script start
+        script.
+            window.jQuery || document.write('<script type="text/javascript" src="/assets/js/vendor/jquery-1.10.2.min.js"><\\\/script>')
+        script(type='text/javascript', src='//platform.twitter.com/widgets.js')
+        script(type='text/javascript', src='/assets/libs/mdl/material.min.js')
+        script(type='text/javascript', src='/assets/libs/sweetalert/sweet-alert.min.js')
+        script(type='text/javascript', src='/assets/js/all-plugins.js')
+        script(type='text/javascript', src='/assets/js/common-plugins.js')
+        script(type='text/javascript', src='/assets/libs/owl-carousel/owl.carousel.min.js')
+        script(type='text/javascript', src='/assets/libs/magnific-popup/jquery.magnific-popup.min.js')
+        script(type='text/javascript', src='/assets/js/common.js')
+        script(type='text/javascript', src='/assets/js/all-components.js')
