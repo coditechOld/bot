@@ -96,7 +96,7 @@ $(document).ready(function ($) {
                 [1200, 4]
             ],
             itemsMobile: false,
-            pagination: false
+            pagination: true
         });
 
         var specialtySliderController = $('.specialty-slider-navwrap a');
