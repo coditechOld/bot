@@ -1,7 +1,5 @@
 extends ../layouts/test-default
 
-block css
-    link(href="/styles/about.css", rel="stylesheet")
 block content
     include ../mixins/about
     // start revolution slider section
@@ -9,16 +7,17 @@ block content
     // end revolution slider section
     .container
         if data.about
-            section#about.about.col-sm-10.col-sm-push-1
+            section#about.about.col-sm-8.col-sm-push-2
                 h2=data.about.aboutUsTitle ? data.about.aboutUsTitle : ''
                 p!=data.about.aboutUsText
-    .container-fluid.mission-container
-        section#mission.about.col-sm-8.col-sm-push-2
-            h2.mission-title=data.about.missionTitle
-            .mission-text!=data.about.missionText
     .container
-        section#vision.about.col-sm-10.col-sm-push-1
+        section#mission.about.col-sm-8.col-sm-push-2
+            h2=data.about.missionTitle
+            hr
+            !=data.about.missionText
+        section#vision.about.col-sm-8.col-sm-push-2
             h2=data.about.visionTitle
+            hr
             !=data.about.visionText
 
 
