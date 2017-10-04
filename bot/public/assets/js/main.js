@@ -500,49 +500,49 @@ $(document).ready(function ($) {
 
             lat: 33.893775,	// Provide your latitude
             lng: 35.557071, // Provide your longitude
-            content: '<p>Coder Pixel, Gulshan 1, Dhaka, Bangladesh</p>', // Provide your address to show on pop up
+            content: '<p>Beirut</p>', // Provide your address to show on pop up
             icon: '/img/marker-icon.png',
         };
         window.mapOps2 = {
             lat: 34.434706,	// Provide your latitude
             lng: 35.835389, // Provide your longitude
-            content: '<p>Coder Pixel, Gulshan 1, Dhaka, Bangladesh</p>', // Provide your address to show on pop up
+            content: '<p>Tripoli</p>', // Provide your address to show on pop up
             icon: '/img/marker-icon.png',
         };
         window.mapOps3 = {
             lat: 34.546827,	// Provide your latitude
             lng: 36.085198, // Provide your longitude
-            content: '<p>Coder Pixel, Gulshan 1, Dhaka, Bangladesh</p>', // Provide your address to show on pop up
+            content: '<p>Akkar</p>', // Provide your address to show on pop up
             icon: '/img/marker-icon.png',
         };
         window.mapOps4 = {
             lat: 33.376892,	// Provide your latitude
             lng: 35.481483, // Provide your longitude
-            content: '<p>Coder Pixel, Gulshan 1, Dhaka, Bangladesh</p>', // Provide your address to show on pop up
+            content: '<p>Nabatieh</p>', // Provide your address to show on pop up
             icon: '/img/marker-icon.png',
         };
         window.mapOps5 = {
             lat: 33.558020,	// Provide your latitude
             lng: 35.372854, // Provide your longitude
-            content: '<p>Coder Pixel, Gulshan 1, Dhaka, Bangladesh</p>', // Provide your address to show on pop up
+            content: '<p>Sidon</p>', // Provide your address to show on pop up
             icon: '/img/marker-icon.png',
         };
         window.mapOps6 = {
             lat: 33.702266,	// Provide your latitude
-            lng: 35.581105, // Provide your longitude
-            content: '<p>Coder Pixel, Gulshan 1, Dhaka, Bangladesh</p>', // Provide your address to show on pop up
+            lng: 35.581105, // Provide your longitudeCoder Pixel, Gulshan 1, Dhaka, Bangladesh
+            content: '<p>Chouf</p>', // Provide your address to show on pop up
             icon: '/img/marker-icon.png',
         };
         window.mapOps7 = {
             lat: 34.004658,	// Provide your latitude
             lng: 36.211068, // Provide your longitude
-            content: '<p>Coder Pixel, Gulshan 1, Dhaka, Bangladesh</p>', // Provide your address to show on pop up
+            content: '<p>Baalbeck</p>', // Provide your address to show on pop up
             icon: '/img/marker-icon.png',
         };
         window.mapOps8 = {
             lat: 33.762066,	// Provide your latitude
             lng: 35.883544, // Provide your longitude
-            content: '<p>Coder Pixel, Gulshan 1, Dhaka, Bangladesh</p>', // Provide your address to show on pop up
+            content: '<p>Central Beqaa</p>', // Provide your address to show on pop up
             icon: '/img/marker-icon.png',
         };
 
