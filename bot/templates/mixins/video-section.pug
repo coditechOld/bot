@@ -28,5 +28,5 @@ mixin fetchVideoSections(homePageVideo)
 
 mixin fetchVideoSection(homePageVideo)
     #bg_container
-        iframe#bg(src= homePageVideo.link , frameborder='0')
+        !=homePageVideo.link
     #content
