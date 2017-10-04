@@ -9,7 +9,7 @@ block content
     // end revolution slider section
     .container
         if data.about
-            section#about.about.col-sm-8.col-sm-push-2
+            section#about.about.col-sm-10.col-sm-push-1
                 h2=data.about.aboutUsTitle ? data.about.aboutUsTitle : ''
                 p!=data.about.aboutUsText
     .container-fluid.mission-container
@@ -17,7 +17,7 @@ block content
             h2.mission-title=data.about.missionTitle
             .mission-text!=data.about.missionText
     .container
-        section#vision.about.col-sm-8.col-sm-push-2
+        section#vision.about.col-sm-10.col-sm-push-1
             h2=data.about.visionTitle
             !=data.about.visionText
 
