@@ -290,8 +290,16 @@ $(document).ready(function ($) {
                 swal("Thanks!", "Almost finished... Please confirm your email address.", "success");
 
             } else if (resp.result === 'error') {
+                alert(JSON.stringify(resp));
 
-                swal("Ops!", "Please enter a valid email address.", "error");
+
+                swal({
+                    title: "Ops!",
+                    text: resp.msg.split("0 -").join(""),
+                    icon: "error",
+                    html: true
+                });
+
 
             }
 
