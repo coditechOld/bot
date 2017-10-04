@@ -587,3 +587,9 @@ span.comment-reply {
   text-align: right;
   direction: rtl;
 }
+
+*, nav.nav-typo ul li a{
+  font-family: 'DroidArabicNaskhRegular' !important; 
+  font-weight: normal; 
+  font-style: normal;
+} 
