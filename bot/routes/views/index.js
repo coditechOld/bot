@@ -35,7 +35,7 @@ exports = module.exports = function (req, res) {
 
     });
     view.on('init', function (next) {
-        var q = keystone.list('HomepageVideo').model.find();
+        var q = keystone.list('HomepageVideo').model.findOne();
 
         q.exec(function (err, results) {
             locals.data.homeVideo = results;

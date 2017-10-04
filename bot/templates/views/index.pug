@@ -9,6 +9,7 @@ block content
     include ../mixins/services
     +fetchServiceSlider(data.service)
     include ../mixins/video-section
+    -console.log('homeVideo ==>',data.homeVideo)
     +fetchVideoSection({
         link: data.homeVideo.link + '?autoplay=1&loop=1&cc_load_policy=1&rel=0&controls=0&showinfo=0',
         backgroundImage: {url: '/test/sliders/slide1.jpg'}
