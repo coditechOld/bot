@@ -297,7 +297,7 @@ $(document).ready(function ($) {
 
         },
 
-        url: "https://facebook.us16.list-manage.com/subscribe/post?u=63ee01e3990bcad50010c9a85&id=1a55721ae5" //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".
+        url: "https://dotrust.us16.list-manage.com/subscribe/post?u=9ef3a4bc85239222f957c1651&amp;id=7398fccd2c" //Replace this with your own mailchimp post URL. Don't remove the "". Just paste the url inside "".
 
     });
 
