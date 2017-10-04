@@ -14,9 +14,9 @@ block content
                 p!=data.about.aboutUsText
     .container-fluid.mission-container
         section#mission.about.col-sm-8.col-sm-push-2
-            h2=data.about.missionTitle
-            hr
-            !=data.about.missionText
+            h2.mission-title=data.about.missionTitle
+            hr.mission-bar
+            .mission-text!=data.about.missionText
     .container
         section#vision.about.col-sm-8.col-sm-push-2
             h2=data.about.visionTitle
