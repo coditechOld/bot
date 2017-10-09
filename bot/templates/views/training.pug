@@ -1,5 +1,9 @@
 extends ../layouts/page
 
 block content
-    .container
-        img(src=data.header.background.url)
+    .container-fluid
+        if data.training
+            .row.bg-image-training.text-center.our-model
+                .col-sm-8.col-sm-push-2
+                    h1=data.training.ourModelTitle
+                    !=data.training.modelText

@@ -23,9 +23,6 @@ mixin post(post)
             p.read-more: a(href='/blog/post/' + post.slug) Read more...
 
 
-
-
-
 block intro
     .container
         h1= data.category ? data.category.name : 'Blog'
@@ -59,8 +56,8 @@ block content
                             else
                                 li.disabled: a(href='?page=' + 1): span.glyphicon.glyphicon-chevron-left
                             each p, i in data.posts.pages
-                                li(class=data.posts.currentPage == p ? 'active' : null)
-                                    a(href='?page=' + (p == '...' ? (i ? data.posts.totalPages : 1) : p ))= p
+                                li(class=data.posts.currentPage === p ? 'active' : null)
+                                    a(href='?page=' + (p === '...' ? (i ? data.posts.totalPages : 1) : p ))= p
                             if data.posts.next
                                 li: a(href='?page=' + data.posts.next): span.glyphicon.glyphicon-chevron-right
                             else

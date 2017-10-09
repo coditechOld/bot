@@ -16,7 +16,9 @@ exports = module.exports = function (req, res) {
     locals.data = {
         posts: [],
         header: {
-            background: null
+            background: null,
+            title: null,
+            text: null
         }
     };
     view.on('init', function (next) {

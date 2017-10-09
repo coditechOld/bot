@@ -12,7 +12,9 @@ exports = module.exports = function (req, res) {
     locals.data = {
         training: [],
         header: {
-            background: null
+            background: null,
+            title: null,
+            text: null
         }
     };
 
@@ -23,6 +25,9 @@ exports = module.exports = function (req, res) {
         q.exec(function (err, results) {
             locals.data.training = results;
             locals.data.header.background = results.image;
+            locals.data.header.title = results.imageTitle;
+            locals.data.header.text = results.imageText;
+            console.log('header', results);
             next(err);
         });
 

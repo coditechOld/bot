@@ -5,6 +5,11 @@
 .footer-logo {
   max-width: 80px;
 }
+body,
+h1,
+h2 {
+  font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+}
 .container-map {
   width: 100%;
   position: absolute;
@@ -77,4 +82,33 @@ section#mission hr {
 }
 section.about h2 {
   text-align: center;
+}
+.banner-header .banner-content h2,
+.banner-header .banner-content h3 {
+  color: #fff;
+}
+section.section-main .overlay {
+  background-color: rgba(34,34,34,0.4);
+}
+.our-model {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+}
+.our-model h1,
+.our-model h2,
+.our-model h3,
+.our-model h4,
+.our-model h5,
+.our-model h6,
+.our-model p,
+.our-model li {
+  color: #fff;
+}
+.our-model p,
+.our-model li {
+  font-size: 22px;
+}
+.bg-image-training {
+  background-color: #443f3f;
 }

@@ -71,25 +71,26 @@ html.no-js
         .nav-overlay-bg
         // start banner
         section.banner-header
-            .banner-overlay
-                if data.header && data.header.background
-                    +headerBackground(data.header.background)
-                else
-                    +headerBackground()
+            if data.header
+                .banner-overlay
+                    if data.header.background
+                        +headerBackground(data.header.background)
+                    else
+                        +headerBackground()
 
-            section.section-main
-                .overlay(style='min-height: 560px')
-                    // start banner content
-                    .container
-                      .section-common-space
-                        .align-middle-contentf.banner-content
-                          h2=header.title
-                          h3
-                            | Super clean minimal design. Awesome features with endless possibilities.
-                            br
-                            |  Fully responsive and retina ready.
+                section.section-main
+                    .overlay(style='min-height: 560px')
+                        // start banner content
+                        .container
+                            .section-common-space
+                                .align-middle-contentf.banner-content
+                                    -console.log(data.header)
+                                    if data.header.title
+                                        h2=data.header.title
+                                    if data.header.text
+                                        h3=data.header.text
 
-                    // end banner content
+                        // end banner content
             // start site main header
             header.main-header.hide-init-animation
                 // start desktop logo

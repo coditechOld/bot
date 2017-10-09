@@ -92,7 +92,7 @@
 }
 .card-title {
   color: #333333;
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 700;
   font-size: 15px;
   margin-bottom: 3px;
@@ -157,7 +157,7 @@ div.tparrows.tp-rightarrow:before {
   content: '\f2fb';
 }
 .rev-title-typo {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 900;
   color: #fff;
 }
@@ -165,12 +165,12 @@ div.tparrows.tp-rightarrow:before {
   color: #adadad;
 }
 .rev-subtitle-typo {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 500;
   color: #ddd;
 }
 .rev-borderd-title {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 400;
   letter-spacing: 4.5px;
   color: rgba(255, 255, 255, 0.6);
@@ -179,7 +179,7 @@ div.tparrows.tp-rightarrow:before {
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 .tp-caption .mdl-button {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 700;
   outline: none;
   font-size: 13px !important;
@@ -282,7 +282,7 @@ div.tparrows.tp-rightarrow:before {
   background-color: #fffefd;
 }
 .imodule-title {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.5;
@@ -623,7 +623,7 @@ div.tparrows.tp-rightarrow:before {
   margin-bottom: 5px;
   color: #757575;
   font-size: 13px;
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 400;
 }
 .progress-bar {
@@ -647,7 +647,7 @@ div.tparrows.tp-rightarrow:before {
   top: -16px;
 }
 .progress-conunt span {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 400;
   font-size: 11px;
   background-color: #fff;
@@ -742,7 +742,7 @@ div.tparrows.tp-rightarrow:before {
   transition: background .3s ease;
 }
 .wcu-collapse .collapse-label .cllabelmain {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 700;
   font-size: 16px;
   line-height: 1;
@@ -759,7 +759,7 @@ div.tparrows.tp-rightarrow:before {
   color: background .3s ease;
 }
 .wcu-collapse .collapse-content {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 400;
   font-size: 13px;
   line-height: 2.1;
@@ -769,7 +769,7 @@ div.tparrows.tp-rightarrow:before {
 }
 .card-title {
   color: #333333;
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 700;
   font-size: 15px;
   margin-bottom: 3px;
@@ -785,7 +785,7 @@ div.tparrows.tp-rightarrow:before {
   padding: 40px;
 }
 .fact-count {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 500;
   font-size: 30px;
   line-height: 1.4;
@@ -793,7 +793,7 @@ div.tparrows.tp-rightarrow:before {
   margin-bottom: 5px;
 }
 .fact {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 400;
   font-size: 13px;
   line-height: 2;
@@ -837,7 +837,7 @@ div.tparrows.tp-rightarrow:before {
   padding: 150px 10% 160px;
 }
 .article-module-wrap .section-title {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.4;
@@ -892,7 +892,7 @@ div.tparrows.tp-rightarrow:before {
   color: #999999;
 }
 .brief-content.brief-article .title-mid {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 700;
   font-size: 20px;
 }
@@ -985,7 +985,7 @@ div.tparrows.tp-rightarrow:before {
   bottom: 0px;
 }
 .special-para {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 400;
   font-size: 13px;
   text-transform: uppercase;
@@ -1025,7 +1025,7 @@ div.tparrows.tp-rightarrow:before {
   display: inline-block;
 }
 .satistic .top {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 700;
   font-size: 30px;
   color: #333333;
@@ -1038,7 +1038,7 @@ div.tparrows.tp-rightarrow:before {
   display: inline-block;
 }
 .satistic .bottom {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 400;
   font-size: 13px;
   line-height: 1.7;
@@ -1074,7 +1074,7 @@ div.tparrows.tp-rightarrow:before {
   background-image: url("../../img/banner/video_bg.jpg");
 }
 .video-checkout-content-start > div {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 700;
   font-size: 30px;
   color: #fff;
@@ -1123,7 +1123,7 @@ div.tparrows.tp-rightarrow:before {
           border-radius: 3px;
 }
 .portfolio-category li {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 400;
   font-size: 13px;
   color: #B3B3B3;
@@ -1196,7 +1196,7 @@ div.tparrows.tp-rightarrow:before {
   margin-bottom: 7px;
 }
 .portfolio-meta h3 {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 500;
   letter-spacing: 1px;
   font-size: 15px;
@@ -1342,7 +1342,7 @@ div.tparrows.tp-rightarrow:before {
 }
 .portfolio-box-style-3 .single-portfolio .portfolio-subtitle,
 .portfolio-box-style-2 .single-portfolio .portfolio-subtitle {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 400;
   display: block;
   font-size: 13px;
@@ -1405,7 +1405,7 @@ div.tparrows.tp-rightarrow:before {
   position: relative;
 }
 .shot-count-inner button {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 700;
   color: #fff;
   font-size: 15px;
@@ -1449,7 +1449,7 @@ div.tparrows.tp-rightarrow:before {
   max-width: 70%;
 }
 .item-description h3 {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.1;
@@ -1458,7 +1458,7 @@ div.tparrows.tp-rightarrow:before {
   margin-bottom: 2px;
 }
 .item-description > div {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 400;
   font-size: 11px;
   line-height: 1.5;
@@ -1846,7 +1846,7 @@ div.tparrows.tp-rightarrow:before {
   padding: 22px 20px;
 }
 .tm-edition2 .member-info .title-four {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 700;
   font-size: 16px;
   color: #555555;
@@ -2030,7 +2030,7 @@ div.tparrows.tp-rightarrow:before {
   min-height: 100%;
 }
 .recomenders-info p {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 500;
   font-size: 15px;
   color: #fff;
@@ -2038,7 +2038,7 @@ div.tparrows.tp-rightarrow:before {
   margin-bottom: 35px;
 }
 .recomenders-info > div span {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 700;
   font-size: 13px;
   color: #fff;
@@ -2114,7 +2114,7 @@ div.tparrows.tp-rightarrow:before {
   padding-bottom: 12px;
 }
 .newsletter-form label {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 400;
   font-size: 13px;
   color: #fff;
@@ -2163,20 +2163,20 @@ div.tparrows.tp-rightarrow:before {
   margin-bottom: 10px;
 }
 .plan-price span {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 500;
   font-size: 40px;
   line-height: 1;
   color: #333333;
 }
 .licence-type {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 400;
   font-size: 15px;
   color: #999999;
 }
 .plan-feature li {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 400;
   font-size: 13px;
   line-height: 1.8;
@@ -2221,7 +2221,7 @@ div.tparrows.tp-rightarrow:before {
 }
 .twitter-info .tweet-text,
 .twitter-info .tweet-text p {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 500;
   font-size: 15px;
   line-height: 1.9;
@@ -2258,7 +2258,7 @@ div.tparrows.tp-rightarrow:before {
   vertical-align: middle;
 }
 .twiiter-options li a span {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 700;
   font-size: 11px;
   text-transform: uppercase;
@@ -2308,7 +2308,7 @@ div.tparrows.tp-rightarrow:before {
   margin-bottom: 23px;
 }
 .ci-items address {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 400;
   font-size: 13px;
   line-height: 1.7;
@@ -2355,7 +2355,7 @@ div.tparrows.tp-rightarrow:before {
           border-radius: 3px;
 }
 .sweet-alert h2 {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 700;
   color: #333333;
   font-size: 23px;
@@ -2365,14 +2365,14 @@ div.tparrows.tp-rightarrow:before {
   text-transform: uppercase;
 }
 .sweet-alert p {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 400;
   color: #757575;
   font-size: 13px;
   line-height: 2;
 }
 .sweet-alert button {
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 500;
   font-size: 13px;
   height: 40px;
@@ -2436,7 +2436,7 @@ div.tparrows.tp-rightarrow:before {
   height: 60px;
   line-height: 60px;
   color: #fff;
-  font-family: 'Roboto', sans-serif;
+    font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
   font-weight: 500;
   outline: none;
   font-size: 13px;
