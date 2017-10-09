@@ -158,16 +158,17 @@ html.matx.no-js
                             .container
                                 .row
                                     .col-sm-12
-                                        if data.posts.totalPages > 1
-                                            h4.text-weight-normal Showing
-                                                strong #{data.posts.first}
-                                                |  to
-                                                strong #{data.posts.last}
-                                                |  of
-                                                strong #{data.posts.total}
-                                                |  posts.
-                                        else
-                                            h4.text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
+                                        //
+                                            if data.posts.totalPages > 1
+                                                h4.text-weight-normal Showing
+                                                    strong #{data.posts.first}
+                                                    |  to
+                                                    strong #{data.posts.last}
+                                                    |  of
+                                                    strong #{data.posts.total}
+                                                    |  posts.
+                                            else
+                                                h4.text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
                                         // start all masonry blog post
                                         #blog-posts-mesonary.row.clearfix.main-post.post-groups
                                             // General Post
