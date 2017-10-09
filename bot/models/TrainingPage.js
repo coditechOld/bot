@@ -28,10 +28,13 @@ TraningPage.add({
     image:{type:Types.File, storage:myStorage},
     imageTitle:{type:String},
     imageText:{type:String},
-    ourModelTitle:{type:String,default:'Our Model'},
+	ourModelTitle:{type:String,default:'Our Model'},
+	modelText: {type: Types.Html, wysiwyg: true, height: 200},
     curriculumTitle:{type:String, default:'Our Curriculum'},
-    curriculum:{type:Types.TextArray},
-    //work with us
+	curriculumText: {type: Types.Html, wysiwyg: true, height: 200},
+	enrollTitle:{type:String,default:'Enroll With Us!!'},
+	enrollText: {type: Types.Html, wysiwyg: true, height: 200},
+	enrollButtonText:{type:String,default:'Enroll Now'},
 
 });
 
