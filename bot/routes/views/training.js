@@ -10,7 +10,10 @@ exports = module.exports = function (req, res) {
     // item in the header navigation.
     locals.section = 'training';
     locals.data = {
-        training: []
+        training: [],
+        header: {
+            background: null
+        }
     };
 
     view.on('init', function (next) {
@@ -19,6 +22,7 @@ exports = module.exports = function (req, res) {
 
         q.exec(function (err, results) {
             locals.data.training = results;
+            locals.data.header.background = results.image;
             next(err);
         });
 

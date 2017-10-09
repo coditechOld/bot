@@ -1,4 +1,4 @@
-extends ../../layouts/page
+extends ../layouts/page
 
 block content
     .container.text-center
@@ -36,7 +36,7 @@ block content
                                 select#contactInterests.mdl-switch__input(name='contactInterests')
                                     option(value='') (select one)
                                     each type in interestedTypes
-                                        option(value=type.value, selected=formData.interestedTypes == type.value)= type.label
+                                        option(value=type.value, selected=formData.interestedTypes === type.value)= type.label
                                 label.mdl-textfield__label(for='contactInterests') Interested
                         .col-sm-6
                             .mdl-textfield.mdl-js-textfield.mdl-textarea
@@ -44,7 +44,7 @@ block content
                                 select#contactBudget.mdl-switch__input(name='contactBudget')
                                     option(value='') (select one)
                                     each type in contactBudgetTypes
-                                        option(value=type.value, selected=formData.contactBudgetTypes == type.value)= type.label
+                                        option(value=type.value, selected=formData.contactBudgetTypes === type.value)= type.label
 
                     .row
                         .col-sm-12
