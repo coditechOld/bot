@@ -38,13 +38,14 @@ block content
             else
                 if data.posts.results.length
                     if data.posts.totalPages > 1
-                        h4.text-weight-normal Showing
-                            strong #{data.posts.first}
-                            |  to
-                            strong #{data.posts.last}
-                            |  of
-                            strong #{data.posts.total}
-                            |  posts.
+                        //
+                            h4.text-weight-normal Showing
+                                strong #{data.posts.first}
+                                |  to
+                                strong #{data.posts.last}
+                                |  of
+                                strong #{data.posts.total}
+                                |  posts.
                     else
                         h4.text-weight-normal Showing #{utils.plural(data.posts.results.length, '* post')}.
                     .blog
