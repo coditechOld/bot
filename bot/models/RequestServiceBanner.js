@@ -8,6 +8,7 @@ var Types = keystone.Field.Types;
 
 var RequestServiceBanner = new keystone.List('RequestServiceBanner',{
 	map: { name: 'title' },
+	label: 'Request Service Banner',
  });
 
  var myStorage = new keystone.Storage({

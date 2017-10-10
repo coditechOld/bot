@@ -8,6 +8,7 @@ const Types = keystone.Field.Types;
 
 const EnrollWithUsBanner = new keystone.List('EnrollWithUsBanner', {
     map: {name: 'title'},
+    label: 'Enroll With Us Banner',
 });
 
 const myStorage = new keystone.Storage({

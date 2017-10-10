@@ -27,7 +27,8 @@ keystone.init({
     'auto update': true,
     'session': true,
     'auth': true,
-    'user model': 'User',
+	'user model': 'User',
+	'mongo':'mongodb://u1517:codi4ever@mongodb1.webrahost.eu:27017/bot?ssl=true',
 });
 
 
