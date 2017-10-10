@@ -41,7 +41,7 @@ keystone.set('locals', {
 	_: require('lodash'),
 	env: keystone.get('env'),
 	utils: keystone.utils,
-	editable: keystone.content.editable,
+	editable: keystone.content.editable
 });
 
 // Load your project's Routes
@@ -58,7 +58,8 @@ keystone.set('nav', {
 	homePage: [ 'HomepageBanner', 'HomepageHowItWorks',
 		'HomepageSlide', 'HomepageVideo','Partner', 'Testimonial'],
 	aboutUsPage: ['About', 'AboutUsSlide'],
-	contacts: ['Contact', 'RequestService']
+	contacts: ['Contact', 'RequestService'],
+
 });
 
 // Start Keystone to connect to your database and initialise the web server

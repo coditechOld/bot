@@ -452,6 +452,68 @@ $(document).ready(function ($) {
             }, 1000);
 
         });
+    }); // contact Request Service Form
+    $('#enrollWithUsFormForm').on('submit', function (e) {
+        e.preventDefault();
+
+        var $this = $(this),
+            data = $(this).serialize(),
+            contactName = $this.find('#contactName'),
+            contactEmail = $this.find('#contactEmail'),
+            contactPhoneNumber = $this.find('#contactPhoneNumber'),
+            contactArea = $this.find('#contactArea'),
+            submitBtn = $this.find('button, input[type="submit"]');
+
+        submitBtn.attr('disabled', 'disabled');
+
+        var success = function (response) {
+            swal("Thanks!", "Your message has been sent successfully!", "success");
+            $this.find("input:not('[type=submit]'), textarea").val("");
+            $this.find(".is-dirty, .is-invalid").removeClass('is-dirty is-invalid');
+        };
+
+        var error = function (response) {
+            $this.find('.is-invalid').removeClass('is-invalid');
+            if (response.errors.contactName) {
+                contactName.closest('.mdl-textfield').addClass('is-invalid');
+            }
+            if (response.errors.contactEmail) {
+                contactEmail.closest('.mdl-textfield').addClass('is-invalid');
+            }
+            if (response.errors.contactPhoneNumber) {
+                contactPhoneNumber.closest('.mdl-textfield').addClass('is-invalid');
+            }
+            if (response.errors.contactArea) {
+                contactArea.closest('.mdl-textfield').addClass('is-invalid');
+            }
+
+        };
+
+        $.ajax({
+            type: "POST",
+            url: '/api/enroll-with-us',
+            data: data
+        }).done(function (res) {
+
+            var response = JSON.parse(res);
+
+            console.log('response ==<', response.success);
+            ( response.success ) ? success(response) : error(response);
+
+            var hand = setTimeout(function () {
+                clearTimeout(hand);
+            }, 1000);
+
+        }).fail(function () {
+
+            sweetAlert("Oops...", "Something went wrong, Try again later!", "error");
+
+            var hand = setTimeout(function () {
+                submitBtn.removeAttr('disabled');
+                clearTimeout(hand);
+            }, 1000);
+
+        });
     });
 
 

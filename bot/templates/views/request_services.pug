@@ -1,4 +1,7 @@
 extends ../layouts/page
+block css
+    link(rel='stylesheet', type='text/css', href='/styles/selectDropdown.css')
+
 
 block content
     .container.text-center
@@ -32,19 +35,21 @@ block content
                                 textarea#contactInterests.mdl-textfield__input(name='contactInterests')
                                 label.mdl-textfield__label(for='contactInterests') Interested
                         .col-sm-6
-                            .mdl-textfield.mdl-js-textfield.mdl-textarea
-                                select#contactInterests.mdl-switch__input(name='contactInterests')
-                                    option(value='') (select one)
-                                    each type in interestedTypes
-                                        option(value=type.value, selected=formData.interestedTypes === type.value)= type.label
+                            .mdl-textfield.mdl-js-textfield.mdl-select
                                 label.mdl-textfield__label(for='contactInterests') Interested
+                                div.form-input-select
+                                    select#contactInterests.mdl-switch__input(name='contactInterests')
+                                        option(value='') (select one)
+                                        each type in interestedTypes
+                                            option(value=type.value, selected=formData.interestedTypes === type.value)= type.label
                         .col-sm-6
-                            .mdl-textfield.mdl-js-textfield.mdl-textarea
+                            .mdl-textfield.mdl-js-textfield.mdl-select
                                 label.mdl-textfield__label(for='contactBudget') Budget
-                                select#contactBudget.mdl-switch__input(name='contactBudget')
-                                    option(value='') (select one)
-                                    each type in contactBudgetTypes
-                                        option(value=type.value, selected=formData.contactBudgetTypes === type.value)= type.label
+                                div.form-input-select
+                                    select#contactBudget.mdl-switch__input(name='contactBudget')
+                                        option(value='') (select one)
+                                        each type in contactBudgetTypes
+                                            option(value=type.value, selected=formData.contactBudgetTypes === type.value)= type.label
 
                     .row
                         .col-sm-12

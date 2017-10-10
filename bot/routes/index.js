@@ -60,6 +60,7 @@ exports = module.exports = function (app) {
     app.get('/api/contact', routes.api.contact);
     app.post('/api/contact', routes.api.contact);
 	app.post('/api/request-service', routes.api.request_service)
+	app.post('/api/enroll-with-us', routes.api.enroll_with_us)
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);

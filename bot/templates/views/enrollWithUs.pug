@@ -1,12 +1,16 @@
 extends ../layouts/page
 
+block css
+    link(rel='stylesheet', type='text/css', href='/styles/selectDropdown.css')
+
+
 block content
     .container.text-center
         h2.title-sec  Request Services
 
         .row
             .col-md-8
-                form#contactRequestServiceForm.matx-form-valid.contact-form(action='#', method='post')
+                form#enrollWithUsFormForm.matx-form-valid.contact-form(action='#', method='post')
                     input(type='hidden', name='action', value='enroll_with_us')
                     .row
                         .col-sm-12.col-md-6
@@ -24,12 +28,13 @@ block content
                                 label.mdl-textfield__label(for='contactPhoneNumber') Phone Number
                     .row
                         .col-sm-6
-                            .mdl-textfield.mdl-js-textfield.mdl-textarea
-                                label.mdl-textfield__label(for='contactArea') Budget
-                                select#contactArea.mdl-switch__input(name='area')
-                                    option(value='') (select one)
-                                    each type in contactArea
-                                        option(value=type.value, selected=formData.contactArea === type.value)= type.label
+                            .mdl-textfield.mdl-js-textfield.mdl-select
+                                label.mdl-textfield__label(for='contactArea') Location
+                                div.form-input-select
+                                    select#contactArea.mdl-switch__input(name='contactArea')
+                                        option(value='') (select one)
+                                        each type in contactArea
+                                            option(value=type.value, selected=formData.contactArea === type.value)= type.label
 
                     .row
                         .col-sm-12
