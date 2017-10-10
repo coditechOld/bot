@@ -9,6 +9,7 @@ const Types = keystone.Field.Types;
 const EnrollWithUS = new keystone.List('EnrollWith', {
     nocreate: true,
     noedit: true,
+    label: 'Enroll With Us',
 });
 
 EnrollWithUS.add({
