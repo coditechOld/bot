@@ -1,0 +1,48 @@
+extends ../layouts/partner
+block content
+    // start main wrapper
+    main.main-wrapper
+        section.section-main
+            .section-common-space
+                .container
+                    .row
+                        .col-sm-12.col-md-7.col-lg-8
+                            .single-pf-images
+                                // portfolio image's slider
+                                .pf-attachment-img-group.thumb-slides-container.bullet-overlaped-center
+                                    img(src=data.partner.image1.url, alt=data.partner.name + ' done By BoT')
+                                    img(src=data.partner.image2.url, alt=data.partner.name + ' done By BoT')
+                                    img(src=data.partner.image3.url, alt=data.partner.name + ' done By BoT')
+                        // start portfolio details
+                        .col-sm-12.col-md-5.col-lg-4
+                            .single-pf-content.pfc-align-left
+                                h4 PROJECT INFO
+                                !=data.partner.partnerDescription
+                                h4 Client
+                                p=data.partner.name
+                                h4 Type of Work
+                                p
+                                    for Work, index in  data.partner.typeOfWork
+                                        = Work
+                                        if index + 1 !== data.partner.typeOfWork.length
+                                            =', '
+                                        else
+                                            ='.'
+                                h4 live url
+                                p
+                                    a(href='http://www.envato.com') http://www.envato.com
+                                // start share portfolio
+                                h4 Social Link
+                                ul.clearfix.social.share-social.portfolio-share(style='font-size: 40px')
+                                    if data.partner.facebook
+                                        li.fb
+                                            a(href=data.partner.facebook)
+                                                i.zmdi.zmdi-facebook
+                                    if data.partner.twitter
+                                    li.tw
+                                        a(href=data.partner.twitter)
+                                            i.zmdi.zmdi-twitter
+
+                                // end share portfolio
+                        // end portfolio details
+    // end main wrapper

@@ -6,12 +6,12 @@ block content
     // start revolution slider section
     +fetchAboutSliders(data.aboutSliders ? data.aboutSliders : [])
     // end revolution slider section
-    .container
+    .container.section-main
         if data.about
             section#about.about.col-sm-8.col-sm-push-2
                 h2=data.about.aboutUsTitle ? data.about.aboutUsTitle : ''
                 p!=data.about.aboutUsText
-    .container
+    .container.section-main
         section#mission.about.col-sm-8.col-sm-push-2
             h2=data.about.missionTitle
             hr

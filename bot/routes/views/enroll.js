@@ -10,6 +10,7 @@ exports = module.exports = function (req, res) {
     // item in the header navigation.
     locals.section = 'enroll-with-us';
     locals.contactArea = EnrollWithUs.fields.area.ops;
+    locals.title = 'Bot - Enroll With Us ';
 
     locals.formData = req.body || {};
 
@@ -31,7 +32,6 @@ exports = module.exports = function (req, res) {
             locals.data.header.text = results.text;
             next(err);
         });
-        console.log('Localsss 2 ==> ', locals.data.services);
 
 
     });

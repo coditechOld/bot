@@ -15,8 +15,10 @@ exports = module.exports = function (req, res) {
 		posts: [],
 		categories: [],
 	};
+    locals.title = 'Bot - Blog';
 
-	// Load all categories
+
+    // Load all categories
 	view.on('init', function (next) {
 
 		keystone.list('PostCategory').model.find().sort('name').exec(function (err, results) {

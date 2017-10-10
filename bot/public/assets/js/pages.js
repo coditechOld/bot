@@ -283,7 +283,6 @@ $(document).ready(function ($) {
 
         callback: function (resp) {
 
-            console.log('respones', resp);
             if (resp.result === 'success') {
 
                 $('.mailchimpForm .mdl-textfield').removeClass('is-dirty').find('input[type=text]').val('');
@@ -352,7 +351,6 @@ $(document).ready(function ($) {
 
             var response = JSON.parse(res);
 
-            console.log('response ==<', response.success);
             ( response.success ) ? success(response) : error(response);
 
             var hand = setTimeout(function () {

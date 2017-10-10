@@ -43,7 +43,6 @@ Post.schema.virtual('content.full').get(function () {
 
 
 Post.schema.virtual('category').get(function () {
-    console.log('this.categories', this.categories);
     return this.categories;
 });
 

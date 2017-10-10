@@ -47,7 +47,7 @@ exports = module.exports = function (app) {
     app.get('/training', routes.views.training);
     app.get('/enroll-with-us', routes.views.enroll);
 	app.get('/request-service',routes.views.request_service);
-	app.get('/partners/:partner',routes.views.partner);
+	app.get('/partners/:partner?',routes.views.partner);
 
 	app.get('/test',routes.tests.home);
 	app.get('/test/slider',routes.tests.sliders);

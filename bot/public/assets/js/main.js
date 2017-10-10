@@ -180,38 +180,26 @@ $(document).ready(function ($) {
             }
         },
 
-        enableBackToTop: function () {
-            var self = this;
-            if (!self.button.hasClass('rotate')) {
-                self.button.addClass('rotate').data('action', 'top');
-            }
-        },
-
-        enableSectionCall: function () {
-            var self = this;
-            if (self.button.hasClass('rotate')) {
-                self.button.removeClass('rotate').data('action', 'bottom');
-            }
-        }
     };
 
 
     backButton.on('click', function () {
 
-        if ($(this).data('action') && $(this).data('action') == 'top') {
-
-            $('html, body').stop(true, true).animate({
-                'scrollTop': '0px'
-            }, 1500, 'easeOutQuad');
-
-        } else {
-            var currentSection = $('.section-main.section-active');
-            var nextSection = currentSection.next();
-
-            $('html, body').stop(true, true).animate({
-                'scrollTop': ( nextSection.offset().top - header.outerHeight() ) + 'px'
-            }, 800, 'easeOutQuad');
-        }
+        $('html, body').stop(true, true).animate({
+            'scrollTop': '0px'
+        }, 1500, 'easeOutQuad');
+        // if ($(this).data('action') && $(this).data('action') == 'top') {
+        //
+        //
+        //
+        // } else {
+        //     var currentSection = $('.section-main.section-active');
+        //     var nextSection = currentSection.next();
+        //
+        //     $('html, body').stop(true, true).animate({
+        //         'scrollTop': ( nextSection.offset().top - header.outerHeight() ) + 'px'
+        //     }, 800, 'easeOutQuad');
+        // }
 
     });
 
@@ -250,9 +238,7 @@ $(document).ready(function ($) {
                     // BackToTop on click button functions
                     if (active_section_index == length - 1) {
                         $('.menu-smooth-scroll').parent('li').removeClass('active');
-                        backToTop.enableBackToTop();
                     } else {
-                        backToTop.enableSectionCall();
                     }
 
                     // BackToTop show hide
@@ -283,7 +269,6 @@ $(document).ready(function ($) {
 
         callback: function (resp) {
 
-            console.log('respones', resp);
             if (resp.result === 'success') {
 
                 $('.mailchimpForm .mdl-textfield').removeClass('is-dirty').find('input[type=text]').val('');
@@ -360,7 +345,6 @@ $(document).ready(function ($) {
 
             var response = JSON.parse(res);
 
-            console.log('response ==<', response.success);
             ( response.success ) ? success(response) : error(response);
 
             var hand = setTimeout(function () {
@@ -435,7 +419,6 @@ $(document).ready(function ($) {
 
             var response = JSON.parse(res);
 
-            console.log('response ==<', response.success);
             ( response.success ) ? success(response) : error(response);
 
             var hand = setTimeout(function () {
@@ -484,8 +467,9 @@ $(document).ready(function ($) {
                 contactPhoneNumber.closest('.mdl-textfield').addClass('is-invalid');
             }
             if (response.errors.contactArea) {
-                contactArea.closest('.mdl-textfield').addClass('is-invalid');
+                contactArea.closest('.form-input-select').addClass('is-invalid');
             }
+            swal("Oops...", "Please Fill all the required fields", "error");
 
         };
 
@@ -497,7 +481,6 @@ $(document).ready(function ($) {
 
             var response = JSON.parse(res);
 
-            console.log('response ==<', response.success);
             ( response.success ) ? success(response) : error(response);
 
             var hand = setTimeout(function () {

@@ -16,9 +16,14 @@ mixin fetchPartnersSlider(partners)
                                     each partner, index in partners
                                         // single icon box
                                         .col-md-12.col-xs-6
-                                            a(href=partner.slug)
-                                            .single-imodule.imodule-centerd.imodule-slide
-                                                img(src=partner.logo.url)
+                                            if partner.externalWebsite
+                                                a(href=partner.website, target="_blank")
+                                                    .single-imodule.imodule-centerd.imodule-slide
+                                                        img(src='')
+                                            else
+                                                a(href='/partners/' + partner.slug)
+                                                    .single-imodule.imodule-centerd.imodule-slide
+                                                        img(src=partner.logo.url)
                             .specialty-slider-navwrap
                                 a.mdl-button.mdl-js-button.mdl-js-ripple-effect.ch-trns-white.left-arrow.icon-arrow.round-arrow.wow.fadeInLeft(href='#', data-wow-duration='1s')
                                     i.zmdi.zmdi-chevron-left

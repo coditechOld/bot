@@ -14,7 +14,9 @@ exports = module.exports = function (req, res) {
 		about: [],
 	};
 
-	view.on('init', function (next) {
+    locals.title = 'Bot - About';
+
+    view.on('init', function (next) {
 
 		var q = keystone.list('AboutUsSlide').model.find();
 

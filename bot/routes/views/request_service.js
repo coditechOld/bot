@@ -21,7 +21,9 @@ exports = module.exports = function (req, res) {
 			text: null,
 		},
 	};
-	view.on('init', function (next) {
+    locals.title = 'Bot - Request Service';
+
+    view.on('init', function (next) {
 
 		var q = keystone.list('RequestServiceBanner').model.findOne();
 
@@ -31,7 +33,6 @@ exports = module.exports = function (req, res) {
 			locals.data.header.text = results.text;
 			next(err);
 		});
-		console.log('Localsss 2 ==> ', locals.data.services);
 
 
 	});

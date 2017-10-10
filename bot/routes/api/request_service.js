@@ -34,7 +34,6 @@ exports = module.exports = function (req, res) {
         var newRequestService = new RequestService.model();
         var updater = newRequestService.getUpdateHandler(req);
 
-        console.log('req.body ==>>', req.body);
         updater.process({
             organizationName: req.body.contactOrganizationName,
             contactName: req.body.contactEmail,

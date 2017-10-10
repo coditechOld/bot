@@ -17,6 +17,8 @@ exports = module.exports = function (req, res) {
             text: null
         }
     };
+    locals.title =  'Bot - Training ';
+
 
     view.on('init', function (next) {
 
@@ -27,7 +29,6 @@ exports = module.exports = function (req, res) {
             locals.data.header.background = results.image;
             locals.data.header.title = results.imageTitle;
             locals.data.header.text = results.imageText;
-            console.log('header', results);
             next(err);
         });
 

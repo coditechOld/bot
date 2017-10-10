@@ -32,7 +32,6 @@ exports = module.exports = function (req, res) {
         const newEnrollWithUs = new EnrollWithUs.model();
         const updater = newEnrollWithUs.getUpdateHandler(req);
 
-        console.log('req.body ==>>', req.body);
         updater.process({
             contactName: req.body.contactName,
             contactEmail: req.body.contactEmail,

@@ -21,7 +21,7 @@ exports = module.exports = function (req, res) {
 
 
     };
-
+    locals.title = 'Bot';
 
     view.on('init', function (next) {
 

@@ -11,6 +11,7 @@ exports = module.exports = function (req, res) {
 	locals.validationErrors = {};
 	locals.enquirySubmitted = false;
 
+    locals.title = 'Bot - Contact';
 
 	view.render('contact');
 };
