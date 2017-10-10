@@ -28,7 +28,6 @@ keystone.init({
     'session': true,
     'auth': true,
 	'user model': 'User',
-	'mongo':'mongodb://u1517:codi4ever@mongodb1.webrahost.eu:27017/bot?ssl=true',
 });
 
 
