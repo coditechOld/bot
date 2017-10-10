@@ -107,7 +107,7 @@
 
 .card-title {
     color: #333333;
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 700;
     font-size: 15px;
     margin-bottom: 3px;
@@ -183,7 +183,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .rev-title-typo {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 900;
     color: #fff;
 }
@@ -193,13 +193,13 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .rev-subtitle-typo {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 500;
     color: #ddd;
 }
 
 .rev-borderd-title {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 400;
     letter-spacing: 4.5px;
     color: rgba(255, 255, 255, 0.6);
@@ -209,7 +209,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .tp-caption .mdl-button {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 700;
     outline: none;
     font-size: 13px !important;
@@ -339,7 +339,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .imodule-title {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.5;
@@ -763,7 +763,7 @@ div.tparrows.tp-rightarrow:before {
     margin-bottom: 5px;
     color: #757575;
     font-size: 13px;
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 400;
 }
 
@@ -791,7 +791,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .progress-conunt span {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 400;
     font-size: 11px;
     background-color: #fff;
@@ -844,7 +844,7 @@ div.tparrows.tp-rightarrow:before {
     transition: background .3s ease;
 }
 
-.wcu-collapse > li  li:before  {
+.wcu-collapse > li li:before {
     content: '';
     border-color: transparent #2990f3;
     border-style: solid;
@@ -918,7 +918,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .wcu-collapse .collapse-label .cllabelmain {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 700;
     font-size: 16px;
     line-height: 1;
@@ -935,7 +935,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .wcu-collapse .collapse-content {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 400;
     font-size: 13px;
     line-height: 2.1;
@@ -946,7 +946,7 @@ div.tparrows.tp-rightarrow:before {
 
 .card-title {
     color: #333333;
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 700;
     font-size: 15px;
     margin-bottom: 3px;
@@ -965,7 +965,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .fact-count {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 500;
     font-size: 30px;
     line-height: 1.4;
@@ -974,7 +974,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .fact {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 400;
     font-size: 13px;
     line-height: 2;
@@ -1027,7 +1027,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .article-module-wrap .section-title {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.4;
@@ -1096,7 +1096,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .brief-content.brief-article .title-mid {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 700;
     font-size: 20px;
 }
@@ -1214,7 +1214,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .special-para {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 400;
     font-size: 13px;
     text-transform: uppercase;
@@ -1263,7 +1263,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .satistic .top {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 700;
     font-size: 30px;
     color: #333333;
@@ -1278,7 +1278,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .satistic .bottom {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 400;
     font-size: 13px;
     line-height: 1.7;
@@ -1321,7 +1321,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .video-checkout-content-start > div {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 700;
     font-size: 30px;
     color: #fff;
@@ -1378,7 +1378,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .portfolio-category li {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 400;
     font-size: 13px;
     color: #B3B3B3;
@@ -1460,7 +1460,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .portfolio-meta h3 {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 500;
     letter-spacing: 1px;
     font-size: 15px;
@@ -1624,7 +1624,7 @@ div.tparrows.tp-rightarrow:before {
 
 .portfolio-box-style-3 .single-portfolio .portfolio-subtitle,
 .portfolio-box-style-2 .single-portfolio .portfolio-subtitle {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 400;
     display: block;
     font-size: 13px;
@@ -1700,7 +1700,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .shot-count-inner button {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 700;
     color: #fff;
     font-size: 15px;
@@ -1752,7 +1752,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .item-description h3 {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.1;
@@ -1762,7 +1762,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .item-description > div {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 400;
     font-size: 11px;
     line-height: 1.5;
@@ -2227,7 +2227,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .tm-edition2 .member-info .title-four {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 700;
     font-size: 16px;
     color: #555555;
@@ -2437,7 +2437,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .recomenders-info p {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 500;
     font-size: 15px;
     color: #fff;
@@ -2446,7 +2446,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .recomenders-info > div span {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 700;
     font-size: 13px;
     color: #fff;
@@ -2537,7 +2537,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .newsletter-form label {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 400;
     font-size: 13px;
     color: #fff;
@@ -2596,7 +2596,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .plan-price span {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 500;
     font-size: 40px;
     line-height: 1;
@@ -2604,14 +2604,14 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .licence-type {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 400;
     font-size: 15px;
     color: #999999;
 }
 
 .plan-feature li {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 400;
     font-size: 13px;
     line-height: 1.8;
@@ -2666,7 +2666,7 @@ div.tparrows.tp-rightarrow:before {
 
 .twitter-info .tweet-text,
 .twitter-info .tweet-text p {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 500;
     font-size: 15px;
     line-height: 1.9;
@@ -2712,7 +2712,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .twiiter-options li a span {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 700;
     font-size: 11px;
     text-transform: uppercase;
@@ -2773,7 +2773,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .ci-items address {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 400;
     font-size: 13px;
     line-height: 1.7;
@@ -2826,7 +2826,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .sweet-alert h2 {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 700;
     color: #333333;
     font-size: 23px;
@@ -2837,7 +2837,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .sweet-alert p {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 400;
     color: #757575;
     font-size: 13px;
@@ -2845,7 +2845,7 @@ div.tparrows.tp-rightarrow:before {
 }
 
 .sweet-alert button {
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 500;
     font-size: 13px;
     height: 40px;
@@ -2915,7 +2915,7 @@ div.tparrows.tp-rightarrow:before {
     height: 60px;
     line-height: 60px;
     color: #fff;
-      font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+    font-family: proxima-n-w01-reg,sans-serif;
     font-weight: 500;
     outline: none;
     font-size: 13px;

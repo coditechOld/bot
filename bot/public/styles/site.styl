@@ -1,7 +1,7 @@
 @import "navbar"
 @import "footer"
 body, h1, h2
-  font-family wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold
+  font-family: proxima-n-w01-reg,sans-serif;
 
 .container-map
   width 100%
@@ -101,3 +101,58 @@ section.section-main
 
 .bg-image-training
   background-color rgb(68, 63, 63)
+
+.our-curriculum
+  background-color white
+  h1, h2, h3, h4, h5, h6, p, li
+    color black
+  p, li
+    font-size 22px
+  padding-top 20px
+  padding-bottom 40px
+  padding-left 30px
+  ol
+    list-style none
+    text-align left
+    li
+      counter-increment: item;
+      position: relative;
+      margin-top 20px
+      min-height 120px
+      margin-bottom 20px
+      strong
+        position absolute
+        top 25px
+        padding-left 25px
+      p
+        padding-left: 105px;
+        line-height: 1.3;
+        vertical-align baseline
+        font-family wfont_e4cc5f_73453c3e584b413c990f7fea4ea52c59,wf_73453c3e584b413c990f7fea4,orig_proximanovalight
+    li:before
+      margin-right: 10px;
+      content: counter(item);
+      background: #fee8a8;
+      border-radius: 50%;
+      color: black;
+      width: 70px;
+      text-align: center;
+      display: inline-block;
+      padding-top: 24px;
+      height: 70px;
+
+.enroll
+  h1, h2, h3, h4, h5, h6, p, li
+    color white
+  p, li
+    font-size 22px
+  padding-top 20px
+  padding-bottom 40px
+  padding-left 20px
+  .enroll-button
+    button
+      margin-top 20px
+
+
+
+

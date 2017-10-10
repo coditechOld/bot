@@ -7,3 +7,13 @@ block content
                 .col-sm-8.col-sm-push-2
                     h1=data.training.ourModelTitle
                     !=data.training.modelText
+            .row.bg-image-training.text-center.our-curriculum
+                .col-sm-8.col-sm-push-2
+                    h1=data.training.curriculumTitle
+                    !=data.training.curriculumText
+            .row.bg-image-training.text-center.enroll
+                .col-sm-8.col-sm-push-2
+                    h1=data.training.enrollTitle
+                    !=data.training.enrollText
+                    a.enroll-button(href='/enroll-with-us')
+                        button.mdl-button.ripple-black.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.btn-default.btn-white.wow.fadeInRight(type='button', data-wow-duration='1.2s')!=data.training.enrollButtonText

@@ -8,7 +8,7 @@
 body,
 h1,
 h2 {
-  font-family: wfont_e11cc5f_658a6dda3f5c414aa58255a07ffe190d, wf_658a6dda3f5c414aa58255a07, orig_proximanovasemibold;
+  font-family: proxima-n-w01-reg, sans-serif;
 }
 .container-map {
   width: 100%;
@@ -111,4 +111,80 @@ section.section-main .overlay {
 }
 .bg-image-training {
   background-color: #443f3f;
+}
+.our-curriculum {
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-left: 30px;
+}
+.our-curriculum h1,
+.our-curriculum h2,
+.our-curriculum h3,
+.our-curriculum h4,
+.our-curriculum h5,
+.our-curriculum h6,
+.our-curriculum p,
+.our-curriculum li {
+  color: #000;
+}
+.our-curriculum p,
+.our-curriculum li {
+  font-size: 22px;
+}
+.our-curriculum ol {
+  list-style: none;
+  text-align: left;
+}
+.our-curriculum ol li {
+  counter-increment: item;
+  position: relative;
+  margin-top: 20px;
+  min-height: 120px;
+  margin-bottom: 20px;
+}
+.our-curriculum ol li strong {
+  position: absolute;
+  top: 25px;
+  padding-left: 25px;
+}
+.our-curriculum ol li p {
+  padding-left: 105px;
+  line-height: 1.3;
+  vertical-align: baseline;
+  font-family: wfont_e4cc5f_73453c3e584b413c990f7fea4ea52c59, wf_73453c3e584b413c990f7fea4, orig_proximanovalight;
+}
+.our-curriculum ol li:before {
+  margin-right: 10px;
+  content: counter(item);
+  background: #fee8a8;
+  border-radius: 50%;
+  color: #000;
+  width: 70px;
+  text-align: center;
+  display: inline-block;
+  padding-top: 24px;
+  height: 70px;
+}
+.enroll {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+}
+.enroll h1,
+.enroll h2,
+.enroll h3,
+.enroll h4,
+.enroll h5,
+.enroll h6,
+.enroll p,
+.enroll li {
+  color: #fff;
+}
+.enroll p,
+.enroll li {
+  font-size: 22px;
+}
+.enroll .enroll-button button {
+  margin-top: 20px;
 }
