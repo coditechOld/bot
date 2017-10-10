@@ -27,6 +27,8 @@ exports = module.exports = function (req, res) {
 
 		q.exec(function (err, results) {
 			locals.data.header.background = results.image;
+			locals.data.header.title = results.title;
+			locals.data.header.text = results.text;
 			next(err);
 		});
 		console.log('Localsss 2 ==> ', locals.data.services);
