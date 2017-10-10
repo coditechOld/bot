@@ -1,12 +1,12 @@
-var keystone = require('keystone');
-var Types = keystone.Field.Types;
+const keystone = require('keystone');
+const Types = keystone.Field.Types;
 
 /**
  * Enquiry Model
  * =============
  */
 
-var EnrollWithUS = new keystone.List('EnrollWithUS', {
+const EnrollWithUS = new keystone.List('EnrollWith', {
     nocreate: true,
     noedit: true,
 });
@@ -14,7 +14,7 @@ var EnrollWithUS = new keystone.List('EnrollWithUS', {
 EnrollWithUS.add({
     // name email phoneNumber ,  area
     contactName: {type: Types.Name, required: true},
-    email: {type: Types.Email, required: true},
+    contactEmail: {type: Types.Email, required: true},
     phoneNumber: {type: String, required: true},
     area: {
         type: Types.Select, options: [
@@ -48,8 +48,8 @@ EnrollWithUS.schema.methods.sendNotificationEmail = function (callback) {
             if (err) {
                 {
 
-                    var view = new keystone.View(req, res);
-                    var locals = res.locals;
+                    const view = new keystone.View(req, res);
+                    const locals = res.locals;
                     // Set locals
 
                     // locals.section is used to set the currently selected
@@ -77,8 +77,8 @@ EnrollWithUS.schema.methods.sendNotificationEmail = function (callback) {
         return callback(new Error('could not find mailgun credentials'));
     }
 
-    var contact = this;
-    var brand = keystone.get('brand');
+    const contact = this;
+    const brand = keystone.get('brand');
 
     keystone.list('User').model.find().where('isAdmin', true).exec(function (err, admins) {
         if (err) return callback(err);

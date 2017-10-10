@@ -1,0 +1,59 @@
+extends ../layouts/page
+
+block content
+    .container.text-center
+        h2.title-sec  Request Services
+
+        .row
+            .col-md-8
+                form#contactRequestServiceForm.matx-form-valid.contact-form(action='#', method='post')
+                    input(type='hidden', name='action', value='enroll_with_us')
+                    .row
+                        .col-sm-12.col-md-6
+                            .mdl-textfield.mdl-js-textfield
+                                input#contactName.mdl-textfield__input(type='text', name='contactName')
+                                label.mdl-textfield__label(for='contactName') Name
+                        .col-sm-12.col-md-6
+                            .mdl-textfield.mdl-js-textfield
+                                input#contactEmail.mdl-textfield__input(type='text', name='contactEmail')
+                                label.mdl-textfield__label(for='contactEmail') Email
+                    .row
+                        .col-sm-6
+                            .mdl-textfield.mdl-js-textfield
+                                input#contactPhoneNumber.mdl-textfield__input(type='text', name='contactPhoneNumber')
+                                label.mdl-textfield__label(for='contactPhoneNumber') Phone Number
+                    .row
+                        .col-sm-6
+                            .mdl-textfield.mdl-js-textfield.mdl-textarea
+                                label.mdl-textfield__label(for='contactArea') Budget
+                                select#contactArea.mdl-switch__input(name='area')
+                                    option(value='') (select one)
+                                    each type in contactArea
+                                        option(value=type.value, selected=formData.contactArea === type.value)= type.label
+
+                    .row
+                        .col-sm-12
+                            .text-center(style="margin-top: 30px")
+                                button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.btn-black.btn-default.btn-submit(disabled='', style="") send
+
+            .col-md-4.contact-info-start
+                .section-common-space
+                    h2.section-title CONTACT US
+                    .contact-info
+                        .clearfix.ci-items
+                            span.ci-icons
+                                i.zmdi.zmdi-home
+                            address 1600 Amphitheatre Parkway, Mountain View, CA 94043, US
+                        .clearfix.ci-items
+                            span.ci-icons
+                                i.zmdi.zmdi-email
+                            address info@coderpixel.com
+                        .clearfix.ci-items
+                            span.ci-icons
+                                i.zmdi.zmdi-phone
+                            address 0088 1234 567890
+                        .clearfix.ci-items
+                            span.ci-icons
+                                i.zmdi.zmdi-globe
+                            address www.coderpixel.com
+
