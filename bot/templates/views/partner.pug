@@ -21,20 +21,21 @@ block content
                                     !=data.partner.partnerDescription
                                     h4 Client
                                     p=data.partner.name
-                                    h4 Type of Work
-                                    p
-                                        for Work, index in  data.partner.typeOfWork
-                                            = Work
-                                            if index + 1 !== data.partner.typeOfWork.length
-                                                =', '
-                                            else
-                                                ='.'
+                                    if data.partner.typeOfWork.length > 0
+                                        h4 Type of Work
+                                        p
+                                            for Work, index in  data.partner.typeOfWork
+                                                = Work
+                                                if index + 1 !== data.partner.typeOfWork.length
+                                                    =', '
+                                                else
+                                                    ='.'
                                     h4 live url
                                     p
                                         a(href=data.partner.website)=data.partner.website
                                     // start share portfolio
                                     h4 Social Link
-                                    ul.clearfix.social.share-social.portfolio-share(style='font-size: 40px')
+                                    ul.clearfix.social(style='font-size: 40px')
                                         if data.partner.facebook
                                             li.fb
                                                 a(href=data.partner.facebook)
