@@ -33,10 +33,10 @@ Partner.add({
 	image3:{type:Types.File, storage:myStorage},
 	year:{type:Number},
     typeOfWork:{type:Types.TextArray},
-	website:{type:String},
+	website:{type:Types.Url},
 	externalWebsite:{ type: Types.Boolean },
-	facebook:{type:String},
-	twitter:{type:String},
+	facebook:{type:Types.Url},
+	twitter:{type:Types.Url},
     partnerDescription:{type: Types.Html, wysiwyg: true, height: 300},
 
 });

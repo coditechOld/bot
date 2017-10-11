@@ -27,7 +27,7 @@ HomepageSlide.add({
   title: { type: String},	
   image: { type: Types.File, storage: myStorage},
   text: { type: String },
-  buttonlink: { type: String } ,
+  buttonlink: { type: Types.Url } ,
   buttontext: { type: String },
 });
 
