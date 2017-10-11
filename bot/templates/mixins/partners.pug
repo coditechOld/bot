@@ -19,7 +19,7 @@ mixin fetchPartnersSlider(partners)
                                             if partner.externalWebsite
                                                 a(href=partner.website, target="_blank")
                                                     .single-imodule.imodule-centerd.imodule-slide
-                                                        img(src='')
+                                                        img(src=partner.logo.url)
                                             else
                                                 a(href='/partners/' + partner.slug)
                                                     .single-imodule.imodule-centerd.imodule-slide
