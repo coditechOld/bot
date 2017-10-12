@@ -214,3 +214,6 @@ section.section-main .overlay {
 .collapse-content ul li {
   list-style-type: none;
 }
+.service {
+  height: 200px;
+}

@@ -7,9 +7,12 @@ mixin fetchServiceSlider(services)
                 h2 Services
                 .container
                     .row
-                        if services
-                            each service, index in services
-                                .col-sm-4.col-xs-6
+                        if services && services.length
+                            - var cutoff = services.length-services.length%3
+                            - var services1 = services.slice(0,cutoff)
+                            - var services2 = services.slice(cutoff)
+                            each service, index in services1
+                                .col-sm-4.col-xs-6.service
                                     a(href='/services#' + service.slug.split('-').join('_') )
                                         // start bordered icon box
                                         .single-imodule.imodule-centerd.rbodard-imodule.wow.fadeInUp(data-wow-duration='1s')
@@ -19,7 +22,20 @@ mixin fetchServiceSlider(services)
                                                 h3.imodule-title=service.title
                                                 p=service.briefDescription
                                         // end bordered icon box
-
+                            - var numberOfItems = services2.length
+                            if services2.length
+                                - var classes = (numberOfItems == 1 ? "col-sm-push-4" : "col-sm-push-2")
+                                each service, index in services2
+                                    .col-sm-4.col-xs-6.service(class=classes)
+                                        a(href='/services#' + service.slug.split('-').join('_') )
+                                            // start bordered icon box
+                                            .single-imodule.imodule-centerd.rbodard-imodule.wow.fadeInUp(data-wow-duration='1s')
+                                                .icon-box
+                                                    i(class=service.icon)
+                                                .ic-module-content
+                                                    h3.imodule-title=service.title
+                                                    p=service.briefDescription
+                                            // end bordered icon box
         // end intro section with icon box
     // end service section
 mixin fetchServices(services)
