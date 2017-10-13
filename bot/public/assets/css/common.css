@@ -1441,9 +1441,6 @@ nav.nav-typo ul li a {
     padding: 15px;
 }
 
-.main-nav > ul > li:last-child > a {
-    padding-right: 0 !important;
-}
 
 .main-nav > ul > li ul {
     position: absolute;
