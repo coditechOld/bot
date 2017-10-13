@@ -163,14 +163,6 @@ html.matx.no-js
                                                         a(href='/blog/post/' + recentPost.slug)=recentPost.title
                                                         span
                                                             time(datetime=data.post._.publishedDate.format('YYYY-MM-D')) #{data.post._.publishedDate.format('MMMM D, YYYY')}
-                                    // category widget
-                                    aside.white-box.widget
-                                        h3.widget-title CATEGORIES
-                                        ul
-                                            each category in data.categories
-                                                li
-                                                    a(href='/blog/category/' + category.key)=category.name
-
                             // end sidebar
         // end main wrapper
         // start main footer
